@@ -7,6 +7,9 @@ import DownIcon from '../../svgs/down-chevron.svg';
 const TopicsHeaderStyles = styled.header`
   width: 100%;
   padding: 6rem 0 3rem 0;
+  @media only screen and (min-width: 768px) {
+    padding: 8rem 0 0 0;
+  }
   .t-h {
     width: 90%;
     margin: var(--auto);
@@ -69,7 +72,7 @@ const TopicsHeaderStyles = styled.header`
         }
         .topics--desktop {
           display: block;
-          padding: 1.5rem 0;
+          padding: 1.5rem 0 0.9rem 0;
           width: 90%;
           margin: var(--auto);
           ul {
@@ -96,6 +99,11 @@ const TopicsHeaderStyles = styled.header`
             }
           }
         }
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      section {
+        margin-bottom: 0;
       }
     }
   }
