@@ -3,10 +3,11 @@ import React from 'react';
 import 'normalize.css';
 import { ThemeProvider } from 'styled-components';
 //* Local imports
+import { Helmet } from 'react-helmet';
 import GlobalStyles from '../styles/globalstyles';
-import nav from './nav';
-import footer from './footer';
-import theme from '../styles/theme';
+import Nav from './nav';
+import Footer from './footer';
+import Theme from '../styles/theme';
 
 // ? https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -14,22 +15,26 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-function Layout({ children }) {
+const Layout = ({ children, alt }) => {
   const i = true;
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={Theme}>
+        <Helmet>
+          <link rel="stylesheet" href="https://use.typekit.net/ltj6ded.css" />
+        </Helmet>
         <GlobalStyles />
-        <nav />
+        <Nav alt={alt} />
         <main>{children}</main>
-        <footer />
+        <Footer />
       </ThemeProvider>
     </>
   );
-}
+};
 
 Layout.propTypes = {
   children: PropTypes.any,
+  alt: PropTypes.any,
 };
 
 export default Layout;

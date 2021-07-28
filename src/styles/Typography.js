@@ -2,8 +2,8 @@ import { css } from 'styled-components';
 
 const typography = css`
   html {
-    font-size: 18px;
-    @media only screen and (min-width: 375px) {
+    font-size: 16px;
+    /* @media only screen and (min-width: 375px) {
       font-size: 18.5px;
     }
     @media only screen and (min-width: 414px) {
@@ -11,7 +11,7 @@ const typography = css`
     }
     @media only screen and (min-width: 1280px) {
       font-size: 20px;
-    }
+    } */
   }
   h1 {
     font-size: var(--titleLarge);
@@ -20,7 +20,7 @@ const typography = css`
     font-size: var(--titleMedium);
   }
   h3 {
-    font-size: var(--titleRegular);
+    font-size: var(--titleMedium);
   }
   h4 {
     font-size: var(--titleRegular);

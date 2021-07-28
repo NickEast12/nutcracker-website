@@ -13,16 +13,16 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-image`,
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-image`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
-        // path: path.join(__dirname, `src`, `assets`, 'images'),
       },
     },
     {
@@ -33,7 +33,6 @@ module.exports = {
         },
       },
     },
-    // `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -48,12 +47,21 @@ module.exports = {
         icon: `./src/assets/images/icon.png`,
       },
     },
-    // {
-    //   resolve: `gatsby-transform-portable-text`,
-    //   options: {
-    //     extendTypes: [{ typeName: `SanityPost`, contentFieldName: "body" }],
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: 'gkbnlmj8',
+        dataset: `production`,
+        watchMode: true,
+        token: process.env.SANITY_KEY,
+      },
+    },
+    {
+      resolve: `gatsby-transform-portable-text`,
+      options: {
+        extendTypes: [{ typeName: `SanityPost`, contentFieldName: 'body' }],
+      },
+    },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
