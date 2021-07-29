@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 //* Local imports
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '../styles/GlobalStyles';
-import Theme from '../styles/Theme';
+import Theme from '../styles/theme';
 import Nav from './Nav';
 import Footer from './Footer';
 
