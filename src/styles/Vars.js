@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const vars = css`
+const Vars = css`
   :root {
     //*Colours
     --mainColour: #2ba5a2;
@@ -27,4 +27,4 @@ const vars = css`
   }
 `;
 
-export default vars;
+export default Vars;

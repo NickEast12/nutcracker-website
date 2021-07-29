@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const typography = css`
+const Typography = css`
   html {
     font-size: 16px;
     @media only screen and (min-width: 414px) {
@@ -44,4 +44,4 @@ const typography = css`
   }
 `;
 
-export default typography;
+export default Typography;

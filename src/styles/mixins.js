@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const mixins = {
+const Mixins = {
   mainBtn: css`
     padding: 1rem;
   `,
@@ -9,4 +9,4 @@ const mixins = {
   `,
 };
 
-export default mixins;
+export default Mixins;

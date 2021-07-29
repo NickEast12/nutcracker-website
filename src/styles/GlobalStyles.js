@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 // ? Local imports
-import vars from './Vars';
-import animations from './Animations';
-import typography from './Typography';
+import Vars from './Vars';
+import Animations from './Animations';
+import Typography from './Typography';
 
 const GlobalStyles = createGlobalStyle`
-    ${vars}
-    ${animations}
-    ${typography}
+    ${Vars}
+    ${Animations}
+    ${Typography}
     *, *:after, *:before {
         box-sizing: border-box;
         margin: 0;
