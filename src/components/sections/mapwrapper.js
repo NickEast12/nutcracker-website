@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Map from '../functional/map';
-import OfficeIcon from '../../svgs/office.svg';
+// import OfficeIcon from '../../svgs/office.svg';
+import OfficeIcon from '../../svgs/nut.svg';
 
 const MapWrapperStyles = styled.section`
   width: 100%;
@@ -17,9 +18,9 @@ const MapWrapperStyles = styled.section`
       margin-bottom: 1.5rem;
       svg {
         width: 60px;
-        background-color: var(--mainColour);
+
         fill: #fff;
-        border-radius: 50%;
+
         padding: 0.5rem;
       }
 

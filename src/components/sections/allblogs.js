@@ -15,7 +15,8 @@ const PopularBlogsStyles = styled.section`
       text-align: center;
       font-weight: 700;
     }
-    &__wrapper {
+    &__desktop {
+      display: none;
       /* margin-top: 2rem; */
     }
     &__btn {
@@ -24,6 +25,10 @@ const PopularBlogsStyles = styled.section`
     }
     @media only screen and (min-width: 750px) {
       &__wrapper {
+        display: none;
+      }
+      &__desktop {
+        display: block;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
@@ -34,7 +39,7 @@ const PopularBlogsStyles = styled.section`
       }
     }
     @media only screen and (min-width: 1024px) {
-      &__wrapper {
+      &__desktop {
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -47,7 +52,12 @@ const AllBlogs = ({ data }) => {
       <div className="recent">
         <div className="recent__wrapper">
           {data.map((recent) => (
-            <ReducedBlog key={recent.title} data={recent} alt />
+            <ReducedBlog key={recent.title} data={recent} />
+          ))}
+        </div>
+        <div className="recent__desktop">
+          {data.map((recent) => (
+            <SingleBlog key={recent.title} data={recent} />
           ))}
         </div>
       </div>

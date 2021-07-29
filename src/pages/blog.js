@@ -13,17 +13,32 @@ const Blog = ({ data }) => {
   const FeaturedBlogData = data.FeaturedBlog.nodes;
   const PopularBlogData = data.PopularBlog.nodes;
   const AllBlogData = data.AllBlogs.nodes;
-  console.log(AllBlogData);
   return (
     <Layout alt>
       <SEO />
-      <BlogHeader />
+      <BlogHeader>
+        <span>News</span> and <span>views </span>from the Nutracker team
+      </BlogHeader>
       <FeaturedBlog data={FeaturedBlogData} />
       <PopularBlogs data={PopularBlogData} />
       <BlogTopics />
       <AllBlogs data={AllBlogData} />
     </Layout>
   );
+};
+
+Blog.propTypes = {
+  data: PropTypes.shape({
+    AllBlogs: PropTypes.shape({
+      nodes: PropTypes.any,
+    }),
+    FeaturedBlog: PropTypes.shape({
+      nodes: PropTypes.any,
+    }),
+    PopularBlog: PropTypes.shape({
+      nodes: PropTypes.any,
+    }),
+  }),
 };
 
 export default Blog;

@@ -74,6 +74,11 @@ const BlogTopicsStyles = styled.aside`
       }
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .topics--desktop {
+      width: 60%;
+    }
+  }
 `;
 const BlogTopics = () => {
   const data = useStaticQuery(graphql`
@@ -90,6 +95,7 @@ const BlogTopics = () => {
   `);
   const topicData = data.topics.nodes;
   const [open, setOpen] = useState(false);
+  console.log(topicData);
   return (
     <BlogTopicsStyles open={open}>
       <div className="topics">

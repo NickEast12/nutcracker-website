@@ -3,6 +3,9 @@ import { css } from 'styled-components';
 const typography = css`
   html {
     font-size: 16px;
+    @media only screen and (min-width: 414px) {
+      font-size: 17px !important;
+    }
     /* @media only screen and (min-width: 375px) {
       font-size: 18.5px;
     }

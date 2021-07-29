@@ -2,33 +2,31 @@ import { Link, navigate } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 // local imports
-import AnimatedTree from '../../svgs/tree-animated.svg';
+import Tree from '../icons/Tree';
 
 const HomepageStyled = styled.section`
   width: 100%;
+  background: var(--backgroundColour);
+  @media only screen and (min-width: 375px) {
+    height: 100vh;
+  }
+
   .homepage {
     width: 90%;
     margin: 0 auto;
-    padding: 5rem 0 0 0;
+    padding: 6rem 0 2rem 0;
     max-width: var(--maxWidth);
     &--icon {
-      /* padding: 3rem 0; */
-      max-width: 400px;
-      margin: 0 auto;
-      svg {
-        width: 100%;
-        text-align: center;
-        a {
-          font-size: 4.85px;
-        }
-      }
+      display: none;
     }
     &--content {
-      color: #000;
+      color: #fff;
       width: 95%;
       margin: 0 auto;
+
       h1 {
-        color: var(--backgroundColour);
+        color: #fff;
+        font-size: 2.5rem;
         span {
           color: var(--mainColour);
           font-weight: 800;
@@ -42,14 +40,22 @@ const HomepageStyled = styled.section`
         margin: 2rem auto 2rem 0;
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         button {
-          width: 48%;
+          width: 100%;
           margin-bottom: 0.85rem;
+        }
+        @media only screen and (min-width: 768px) {
+          flex-direction: row;
+          justify-content: space-between;
+          button {
+            width: 48%;
+          }
         }
       }
       h3 {
-        color: var(--backgroundColour);
+        color: #fff;
+        font-size: 1.9rem;
         span {
           color: var(--yellow);
           font-weight: 800;
@@ -59,25 +65,30 @@ const HomepageStyled = styled.section`
   }
   @media only screen and (min-width: 375px) {
     .homepage {
-      padding-top: 3.25rem;
+      padding: 8rem 0 0 0;
     }
   }
-  @media only screen and (min-width: 750px) {
+
+  @media only screen and (min-width: 768px) {
+    height: 100%;
+    padding: 1rem 0 4rem 0;
     .homepage {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: 'a b';
-      grid-gap: 2rem;
-      padding-top: 6rem;
+      grid-gap: 4rem;
       &--icon {
+        display: block;
         grid-area: b;
-        padding: 0;
         svg {
+          margin-top: -2rem;
+          height: 100%;
+          width: 100%;
+          max-width: 410px;
         }
       }
       &--content {
         grid-area: a;
-        padding-top: 2rem;
       }
     }
   }
@@ -88,12 +99,30 @@ const HomepageStyled = styled.section`
         padding-top: 5rem;
       }
       &--icon {
-        width: 100%;
+        width: 90%;
         height: auto;
         svg {
-          max-width: 600px;
           width: 100%;
-          height: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    padding-top: 3rem;
+    .homepage {
+      padding-bottom: 0.15rem;
+      grid-gap: 8rem;
+      &--content {
+        padding-top: 5rem;
+      }
+      &--icon {
+        width: 90%;
+        height: 100%;
+        svg {
+          width: 100%;
+          height: 100%;
+          margin-top: -3rem;
         }
       }
     }
@@ -105,8 +134,7 @@ const Homepage = () => {
     <HomepageStyled>
       <div className="homepage">
         <div className="homepage--icon">
-          {/* <TreeIcon /> */}
-          {/* <AnimatedTree /> */}
+          <Tree />
         </div>
         <div className="homepage--content">
           <h1>

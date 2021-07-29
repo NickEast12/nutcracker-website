@@ -28,12 +28,12 @@ const ReviewStyles = styled.section`
       width: 60%;
     }
     &__img {
-      width: 150px;
+      width: 90px;
       height: auto;
-      margin: 0 auto;
+      margin: 1rem auto;
       text-align: center;
       @media only screen and (min-width: 750px) {
-        width: 160px;
+        width: 120px;
       }
       .gatsby-image-wrapper {
         width: 100%;

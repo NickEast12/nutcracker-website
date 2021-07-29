@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -57,19 +58,21 @@ const BlogHeaderStyles = styled.header`
     }
   }
 `;
-const BlogHeader = () => {
+const BlogHeader = ({ children }) => {
   const i = true;
   return (
     <BlogHeaderStyles>
       <div className="blog__header">
         <div className="blog__header__content">
-          <h1>
-            <span>News</span> and <span>views </span>from the Nutracker team
-          </h1>
+          <h1>{children}</h1>
         </div>
       </div>
     </BlogHeaderStyles>
   );
+};
+
+BlogHeader.propTypes = {
+  children: PropTypes.any,
 };
 
 export default BlogHeader;

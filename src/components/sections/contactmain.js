@@ -70,11 +70,13 @@ const ContactMainStyles = styled.section`
           background: none;
           border: solid var(--backgroundColour) 1px;
           max-width: 100%;
+          transition: inherit;
           &:hover {
             background-color: var(--mainColour);
             border: solid var(--mainColour) 1px;
             span {
               color: #fff;
+              transition: inherit;
             }
           }
           span {
@@ -103,6 +105,12 @@ const ContactMainStyles = styled.section`
     @media only screen and (min-width: 1280px) {
       grid-template-columns: 45% 1fr;
       padding-top: 5rem;
+      grid-gap: 4rem;
+      &__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
       &__form {
         form {
           display: grid;

@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
     }
     .btn {
         width: 100%;
-        padding: .65rem 0; 
+        padding: .75rem 0; 
         border-radius: 3px;
         cursor: pointer;
         max-width: 300px;

@@ -29,6 +29,7 @@ const TopicsStyles = styled.section`
     width: 90%;
     margin: 0 auto;
     max-width: var(--maxWidth);
+    text-align: center;
     p {
       font-size: 1.4rem;
     }

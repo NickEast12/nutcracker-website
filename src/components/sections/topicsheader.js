@@ -100,6 +100,11 @@ const TopicsHeaderStyles = styled.header`
           }
         }
       }
+      @media only screen and (min-width: 1024px) {
+        .topics--desktop {
+          width: 70%;
+        }
+      }
     }
     @media only screen and (min-width: 768px) {
       section {
