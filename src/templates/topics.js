@@ -39,7 +39,6 @@ const Topics = ({ pageContext, data }) => {
   const blogData = data.AllBlogs.nodes;
   const featuredData = data.FeaturedBlog.nodes;
   const topics = data.topics.nodes;
-  // console.log(topics);
   const arr = [];
   const secondArr = [];
   for (const i of topics) {

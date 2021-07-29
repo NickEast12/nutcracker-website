@@ -19,7 +19,8 @@ import EmailIcon from '../svgs/blogsend.svg';
 import TwitterIcon from '../svgs/blogtwitter.svg';
 import FacebookIcon from '../svgs/blogfacebook.svg';
 import LinkedInIcon from '../svgs/bloglinkedin.svg';
-// import RelatedBlogs from '../components/pageComponents/RelatedBlogs';
+import GetImage from '../components/functional/getImage';
+import RelatedBlogs from '../components/sections/relatedblogs';
 
 const Blog = ({ data }) => {
   const blogData = data.Blog;
@@ -32,7 +33,7 @@ const Blog = ({ data }) => {
       <BlogHeader coverImage={coverImage} />
       <main>
         <BlogBody blogData={blogData} />
-        {/* <RelatedBlogs relatedBlogsData={RelatedData} /> */}
+        <RelatedBlogs relatedBlogsData={RelatedData} />
       </main>
     </Layout>
   );
@@ -74,9 +75,14 @@ const BlogHeader = ({ coverImage }) => (
   <BlogHeaderStyles>
     <div className="bheader">
       {/* <Img fluid={coverImage.asset.fluid} alt={coverImage.alt} /> */}
+      <GetImage data={coverImage} />
     </div>
   </BlogHeaderStyles>
 );
+
+BlogHeader.propTypes = {
+  coverImage: PropTypes.any,
+};
 const BlogBodyStyles = styled.article`
   width: 100%;
   background-color: #fff;
@@ -186,7 +192,6 @@ const BlogBodyStyles = styled.article`
           margin-bottom: 1rem;
           font-weight: 700;
           color: var(--mainColour);
-          font-family: var(--slab);
         }
         &__wrapper {
           display: flex;
@@ -275,6 +280,7 @@ const BlogBody = ({ blogData }) => {
           <div className="sticky">
             <div className="bb__right--author">
               <section>
+                <GetImage data={blogData.authors[0].author.image} />
                 {/* <Img
                   fluid={blogData.authors[0].author.image.asset.fluid}
                   alt={blogData.authors[0].author.image.alt}
@@ -377,7 +383,7 @@ export const query = graphql`
         alt
         asset {
           gatsbyImageData(
-            width: 200
+            width: 900
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
@@ -399,6 +405,7 @@ export const query = graphql`
         }
         publishedAt(formatString: "MMM DD YYYY")
         id
+        readingTimeInMinutes
         categories {
           title
           slug {
@@ -423,9 +430,10 @@ export const query = graphql`
           }
         }
         mainImage {
+          alt
           asset {
             gatsbyImageData(
-              width: 200
+              width: 700
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )

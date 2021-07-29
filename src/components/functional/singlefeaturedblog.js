@@ -140,9 +140,10 @@ const FeaturedBlogStyles = styled.article`
 `;
 const SingleFeaturedBlog = ({ data }) => {
   const i = data;
+  console.log(data);
   return (
     <FeaturedBlogStyles>
-      <Link to={`${i.categories[0].slug.current}/${i.slug.current}`}>
+      <Link to={`/blog/${i.categories[0].slug.current}/${i.slug.current}`}>
         <div className="fea">
           <div className="fea--img">
             <GetImage data={i.mainImage} />
