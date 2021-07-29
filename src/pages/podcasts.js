@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
-import Layout from '../components/layout.js';
+import Layout from '../components/Layout.js';
 import AllPodcasts from '../components/sections/allpodcasts.js';
 import BlogHeader from '../components/sections/blogheader.js';
 

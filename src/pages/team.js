@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { graphql } from 'gatsby';
 import SEO from '../components/functional/SEO';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import TeamHeader from '../components/sections/teamheader';
 import TeamPhotos from '../components/sections/teamphotos';
 import Review from '../components/sections/review';

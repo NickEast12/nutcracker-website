@@ -14,7 +14,7 @@ import {
   FacebookShareButton,
 } from 'react-share';
 import SEO from '../components/functional/SEO';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import EmailIcon from '../svgs/blogsend.svg';
 import TwitterIcon from '../svgs/blogtwitter.svg';
 import FacebookIcon from '../svgs/blogfacebook.svg';

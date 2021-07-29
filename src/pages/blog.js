@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
 import SEO from '../components/functional/SEO';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import BlogHeader from '../components/sections/blogheader';
 import BlogTopics from '../components/sections/blogtopics';
 import PopularBlogs from '../components/sections/popularblogs';

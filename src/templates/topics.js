@@ -4,7 +4,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import SEO from '../components/functional/SEO';
 import SingleBlog from '../components/functional/singleblog';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import TopicsHeader from '../components/sections/topicsheader';
 import SingleFeaturedBlog from '../components/functional/singlefeaturedblog';
 

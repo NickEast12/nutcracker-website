@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/functional/SEO';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import ContactHeader from '../components/sections/contactheader';
 import ContactMain from '../components/sections/contactmain';
 import MapWrapper from '../components/sections/mapwrapper';
