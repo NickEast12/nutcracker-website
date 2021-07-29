@@ -4,10 +4,10 @@ import 'normalize.css';
 import { ThemeProvider } from 'styled-components';
 //* Local imports
 import { Helmet } from 'react-helmet';
-import GlobalStyles from '../styles/globalstyles';
-import Nav from './nav';
-import Footer from './footer';
-import Theme from '../styles/theme';
+import GlobalStyles from '../styles/GlobalStyles';
+import Nav from './Nav';
+import Footer from './Footer';
+import Theme from '../styles/Theme';
 
 // ? https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {

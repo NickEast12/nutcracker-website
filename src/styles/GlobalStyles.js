@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 // ? Local imports
-import vars from './vars';
-import animations from './animations';
-import typography from './typography';
+import vars from './Vars';
+import animations from './Animations';
+import typography from './Typography';
 
 const GlobalStyles = createGlobalStyle`
     ${vars}

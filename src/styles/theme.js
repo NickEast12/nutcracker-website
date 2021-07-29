@@ -1,4 +1,4 @@
-import mixins from './mixins';
+import mixins from './Mixins';
 
 const theme = {
   mixins,
