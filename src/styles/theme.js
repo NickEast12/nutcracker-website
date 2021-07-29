@@ -1,7 +1,7 @@
-import mixins from './Mixins';
+import Mixins from './Mixins';
 
 const Theme = {
-  mixins,
+  Mixins,
 };
 
 export default Theme;
