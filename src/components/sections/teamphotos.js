@@ -20,6 +20,8 @@ const TeamPhotosStyles = styled.section`
   width: 100%;
   background-color: #fff;
   padding: 3rem 0;
+  max-width: 1100px;
+  margin: var(--auto);
   .team--photos {
     max-width: var(--maxWidth);
     margin: 0 auto;
@@ -27,11 +29,14 @@ const TeamPhotosStyles = styled.section`
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1rem;
     column-gap: 0.85rem;
-    @media only screen and (min-width: 750px) {
-      grid-template-columns: repeat(4, 1fr);
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      grid-template-rows: masonry;
     }
     @media only screen and (min-width: 1280px) {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
     }
     &--box {
       width: 100%;
@@ -121,6 +126,7 @@ const TeamPhotosStyles = styled.section`
       }
       &:nth-child(even) {
         margin-top: 2rem;
+
         .team--photos--box--content:hover {
           background-color: rgba(30, 54, 59, 0.5);
         }
@@ -166,9 +172,8 @@ const TeamPhotos = ({ TeamData }) => {
             className="team--photos--box willAnimate photosIn"
             key={team.name}
           >
-            {/* <StaticImage src="../assets/images/Rebecca.jpg" alt="" /> */}
             <GetImage data={team.image} />
-            {/* <GatsbyImage fluid={team.image.asset.fluid} alt={team.image.alt} /> */}
+
             <div className="team--photos--box--content">
               <section>
                 <h5>{team.name}</h5>
