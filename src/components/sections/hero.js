@@ -114,10 +114,29 @@ const HomepageStyled = styled.section`
       padding-bottom: 0.15rem;
       grid-gap: 8rem;
       &--content {
-        padding-top: 5rem;
+        padding-top: 2rem;
       }
       &--icon {
         width: 90%;
+        height: 100%;
+        svg {
+          width: 100%;
+          height: 100%;
+          margin-top: -3rem;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    padding-top: 3rem;
+    .homepage {
+      padding-bottom: 1rem;
+      grid-gap: 8rem;
+      &--content {
+        padding-top: 2.5rem;
+      }
+      &--icon {
+        width: 100%;
         height: 100%;
         svg {
           width: 100%;

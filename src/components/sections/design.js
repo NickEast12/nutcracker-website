@@ -5,17 +5,17 @@ import DesignIcon from '../../svgs/nut-design.svg';
 
 const DesignStyles = styled.section`
   width: 100%;
-  background-color: #fff;
   padding: 3rem 0;
+  background: var(--backgroundColour);
   .design {
     width: 90%;
     margin: 0 auto;
-    max-width: var(--maxWidth);
-    color: var(--backgroundColour);
+    max-width: 1000px;
+    color: #fff;
     &--img {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       width: 100%;
-      height: 100%;
+      height: auto;
 
       svg {
         width: 100%;
@@ -25,26 +25,16 @@ const DesignStyles = styled.section`
     &--wrapper {
       h3 {
         margin-bottom: 1.5rem;
+        color: #fff;
         span {
           font-weight: 800;
-          color: var(--mainColour);
+          color: var(--yellow);
         }
       }
       p {
       }
       &--btn {
-        width: 50%;
-        margin-top: 1.5rem;
-        button {
-          background: var(--mainColour);
-          border: none;
-          span {
-            color: #fff;
-          }
-          &:hover {
-            background-color: var(--navy);
-          }
-        }
+        ${({ theme }) => theme.Mixins.button};
       }
     }
   }
@@ -52,13 +42,14 @@ const DesignStyles = styled.section`
     .design {
       padding: 1.5rem 0;
       &--img {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
       }
     }
   }
-  @media only screen and (min-width: 750px) {
-    padding-bottom: 2rem;
+  @media only screen and (min-width: 768px) {
+    padding: 3rem 0;
+    background-color: var(--backgroundColour);
     .design {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -70,22 +61,34 @@ const DesignStyles = styled.section`
         }
       }
       &--wrapper {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         z-index: 5;
+        h3 {
+          color: #fff;
+          span {
+            color: var(--yellow);
+          }
+        }
+        p {
+          color: #fff;
+        }
       }
     }
   }
   @media only screen and (min-width: 1280px) {
-    padding-top: 0;
+    padding: 0;
     .design {
-      padding: 0;
+      padding: 3em 0;
+      grid-gap: 2rem;
       &--wrapper {
         /* padding-top: 4.5rem; */
         align-self: center;
       }
       &--img {
         svg {
-          width: 90%;
+          width: 100%;
           height: auto;
         }
       }

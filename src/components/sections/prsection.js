@@ -1,8 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import PRIcon from '../../svgs/nut-pr.svg';
-import PRIconAnimated from '../../svgs/new-speechbubbles.svg';
+import PRIcon from '../../svgs/new-bubbles.svg';
 
 const DesignStyles = styled.section`
   width: 100%;
@@ -15,8 +14,8 @@ const DesignStyles = styled.section`
     color: var(--backgroundColour);
     &--img {
       padding-bottom: 2rem;
-      width: 100%;
-
+      width: 80%;
+      margin: var(--auto);
       svg {
         width: 100%;
         height: auto;
@@ -30,34 +29,21 @@ const DesignStyles = styled.section`
           color: var(--mainColour);
         }
       }
-      p {
-      }
       &--btn {
-        width: 50%;
-        margin-top: 1.5rem;
-        button {
-          background: var(--mainColour);
-          border: none;
-          span {
-            color: #fff;
-          }
-          &:hover {
-            background-color: var(--navy);
-          }
-        }
+        ${({ theme }) => theme.Mixins.button};
       }
     }
   }
   @media only screen and (min-width: 414px) {
     .design {
-      padding: 1.5rem 0;
+      padding: 0;
       &--img {
-        width: 95%;
+        width: 75%;
         margin: 0 auto;
       }
     }
   }
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 768px) {
     .design {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -67,20 +53,35 @@ const DesignStyles = styled.section`
         height: 100%;
       }
       &--wrapper {
-        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1024px) {
     padding-bottom: 0;
     .design {
       margin-bottom: 0;
       padding-bottom: 0;
       &--img {
-        svg {
-          width: 90%;
-          height: 100%;
-        }
+        width: 80%;
+      }
+      &--wrapper {
+        /* padding-top: 6.5rem; */
+        align-self: center;
+      }
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    .design {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      &--img {
+        width: 70%;
       }
       &--wrapper {
         /* padding-top: 6.5rem; */
@@ -96,7 +97,6 @@ const PagePR = () => {
       <div className="design">
         <div className="design--img">
           <PRIcon />
-          {/* <PRIconAnimated /> */}
         </div>
         <div className="design--wrapper">
           <h3>

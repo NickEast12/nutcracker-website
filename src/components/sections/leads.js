@@ -11,14 +11,12 @@ const LeadsStyles = styled.section`
   .leads {
     width: 90%;
     margin: 0 auto;
-    max-width: var(--maxWidth);
+    max-width: 1000px;
     &--img {
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
       width: 100%;
       height: 100%;
-
       svg {
-        /* margin-top: -3px; */
         width: 100%;
         height: auto;
       }
@@ -35,59 +33,62 @@ const LeadsStyles = styled.section`
       }
       p {
       }
+
       &--btn {
-        width: 50%;
-        margin-top: 1.5rem;
-        button {
-          background: var(--mainColour);
-          border: solid 2px var(--mainColour);
-          span {
-            /* color: #000; */
-          }
-          &:hover {
-            background: none;
-            span {
-              color: var(--yellow);
-            }
-          }
-        }
+        ${({ theme }) => theme.Mixins.button};
       }
     }
   }
   @media only screen and (min-width: 414px) {
     .leads {
-      padding: 0 0 1.5rem 0;
+      padding: 0 0 0 0;
       &--img {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
       }
     }
   }
-  @media only screen and (min-width: 750px) {
-    padding: 1rem 0;
+  @media only screen and (min-width: 765px) {
+    padding: 3rem 0 0 0;
+    position: relative;
+    overflow: hidden;
     .leads {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 45% 1fr;
       grid-gap: 1rem;
       grid-template-areas: 'a b';
       padding-bottom: 0;
       &--img {
-        position: relative;
         width: 100%;
-        height: 100%;
+        height: auto;
         svg {
           position: absolute;
-          width: 100%;
-          height: 100%;
-          /* top: -1.1rem;
-          left: -6rem; */
+          top: -5px;
+          right: 0.15rem;
+          width: 500px;
+          height: auto;
         }
       }
       &--wrapper {
         grid-area: a;
-        padding-top: 2rem;
-        h3,
-        p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 4rem 0 1rem 0;
+    .leads {
+      &--img {
+        width: 100%;
+        height: auto;
+        svg {
+          position: absolute;
+          top: -5px;
+          right: 0.15rem;
+          width: 560px;
+          height: auto;
         }
       }
     }
@@ -95,15 +96,15 @@ const LeadsStyles = styled.section`
   @media only screen and (min-width: 1280px) {
     .leads {
       padding-bottom: 4rem;
+      grid-template-columns: 55% 1fr;
       &--img {
         svg {
-          width: 130%;
-          height: 120%;
-          top: -21px;
+          width: 650px;
+          right: 4rem;
         }
       }
       &--wrapper {
-        /* padding-top: 6rem; */
+        padding-top: 3rem;
         align-self: center;
       }
     }

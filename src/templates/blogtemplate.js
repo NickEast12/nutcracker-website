@@ -249,7 +249,14 @@ const BlogBody = ({ blogData }) => {
     types: {
       mainImage: (props) => (
         <div className="image">
-          <img src={urlFor(props.node.asset)} alt="Blog Photos" />
+          <img
+            src={`${urlFor(props.node.asset)
+              .width(1388)
+              .height(926)
+              .fit('crop')
+              .auto('format')}`}
+            alt={blogData.title}
+          />
         </div>
       ),
       videoEmbed: ({ node }) => {

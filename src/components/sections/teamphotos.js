@@ -49,14 +49,18 @@ const TeamPhotosStyles = styled.section`
         top: 0;
         left: 0;
         background-color: rgba(65, 64, 76, 0);
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         section {
           width: 80%;
           margin: 0 auto;
           text-align: center;
           padding-top: 1.5rem;
+
           color: #fff;
-          @media only screen and (min-width: 375px) {
+          /* @media only screen and (min-width: 375px) {
             padding-top: 2.5rem;
           }
           @media only screen and (min-width: 414px) {
@@ -70,7 +74,7 @@ const TeamPhotosStyles = styled.section`
           }
           @media only screen and (min-width: 1280px) {
             width: 70%;
-          }
+          } */
           h5 {
             font-size: 1.4rem;
             font-weight: 500;

@@ -1,13 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import NutMedia from '../../svgs/nut-media.svg';
+import NutMedia from '../../svgs/new-social-media.svg';
 
 const SocialMediaStyles = styled.section`
   width: 100%;
-  padding: 3rem 0;
+  padding: 2rem 0;
   .media {
-    max-width: var(--maxWidth);
+    max-width: 1000px;
     width: 90%;
     margin: 0 auto;
     &--img {
@@ -30,17 +30,7 @@ const SocialMediaStyles = styled.section`
       p {
       }
       &--btn {
-        width: 50%;
-        margin-top: 1.5rem;
-        button {
-          background: var(--mainColour);
-          border: none;
-          span {
-          }
-          &:hover {
-            background-color: var(--navy);
-          }
-        }
+        ${({ theme }) => theme.Mixins.button};
       }
     }
   }
@@ -53,12 +43,15 @@ const SocialMediaStyles = styled.section`
       }
     }
   }
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 768px) {
     padding-bottom: 1rem;
+    padding-top: 0;
+    margin-top: 0;
     .media {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: 'a b';
+      grid-gap: 2rem;
       &--img {
         grid-area: b;
         svg {
@@ -66,6 +59,9 @@ const SocialMediaStyles = styled.section`
         }
       }
       &--wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h3,
         p {
           /* color: var(--altBackground); */
@@ -73,6 +69,7 @@ const SocialMediaStyles = styled.section`
       }
     }
   }
+
   @media only screen and (min-width: 1280px) {
     .media {
       &--img {

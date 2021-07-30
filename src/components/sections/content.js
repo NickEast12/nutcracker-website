@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import NutPen from '../../svgs/nut-pen.svg';
+import NutPen from '../../svgs/new-pen.svg';
 
 const ContentStyles = styled.section`
   width: 100%;
@@ -13,13 +13,12 @@ const ContentStyles = styled.section`
       margin: 0;
       padding: 0;
       svg {
-        height: auto;
+        height: 300px;
         width: 100%;
-        margin-bottom: -5px;
       }
     }
     &--wrapper {
-      padding: 3rem 0;
+      padding: 1rem 0 3rem 0;
       &--content {
         color: var(--backgroundColour);
         width: 90%;
@@ -35,75 +34,52 @@ const ContentStyles = styled.section`
           font-size: var(--text);
         }
         &--btn {
-          width: 50%;
-          margin-top: 1.5rem;
-          button {
-            background: var(--mainColour);
-            border: none;
-            &:hover {
-              background-color: var(--navy);
-            }
-          }
+          ${({ theme }) => theme.Mixins.button};
         }
       }
     }
   }
   @media only screen and (min-width: 414px) {
     .content {
-      padding: 1.5rem 0;
       &--img {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
+        svg {
+          height: 400px;
+          width: 100%;
+        }
       }
     }
   }
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 768px) {
     padding-bottom: 3rem;
     .content {
       width: 90%;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 55%;
       grid-gap: 2rem;
-      padding-top: 3rem;
       padding-bottom: 0;
-      &--img {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        /* svg {
-          position: absolute;
-          top: 0;
-          left: -4rem;
-          height: 100%;
-          width: auto;
 
-          z-index: 0;
-        } */
-      }
       &--wrapper {
-        position: relative;
-        z-index: 5;
-        background: none;
-        padding: 3rem 0 4rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
   @media only screen and (min-width: 1280px) {
     padding-bottom: 0;
     .content {
-      padding: 2rem 0 0 0;
       grid-gap: 0;
       &--img {
         svg {
-          width: 85%;
-          height: 100%;
-          /* top: -5.3rem; */
-          left: 0;
+          height: 550px;
+          width: 100%;
         }
       }
       &--wrapper {
-        /* padding-top: 4rem; */
+        width: 90%;
         align-self: center;
       }
     }

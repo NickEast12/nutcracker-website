@@ -41,7 +41,10 @@ const ReviewStyles = styled.section`
       }
     }
     blockquote {
+      padding: 0.5rem 0;
       font-size: var(--titleExtraSmall);
+      max-width: 700px;
+      margin: var(--auto);
     }
     h5 {
       margin-top: 1rem;

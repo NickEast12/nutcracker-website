@@ -4,7 +4,7 @@ const Vars = css`
   :root {
     //*Colours
     --mainColour: #2ba5a2;
-    --backgroundColour: rgb(30, 54, 59);
+    --backgroundColour: #1e363b;
     --yellow: #ffd400;
     --navy: #41404c;
     --altBackground: rgb(245, 245, 245);

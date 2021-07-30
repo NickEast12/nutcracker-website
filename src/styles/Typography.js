@@ -6,6 +6,9 @@ const Typography = css`
     @media only screen and (min-width: 414px) {
       font-size: 17px !important;
     }
+    @media only screen and (min-width: 1280px) {
+      font-size: 18px !important;
+    }
     /* @media only screen and (min-width: 375px) {
       font-size: 18.5px;
     }
