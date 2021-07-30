@@ -49,9 +49,11 @@ const LeadsStyles = styled.section`
     }
   }
   @media only screen and (min-width: 765px) {
-    padding: 3rem 0 0 0;
-    position: relative;
     overflow: hidden;
+    .rel {
+      padding: 3rem 0 0 0;
+      position: relative;
+    }
     .leads {
       display: grid;
       grid-template-columns: 45% 1fr;
@@ -78,7 +80,11 @@ const LeadsStyles = styled.section`
     }
   }
   @media only screen and (min-width: 1024px) {
-    padding: 4rem 0 1rem 0;
+    .rel {
+      padding: 4rem 0 3.5rem 0;
+      max-width: var(--maxWidth);
+      margin: var(--auto);
+    }
     .leads {
       &--img {
         width: 100%;
@@ -100,7 +106,7 @@ const LeadsStyles = styled.section`
       &--img {
         svg {
           width: 650px;
-          right: 4rem;
+          right: 1rem;
         }
       }
       &--wrapper {
@@ -115,26 +121,28 @@ const Leads = () => {
   const i = true;
   return (
     <LeadsStyles>
-      <div className="leads">
-        <div className="leads--img">
-          <NutLeadsIcon />
-          {/* <NutLeadsIconAnimated /> */}
-        </div>
-        <div className="leads--wrapper">
-          <h3>
-            <span>Qualified leads</span>, ready to convert
-          </h3>
-          <p>
-            It’s that simple. We unearth new leads and deliver them to your
-            team, ready to turn into new business, new revenue and new
-            opportunities.
-          </p>
-          <div className="leads--wrapper--btn">
-            <Link to="/lead-generation">
-              <button type="button" className="btn">
-                <span>Find out more</span>
-              </button>
-            </Link>
+      <div className="rel">
+        <div className="leads">
+          <div className="leads--img">
+            <NutLeadsIcon />
+            {/* <NutLeadsIconAnimated /> */}
+          </div>
+          <div className="leads--wrapper">
+            <h3>
+              <span>Qualified leads</span>, ready to convert
+            </h3>
+            <p>
+              It’s that simple. We unearth new leads and deliver them to your
+              team, ready to turn into new business, new revenue and new
+              opportunities.
+            </p>
+            <div className="leads--wrapper--btn">
+              <Link to="/lead-generation">
+                <button type="button" className="btn">
+                  <span>Find out more</span>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
