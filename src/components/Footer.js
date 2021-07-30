@@ -42,9 +42,9 @@ const FooterStyles = styled.footer`
       margin: 1.5rem auto 0 auto;
       section {
         h6 {
-          font-size: var(--titleExtraSmall);
+          font-size: 1.25rem;
           color: var(--backgroundColour);
-          font-weight: 300;
+          font-weight: 500;
         }
         ul {
           list-style: none;
@@ -255,11 +255,11 @@ export default Footer;
 
 const FooterSignUpStyles = styled.section`
   width: 100%;
+  background-color: var(--backgroundColour);
   .signup {
     max-width: var(--maxWidth);
     width: 90%;
     margin: 0 auto;
-    background-color: var(--navy);
     color: #fff;
     border-radius: 4.5px;
     text-align: center;
@@ -303,19 +303,20 @@ const FooterSignUpStyles = styled.section`
       &__check {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 1rem;
         section {
           display: flex;
-          padding: 1.5rem 0 0 0;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.5rem 0;
           svg {
             width: 15px;
-            height: 19px;
-            align-items: center;
+            height: 15px;
             fill: var(--mainColour);
-            margin: 0 !important;
-            padding: 0 !important;
           }
           p {
-            padding-left: 6px;
+            padding-left: 5px;
             font-size: var(--textMediumSmall);
           }
         }
@@ -341,9 +342,12 @@ const FooterSignUpStyles = styled.section`
           width: 90%;
           margin: 0 auto;
         }
+        &__check {
+          gap: 0.15rem;
+        }
       }
     }
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: 765px) {
       &--right {
         width: 80%;
         margin: 0 auto;
@@ -358,8 +362,8 @@ const FooterSignUpStyles = styled.section`
     @media only screen and (min-width: 1024px) {
       padding: 3rem 4rem;
       display: grid;
-      grid-template-columns: 40% 1fr;
-      width: 90%;
+      grid-template-columns: 35% 1fr;
+      width: 100%;
       &--left {
         text-align: left;
         &__img {
@@ -368,7 +372,7 @@ const FooterSignUpStyles = styled.section`
           width: 45px;
         }
         h4 {
-          margin: 10px 0;
+          margin: 1rem 0;
         }
         p {
           margin: 0;
@@ -377,8 +381,11 @@ const FooterSignUpStyles = styled.section`
         }
       }
       &--right {
-        padding-top: 2.5rem;
+        /* padding-top: 2.5rem; */
         margin: 0 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         form {
           width: 100%;
           display: grid;
@@ -391,8 +398,9 @@ const FooterSignUpStyles = styled.section`
           }
         }
         &__check {
-          width: 60%;
-          margin: 0 0 0 auto;
+          /* flex-wrap: nowrap; */
+          width: 100%;
+          margin: 0.5rem 0 0 0;
           justify-content: space-between;
         }
       }
@@ -413,7 +421,10 @@ const FooterSignUp = () => {
             />
           </div>
           <h4>Nut News</h4>
-          <p>Some text on why the user should sign up to our newsletter</p>
+          <p>
+            Join an inspiring community of Nuts to gain exclusive access to
+            announcements, marketing advice and exclusive content.{' '}
+          </p>
         </div>
         <div className="signup--right">
           <form
@@ -439,6 +450,7 @@ const FooterSignUp = () => {
               name="email"
               id="email"
               placeholder="Enter your email address"
+              required
             />
             <button type="submit" className="btn btn--main">
               <span>Sign up</span>
@@ -452,6 +464,14 @@ const FooterSignUp = () => {
             <section>
               <CheckIcon />
               <p>Tips &amp; tricks</p>
+            </section>
+            <section>
+              <CheckIcon />
+              <p>Exclusive Content</p>
+            </section>
+            <section>
+              <CheckIcon />
+              <p>Announcements</p>
             </section>
           </div>
         </div>

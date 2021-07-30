@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
 // import gsap from 'gsap/gsap-core';
 import { gsap } from 'gsap';
 import { useIntersection } from 'react-use';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import EmailIcon from '../../svgs/email.svg';
 import LinkedinIcon from '../../svgs/linkedin.svg';

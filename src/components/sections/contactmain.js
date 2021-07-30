@@ -180,8 +180,9 @@ const ContactMain = () => {
               Talk to a member of our team
             </h2>
             <p className="willAnimate bodyFade ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
-              atque adipisci magnam! Hic, nostrum perferendis.
+              For a marketing agency in London dedicated to helping your
+              business reach new commercial heights, drop us a line or an email
+              for an initial, no-strings-attached conversation.
             </p>
             <section>
               <p className="willAnimate bodyFade ">

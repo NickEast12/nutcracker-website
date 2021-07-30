@@ -8,6 +8,7 @@ const Vars = css`
     --yellow: #ffd400;
     --navy: #41404c;
     --altBackground: rgb(245, 245, 245);
+    --accent: rgb(157, 10, 74);
     //*Font
     --sans: museo-sans, -apple-system, system-ui, 'Helvetica Neue', Helvetica,
       Arial, sans-serif;

@@ -83,7 +83,8 @@ const ContactHeader = () => {
           <span>Let's chat</span>
         </h1>
         <p className="fadeIn">
-          Some text on why they should get in contact or what they get out of it
+          You've got business goals. We've got the experience and expertise to
+          help you achieve them.
         </p>
       </div>
     </ContactHeaderStyles>
