@@ -28,6 +28,7 @@ const LandingPageStyles = styled.section`
   .left {
     position: relative;
     &__wrapper {
+      max-width: 900px;
       width: 85%;
       margin: var(--auto);
       padding: 1rem 0;
@@ -83,6 +84,7 @@ const LandingPageStyles = styled.section`
   .right {
     &__wrapper {
       width: 85%;
+      max-width: 600px;
       margin: var(--auto);
       padding: 1rem 0;
       h3 {
