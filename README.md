@@ -35,3 +35,13 @@
    ```sh
    npm run build
    ```
+
+todo -
+
+add image to podcast player
+add team bios
+services pages
+add animations
+link contact forms
+legal pages
+landing page

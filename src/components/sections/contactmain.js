@@ -94,7 +94,7 @@ const ContactMainStyles = styled.section`
         }
       }
     }
-    @media only screen and (min-width: 750px) {
+    @media only screen and (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
