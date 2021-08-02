@@ -44,6 +44,7 @@ const ReviewStyles = styled.section`
       font-size: var(--titleExtraSmall);
       max-width: 700px;
       margin: var(--auto);
+      line-height: 1.5;
     }
     h5 {
       margin-top: 1rem;
@@ -59,39 +60,16 @@ const ReviewStyles = styled.section`
   }
 `;
 const Review = ({ reviewData }) => {
-  const reviewRef = useRef(null);
-  const contactIntersection = useIntersection(reviewRef, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.2,
-  });
-  const contactFadeIn = (element) => {
-    gsap.to(element, 1, {
-      opacity: 1,
-      y: 0,
-      ease: 'power2.out',
-      delay: 0.5,
-      stagger: {
-        amount: 0.5,
-      },
-    });
-  };
-  useEffect(() => {
-    if (contactIntersection && contactIntersection.isIntersecting) {
-      contactFadeIn('.reviewFade');
-    }
-  });
+  const i = true;
   return (
     <ReviewStyles>
-      <div className="review" ref={reviewRef}>
-        <div className="review__img willAnimate reviewFade ">
+      <div className="review">
+        <div className="review__img ">
           <GetImage data={reviewData.image} />
         </div>
-        <blockquote className="willAnimate reviewFade">
-          "{reviewData.quote}"
-        </blockquote>
-        <h5 className="willAnimate reviewFade">{reviewData.name}</h5>
-        <h6 className="willAnimate reviewFade">{reviewData.job}</h6>
+        <blockquote>"{reviewData.quote}"</blockquote>
+        <h5>{reviewData.name}</h5>
+        <h6>{reviewData.job}</h6>
       </div>
     </ReviewStyles>
   );

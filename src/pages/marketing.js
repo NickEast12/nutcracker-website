@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useIntersection } from 'react-use';
 import gsap from 'gsap/gsap-core';
 import SEO from '../components/functional/SEO';

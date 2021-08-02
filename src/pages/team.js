@@ -49,7 +49,7 @@ export const Query = graphql`
           alt
           asset {
             gatsbyImageData(
-              width: 900
+              width: 1000
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )

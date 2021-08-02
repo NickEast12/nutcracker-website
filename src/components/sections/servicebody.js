@@ -39,6 +39,22 @@ const ServiceBodyStyles = styled.section`
     }
     &__right {
       margin-top: 2rem;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .large-icon-fix {
+      margin: var(--auto);
+      text-align: center;
+      svg {
+        width: 20%;
+        height: 100%;
+        margin: var(--auto);
+        @media only screen and (min-width: 768px) {
+          width: 15%;
+        }
+      }
     }
   }
   @media only screen and (min-width: 1024px) {
@@ -56,19 +72,27 @@ const ServiceBodyStyles = styled.section`
       &__right {
         margin: var(--auto);
         svg {
-          width: 400px;
+          width: 500px;
+        }
+      }
+      .large-icon-fix {
+        svg {
+          width: 30%;
+          height: auto;
         }
       }
     }
   }
 `;
-const ServiceBody = ({ children, icon }) => {
+const ServiceBody = ({ children, icon, alt }) => {
   const i = true;
   return (
     <ServiceBodyStyles>
       <div className="s-b">
         <div className="s-b__left">{children}</div>
-        <div className="s-b__right">{icon}</div>
+        <div className={alt ? 's-b__right large-icon-fix' : 's-b__right'}>
+          {icon}
+        </div>
       </div>
     </ServiceBodyStyles>
   );

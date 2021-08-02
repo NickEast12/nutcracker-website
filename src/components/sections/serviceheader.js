@@ -23,6 +23,9 @@ const ServiceHeaderStyles = styled.header`
           font-weight: 700;
           color: var(--mainColour);
         }
+        .second {
+          color: var(--yellow);
+        }
       }
     }
   }
