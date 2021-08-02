@@ -11,7 +11,7 @@ import NutrackerLogo from '../svgs/nutcracker-logo.svg';
 
 const FooterStyles = styled.footer`
   width: 100%;
-  padding: 2.5rem 0;
+  padding: 0 0 2.5rem 0;
   background-color: #fff;
 
   .footer {
@@ -186,22 +186,22 @@ const Footer = () => {
             <h6>Services</h6>
             <ul>
               <li>
-                <Link to="/pr">PR</Link>
-              </li>
-              <li>
-                <Link to="/social-media">Social media</Link>
-              </li>
-              <li>
                 <Link to="/marketing">Marketing</Link>
               </li>
               <li>
                 <Link to="/content">Content</Link>
               </li>
               <li>
+                <Link to="/social-media">Social media</Link>
+              </li>
+              <li>
                 <Link to="/design">Design</Link>
               </li>
               <li>
                 <Link to="/lead-generation">Lead generation</Link>
+              </li>
+              <li>
+                <Link to="/pr">PR</Link>
               </li>
             </ul>
           </section>
@@ -258,12 +258,12 @@ const FooterSignUpStyles = styled.section`
   background-color: var(--backgroundColour);
   .signup {
     max-width: var(--maxWidth);
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     color: #fff;
     border-radius: 4.5px;
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
     &--left {
       &__img {
         width: 60px;
@@ -272,7 +272,7 @@ const FooterSignUpStyles = styled.section`
       }
       h4 {
         margin: 1rem 0;
-        font-size: var(--titleSemiMedium);
+        font-size: 2rem;
         color: var(--altBackground);
       }
       p {
@@ -323,7 +323,7 @@ const FooterSignUpStyles = styled.section`
       }
     }
     @media only screen and (min-width: 414px) {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       &--left {
         &__img {
@@ -333,8 +333,8 @@ const FooterSignUpStyles = styled.section`
           margin: 0 auto;
         }
         p {
-          width: 70%;
-          margin: 1rem auto;
+          width: 90%;
+          margin: 1.75rem auto;
         }
       }
       &--right {

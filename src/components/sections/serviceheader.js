@@ -26,6 +26,12 @@ const ServiceHeaderStyles = styled.header`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    padding: 7rem 0 4rem 0;
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 8rem 0 5rem 0;
+  }
 `;
 const ServiceHeader = ({ page, children }) => {
   const i = true;

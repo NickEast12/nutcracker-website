@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ReactAudioPlayer from 'react-audio-player';
 import CrossIcon from '../../svgs/close.svg';
+import GetImage from '../functional/getImage';
 
 const PodcastPlayerStyles = styled.section`
   width: 100%;
@@ -27,6 +28,10 @@ const PodcastPlayerStyles = styled.section`
     align-items: center;
     justify-content: center;
     border-radius: 3.5px;
+    .gatsby-image-wrapper {
+      border-radius: 5px;
+      max-width: 400px;
+    }
     h5 {
       margin: 1rem 0;
       font-size: 1.5rem;
@@ -69,6 +74,7 @@ const PodcastPlayer = ({ file, open, setOpen }) => {
   return open ? (
     <PodcastPlayerStyles onClick={() => setOpen(false)}>
       <div className="pp">
+        <GetImage data={file.mainImage} />
         <h5>{file.title}</h5>
         <ReactAudioPlayer src={file.file.asset.url} autoPlay controls />
         <button type="button" onClick={() => setOpen(false)}>

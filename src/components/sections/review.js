@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
 import gsap from 'gsap/gsap-core';
@@ -14,7 +13,7 @@ const ReviewStyles = styled.section`
   border-bottom: solid 2px var(--altBackground);
   text-align: center;
   @media only screen and (min-width: 1024px) {
-    margin: 3rem 0 2rem 0;
+    /* margin: 3rem 0 2rem 0; */
   }
   .review {
     max-width: var(--maxWidth);

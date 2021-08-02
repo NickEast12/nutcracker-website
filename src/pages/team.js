@@ -17,15 +17,7 @@ const Team = ({ data }) => {
       <SEO />
       <TeamHeader />
       <TeamPhotos TeamData={TeamData} />
-      <Review
-        reviewData={reviewData}
-        quote="Nutcracker are an exceptional full service marketing agency, with a
-          unique blend of strategic ideas and delivery excellence. They have
-          gone the extra mile on so many projects for us. I highly recommend
-          working with them."
-        person="Person Name"
-        position="Company"
-      />
+      <Review reviewData={reviewData} />
     </Layout>
   );
 };
