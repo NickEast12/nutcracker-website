@@ -82,7 +82,10 @@ const LeadGeneration = ({ data }) => {
 
   return (
     <Layout alt>
-      <SEO />
+      <SEO
+        title="Lead Generation | Marketing Agency London | Nutcracker Agency"
+        description="Lead generation is at the heart of our marketing strategy here at Nutcracker Marketing. Obtain and generate new sales leads and position your company."
+      />
       <ServiceHeader page="Lead Generation">
         <h1>
           Struggling to compete?{' '}

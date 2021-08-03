@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React, { useEffect } from 'react';
-import { useIntersection } from 'react-use';
-import gsap from 'gsap/gsap-core';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
@@ -152,7 +150,10 @@ const Marketing = ({ data }) => {
 
   return (
     <Layout alt>
-      <SEO />
+      <SEO
+        title="Marketing | Marketing Agency London | Nutcracker Agency"
+        description="A marketing agency in London that uses bespoke marketing campaigns to generate leads, build brand identity and help your business stand out from the crowd."
+      />
       <ServiceHeader page="Marketing">
         <h1>
           Vanishing vision?{' '}

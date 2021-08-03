@@ -14,7 +14,10 @@ const Team = ({ data }) => {
 
   return (
     <Layout alt={alt}>
-      <SEO />
+      <SEO
+        title="Nutcracker Team | Marketing Agency London | Nutcracker Agency"
+        description="Nutcracker team Marketing agency in London. Each with our own set of expertise and skills, working hard to deliver your business objectives."
+      />
       <TeamHeader />
       <TeamPhotos TeamData={TeamData} />
       <Review reviewData={reviewData} />

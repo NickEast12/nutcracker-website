@@ -149,7 +149,10 @@ const SocialMedia = ({ data }) => {
 
   return (
     <Layout alt>
-      <SEO />
+      <SEO
+        title="Social Media | Marketing Agency London | Nutcracker Agency"
+        description="Social Media marketing agency in London with expertise in bringing content platforms to life, using channels to tell stories and create brand loyalty."
+      />
       <ServiceHeader page="Social media">
         <h1>
           Feeling underexposed?{' '}

@@ -22,6 +22,9 @@ const LegalStyles = styled.section`
     h1 {
       margin-top: 1rem;
     }
+    h4 {
+      font-size: 1.5rem;
+    }
     h6 {
       margin-top: 1rem;
       font-size: 1rem;

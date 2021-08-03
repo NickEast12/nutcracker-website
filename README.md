@@ -40,3 +40,4 @@ todo -
 
 add animations
 SEO
+mobile menu

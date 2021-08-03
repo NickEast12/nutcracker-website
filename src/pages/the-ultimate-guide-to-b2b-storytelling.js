@@ -11,7 +11,7 @@ const StorytellingLandingPage = () => {
   return (
     <main>
       <SEO
-        title="The Ultimate guide to B2B storytelling"
+        title="The Ultimate guide to B2B storytelling | Nutcracker Agency"
         description="Learn why storytelling needs to be a part of your content strategy to elevate your brand, influence decision making, connect to your audience and generate leads with the ultimate guide to B2B storytelling from Nutcracker."
         img={MetaImg}
       />

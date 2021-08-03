@@ -29,7 +29,11 @@ const Blog = ({ data }) => {
   console.log(RelatedData);
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title={`${blogData.title} | Nutcracker Agency`}
+        description={blogData.excerpt}
+        img={blogData.mainImage.asset.url}
+      />
       <BlogHeader coverImage={coverImage} />
       <main>
         <BlogBody blogData={blogData} />
@@ -368,6 +372,7 @@ export const query = graphql`
       categories {
         title
       }
+      excerpt
       _rawBody
       authors {
         author {
@@ -377,6 +382,7 @@ export const query = graphql`
           image {
             alt
             asset {
+              url
               gatsbyImageData(
                 width: 200
                 placeholder: BLURRED

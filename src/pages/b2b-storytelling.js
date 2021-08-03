@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import GlobalStyles from '../styles/GlobalStyles';
 import Icon from '../svgs/arrow.svg';
 
@@ -73,6 +74,9 @@ const StoryTelling = ({ data }) => {
   console.log(file);
   return (
     <StoryTellingStyles>
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <GlobalStyles />
       <section>
         <h1>The ultimate guide to B2B Storytelling</h1>

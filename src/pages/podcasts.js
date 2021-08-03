@@ -4,12 +4,17 @@ import React from 'react';
 import Layout from '../components/Layout.js';
 import AllPodcasts from '../components/sections/allpodcasts.js';
 import BlogHeader from '../components/sections/blogheader.js';
+import SEO from '../components/functional/SEO.js';
 
 const Podcasts = ({ data }) => {
   const featuredPodcast = data.Fea.nodes;
   const allPodcasts = data.All.nodes;
   return (
     <Layout alt>
+      <SEO
+        title="Podcasts | What the Nuts have to say |Marketing Agency London | Nutcracker Agency"
+        description="Latest podcasts form the team at Nutcraker"
+      />
       <BlogHeader>
         What the <span>Nuts</span> have to say
       </BlogHeader>

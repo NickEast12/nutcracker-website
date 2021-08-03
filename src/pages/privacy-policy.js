@@ -1,10 +1,17 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Legal from '../components/sections/legal';
 
 const PrivacyPolicy = () => (
   <Layout>
+    <SEO
+      title="Privacy Policy | Marketing Agency London | Nutcracker Agency"
+      description="This Privacy Policy describes the policies of Nutcracker Agency Ltd,
+      Salatin House 19 Cedar Road Sutton, Surrey SM2 5DA, United Kingdom of
+      Great Britain and Northern Ireland"
+    />
     <Legal title="Privacy Policy" date="28-Apr-2021">
       <section>
         <p>
@@ -88,7 +95,7 @@ const PrivacyPolicy = () => (
             Do note that if you do not allow us to collect or process the
             required personal information or withdraw the consent to process the
             same for the required purposes, you may not be able to access or use
-            the services for which your information was sought.§
+            the services for which your information was sought.
           </p>
         </section>
         <section>

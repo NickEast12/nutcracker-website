@@ -53,7 +53,10 @@ const Topics = ({ pageContext, data }) => {
   }));
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title={`${pageContext.title} | Nutcracker Agency`}
+        description={pageContext.description}
+      />
       <TopicsHeader
         name={pageContext.title}
         description={pageContext.description}

@@ -91,7 +91,10 @@ const Content = ({ data }) => {
 
   return (
     <Layout alt>
-      <SEO />
+      <SEO
+        title="Content | Marketing Agency London | Nutcracker Agency"
+        description="Content Marketing agency in London that provides award-winning communications for you. From articles to website copy. Engage, inform & innovate."
+      />
       <ServiceHeader page="Content">
         <h1>
           Lost your voice? Don't worry,{' '}

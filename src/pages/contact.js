@@ -9,7 +9,10 @@ const Contact = () => {
   const alt = true;
   return (
     <Layout alt={alt}>
-      <SEO />
+      <SEO
+        title="Contact us | Marketing Agency London | Nutcracker Agency"
+        description="Contact us to find out how Nutcracker's marketing agency in London can create, implement and manage a successful marketing campaign for your business."
+      />
       <ContactHeader />
       <ContactMain />
       <MapWrapper />

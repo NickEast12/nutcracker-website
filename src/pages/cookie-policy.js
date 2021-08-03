@@ -1,9 +1,15 @@
 import React from 'react';
 import Legal from '../components/sections/legal';
 import Layout from '../components/Layout';
+import SEO from '../components/functional/SEO';
 
 const PrivacyPolicy = () => (
   <Layout>
+    <SEO
+      title="Cookie Policy | Marketing Agency London | Nutcracker Agency"
+      description="This is the Cookie Policy for Nutcracker Agency Ltd, accessible from
+      https://www.nutcrackeragency.com/"
+    />
     <Legal title="Cookie Policy" date="28-Apr-2021">
       <section>
         <p>
