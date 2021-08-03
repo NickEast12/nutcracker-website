@@ -432,7 +432,7 @@ const FooterSignUp = () => {
             method="post"
             netlify-honeypot="bot-field"
             data-netlify="true"
-            action="/signup-successful"
+            action="/thank-you"
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input

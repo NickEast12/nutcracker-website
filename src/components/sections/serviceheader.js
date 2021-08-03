@@ -17,6 +17,7 @@ const ServiceHeaderStyles = styled.header`
       color: #fff;
       margin: 1rem 0;
       font-weight: 300;
+      max-width: 750px;
       strong {
         font-weight: 700;
         span {

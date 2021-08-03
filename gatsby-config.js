@@ -106,8 +106,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.nick-east.com',
-        sitemap: 'https://www.nick-east.com/sitemap.xml',
+        host: 'https://www.nutcrackeragency.com/',
+        sitemap: 'https://www.nutcrackeragency.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },

@@ -38,8 +38,5 @@
 
 todo -
 
-add team bios
 add animations
-link contact forms
-add links from svg on homepage
-legal pages
+SEO

@@ -8,6 +8,7 @@ import GlobalStyles from '../styles/GlobalStyles';
 import Theme from '../styles/theme';
 import Nav from './Nav';
 import Footer from './Footer';
+import Cookie from './functional/cookie';
 
 // ? https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -20,6 +21,7 @@ const Layout = ({ children, alt }) => {
   return (
     <>
       <ThemeProvider theme={Theme}>
+        <Cookie />
         <Helmet>
           <link rel="stylesheet" href="https://use.typekit.net/ltj6ded.css" />
         </Helmet>

@@ -6,7 +6,7 @@ import SingleBlog from '../functional/singleblog';
 
 const PopularBlogsStyles = styled.section`
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 0 4rem 0;
   .recent {
     width: 90%;
     margin: 0 auto;

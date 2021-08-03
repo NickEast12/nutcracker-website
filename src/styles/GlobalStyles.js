@@ -136,7 +136,7 @@ const GlobalStyles = createGlobalStyle`
             
         }
         .cookie--btn {
-            font-family: var(--serif);
+            font-family: var(--sans);
             font-feature-settings: "kern" 1;
             font-kerning: normal;
             font-weight: 300;

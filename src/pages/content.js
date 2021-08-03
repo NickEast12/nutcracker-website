@@ -96,7 +96,7 @@ const Content = ({ data }) => {
         <h1>
           Lost your voice? Don't worry,{' '}
           <strong>
-            <span>Nutcracker</span> will find it
+            <span>Nutcracker</span> will find it.
           </strong>
         </h1>
       </ServiceHeader>

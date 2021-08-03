@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 const Tree = () => (
@@ -5,70 +6,52 @@ const Tree = () => (
     <g>
       <g>
         <g>
-          <a
-            xlinkHref="https://nutcrackeragency.com/new-site/pr/"
-            className="pr"
-          >
+          <Link to="/pr">
             <path
               fill="#fae101"
               d="M.93 89.6S40.6 67.75 45.76 93c0 0 1.36 7.3-3.3 11.2 0 0-15.4 14-41.53-14.62"
             />
-          </a>
+          </Link>
         </g>
         <g>
-          <a
-            xlinkHref="https://nutcrackeragency.com/new-site/lead-generation/"
-            className="lead-generation"
-          >
+          <Link to="/lead-generation">
             <path
               fill="#2ba5a2"
               d="M106.28 107.97S64.03 91.7 62.33 117.4c0 0-.36 7.42 4.78 10.67 0 0 17.14 11.77 39.2-20.1"
             />
-          </a>
+          </Link>
         </g>
         <g>
-          <a
-            xlinkHref="https://nutcrackeragency.com/new-site/design/"
-            className="design"
-          >
+          <Link to="/design">
             <path
               fill="#bcc9c9"
               d="M110.16 62.38s-45.26 1.2-36.96 25.6c0 0 2.53 7 8.52 8.02 0 0 20.33 4.28 28.43-33.62"
             />
-          </a>
+          </Link>
         </g>
         <g>
-          <a
-            xlinkHref="https://nutcrackeragency.com/new-site/content/"
-            className="content"
-          >
+          <Link to="/content">
             <path
               fill="#fae101"
               d="M99.4 22.22S55.3 32.54 68.36 54.76c0 0 3.9 6.34 9.97 6.13 0 0 20.78.1 21.07-38.67"
             />
-          </a>
+          </Link>
         </g>
         <g>
-          <a
-            xlinkHref="https://nutcrackeragency.com/new-site/marketing/"
-            className="marketing"
-          >
+          <Link to="/marketing">
             <path
               fill="#8e1b55"
               d="M37.1 1.32S25.12 45 50.86 44.12c0 0 7.43-.4 10.14-5.84 0 0 10-18.22-23.9-36.96"
             />
-          </a>
+          </Link>
         </g>
         <g>
-          <a
-            xlinkHref="https://nutcrackeragency.com/new-site/social-media/"
-            className="social-media"
-          >
+          <Link to="/social-media">
             <path
               fill="#2ba5a2"
               d="M6.25 38.86s45.18 2.9 35.98 26.96c0 0-2.8 6.9-8.82 7.7 0 0-20.47 3.5-27.15-34.66"
             />
-          </a>
+          </Link>
         </g>
         <g>
           <path
@@ -144,57 +127,43 @@ const Tree = () => (
           x="34.486656 38.820145 41.382439 43.448097 46.234539 48.704544 50.497715 52.137062 55.248734"
           y="27.762"
         >
-          <a xlinkHref="https://nutcrackeragency.com/new-site/marketing/">
-            Marketing
-          </a>
+          <Link to="/marketing">Marketing</Link>
         </tspan>
         <tspan
           x="70.547798 73.835281 76.621719 79.702629 81.495789 83.965797 87.046707"
           y="43.544"
         >
-          <a xlinkHref="https://nutcrackeragency.com/new-site/content/">
-            Content
-          </a>
+          <Link to="/content">Content</Link>
         </tspan>
         <tspan
           x="18.853569 21.569687 24.356131 26.84811 28.487448 31.032173 32.504501"
           y="55.622"
         >
-          <a xlinkHref="https://nutcrackeragency.com/new-site/social-media/">
-            Social
-          </a>
+          <Link to="/social-media">Social</Link>
         </tspan>
         <tspan x="18.563501 22.918962 25.388966 28.302862 29.9422" y="60.017">
-          <a xlinkHref="https://nutcrackeragency.com/new-site/social-media/">
-            media
-          </a>
+          <Link to="/social-media">media</Link>
         </tspan>
         <tspan
           x="78.340172 81.803452 84.273453 86.510513 88.149849 91.0242"
           y="80.757"
         >
-          <a xlinkHref="https://nutcrackeragency.com/new-site/design/">
-            Design
-          </a>
+          <Link to="/design">Design</Link>
         </tspan>
         <tspan x="22.048746 25.041754" y="94.447">
-          <a xlinkHref="https://nutcrackeragency.com/new-site/pr/">PR</a>
+          <Link to="/pr">PR</Link>
         </tspan>
         <tspan
           x="67.321861 70.108299 72.578293 75.140594 78.054497"
           y="113.939"
         >
-          <a xlinkHref="https://nutcrackeragency.com/new-site/lead-generation/">
-            Lead
-          </a>
+          <Link to="/lead-generation">Lead</Link>
         </tspan>
         <tspan
           x="67.321861 70.196205 72.666191 75.77787 78.247879 80.339905 82.871437 84.664612 86.30394 89.090393"
           y="118.334"
         >
-          <a xlinkHref="https://nutcrackeragency.com/new-site/lead-generation/">
-            generation
-          </a>
+          <Link to="/lead-generation">generation</Link>
         </tspan>
       </text>
     </g>
