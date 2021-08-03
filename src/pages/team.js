@@ -44,12 +44,13 @@ export const Query = graphql`
         position
         email
         linkedin
+        bio
         order
         image {
           alt
           asset {
             gatsbyImageData(
-              width: 1000
+              width: 600
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )
