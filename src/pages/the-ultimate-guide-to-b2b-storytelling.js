@@ -5,6 +5,7 @@ import GlobalStyles from '../styles/GlobalStyles';
 import Logo from '../svgs/nutcracker-logo.svg';
 import SEO from '../components/functional/SEO';
 import MetaImg from '../assets/images/background.jpeg';
+import Icon from '../assets/images/nut.svg';
 
 const StorytellingLandingPage = () => {
   const i = true;
@@ -41,15 +42,42 @@ const LandingPageStyles = styled.section`
       h1 {
         margin: 2rem 0 1rem 0;
         font-size: 2.5rem;
-        color: #fff;
+        color: rgb(255, 218, 60);
         font-weight: 700;
+      }
+      ul {
+        list-style: none;
+        li {
+          color: #fff;
+          padding: 0.45rem 0 0.45rem 2rem;
+          font-size: 1.05rem;
+          position: relative;
+          font-weight: 500;
+
+          &::before {
+            position: absolute;
+            top: 0.5rem;
+            left: 0;
+            background-image: url(${Icon});
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            content: '';
+          }
+        }
       }
       h2 {
         color: rgb(255, 218, 60);
         display: block;
-        font-size: 1.35rem;
+        font-size: 1.85rem;
         font-family: var(--sans);
-        font-weight: 400;
+        font-weight: 700;
+        margin-top: 1rem;
+      }
+      h4 {
+        color: #fff;
+        margin: 1rem 0;
+        font-size: 1.25rem;
       }
       p {
         color: #fff;
@@ -187,6 +215,17 @@ const LandingPageStyles = styled.section`
   }
   @media only screen and (min-width: 1280px) {
     grid-template-columns: 55% 1fr;
+    .left {
+      padding-top: 1rem;
+      &__wrapper {
+        h1 {
+          font-size: 2.15rem;
+        }
+        p {
+          margin: 0.25rem 0;
+        }
+      }
+    }
   }
 `;
 const LandingPage = () => {
@@ -198,21 +237,26 @@ const LandingPage = () => {
           <section className="logo">
             <Logo />
           </section>
-          <h1>The Ultimate guide to B2B storytelling</h1>
-          <h2>
-            Growing a business is no fairy-tale – but if you want to magic leads
-            from your content marketing efforts, storytelling is a must have.
-          </h2>
+          {/* <h1>The Ultimate guide to B2B storytelling</h1> */}
+          <h1>Growing a business is no fairy-tale – but if you want to:</h1>
+          <ul>
+            <li>Build your brand</li>
+            <li>Influence decision making</li>
+            <li>Make a lasting impression on your target market</li>
+            <li>Drive action</li>
+            <li>
+              And generate magic leads from your content marketing efforts
+            </li>
+          </ul>
+          <h2>Then storytelling is a must have.</h2>
+          <h4>
+            Nutcracker's ultimate guide to B2B storytelling guide will cover:
+          </h4>
           <p>
-            Storytelling is the best way to build your brand, influence decision
-            making and make your business memorable.
-          </p>
-          <p>
-            And with over 5000 brand messages a day competing for space in your
-            customer’s head like kids in a poor old woman’s shoe, you need
-            content that not only spins a good yarn but inspires your audience
-            to take action. Click that button. Pick up that phone. Book that
-            demo. Buy those magic beans.
+            <span>The</span> psychology of storytelling, <span>what</span> it
+            is, <span>why</span> you need it, when to use it and{' '}
+            <span>how</span> to craft a compelling narrative that converts your
+            marketing efforts into leads.
           </p>
           <p>
             At Nutcracker, we’ve transformed industry unknowns into recognisable
@@ -233,7 +277,10 @@ const LandingPage = () => {
             Want to learn more about <span>B2B storytelling</span> from a master
             raconteur?
           </h3>
-          <StaticImage src="../assets/images/book.jpeg" />
+          <StaticImage
+            src="../assets/images/book.jpeg"
+            alt="Nutcracker's ultimate guide to B2B storytelling guide"
+          />
           <form
             name="landinpage_form"
             method="post"

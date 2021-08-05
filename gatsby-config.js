@@ -12,7 +12,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-preload-fonts`,
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

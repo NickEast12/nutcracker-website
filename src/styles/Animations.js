@@ -25,7 +25,12 @@ const Animations = css`
       z-index: 99999;
     }
   }
-
+  @keyframes e-in {
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
   @keyframes puff-in-center {
     0% {
       -webkit-transform: scale(2);

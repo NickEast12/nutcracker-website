@@ -15,7 +15,10 @@ const Blog = ({ data }) => {
   const AllBlogData = data.AllBlogs.nodes;
   return (
     <Layout alt>
-      <SEO />
+      <SEO
+        title="Latest Blogs | Marketing Agency London | Nutcracker Agency"
+        description="Marketing insights from Nutcracker Marketing agency in London. Take a look at our blogs for all the top news and views from the Nutcracker content team."
+      />
       <BlogHeader>
         <span>News</span> and <span>views </span>from the Nutracker team
       </BlogHeader>

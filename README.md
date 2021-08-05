@@ -38,6 +38,9 @@
 
 todo -
 
-add animations
-SEO
-mobile menu
+for tomorrow
+
+add animations + btn animations
+Open graph image for Dramabuds and nutcracker
+Landing page
+move over blog + bios

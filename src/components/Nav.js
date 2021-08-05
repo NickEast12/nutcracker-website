@@ -172,7 +172,6 @@ const NavStyles = styled.nav`
       }
     }
     .mobile--menu {
-      padding: 5rem 1.5rem;
       position: fixed;
       width: 100%;
       top: 0;
@@ -188,15 +187,91 @@ const NavStyles = styled.nav`
         open ? 'menu' : 'menuOut'} 0.35s forwards; */
       opacity: ${({ open }) => (open ? '1' : '0')};
       visibility: ${({ open }) => (open ? 'shown' : 'hidden')};
-
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &--top {
+        padding-top: 2.5rem;
+        li {
+          &:nth-child(1) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 0.35s
+              forwards;
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 0.5s
+              forwards;
+          }
+          &:nth-child(3) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 0.65s
+              forwards;
+          }
+          &:nth-child(4) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 0.8s
+              forwards;
+          }
+          &:nth-child(5) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 0.95s
+              forwards;
+          }
+          &:nth-child(6) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.1s
+              forwards;
+          }
+        }
+      }
+      &--lower {
+        li {
+          &:nth-child(1) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.25s
+              forwards;
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.4s
+              forwards;
+          }
+          &:nth-child(3) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.55s
+              forwards;
+          }
+          &:nth-child(4) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.7s
+              forwards;
+          }
+        }
+      }
       &--top,
       &--lower {
         list-style: none;
         li {
           color: #ffffff;
-          padding: 0.5rem 0;
+          padding: 0.85rem 0;
           font-weight: 500;
-          font-size: var(--titleExtraSmall);
+          font-size: 0.95rem;
+          @media only screen and (min-width: 375px) {
+            font-size: 1.1rem;
+            padding: 1rem 0;
+          }
+          text-align: center;
           a {
             font-family: var(--serif);
           }
@@ -204,8 +279,8 @@ const NavStyles = styled.nav`
             text-align: center;
             margin: 0 auto;
             display: block;
-            width: 100%;
-            margin-top: 1rem;
+            width: 250px;
+            /* margin-top: 0.5rem; */
             max-width: 100%;
             span {
             }
@@ -216,7 +291,7 @@ const NavStyles = styled.nav`
       }
       &--lower {
         li {
-          border-top: solid rgba(255, 255, 255, 0.95) 2px;
+          /* border-top: solid rgba(255, 255, 255, 0.95) 2px; */
           padding-bottom: 8px;
         }
         .menu-btn {
@@ -359,7 +434,7 @@ const Nav = ({ alt }) => {
             <li>
               <Link to="/contact">
                 <button className="btn btn--main" type="button">
-                  <span>Contact us</span>
+                  <span>Contact us now</span>
                 </button>
               </Link>
             </li>
