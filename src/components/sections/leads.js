@@ -129,17 +129,18 @@ const Leads = () => {
           </div>
           <div className="leads--wrapper">
             <h3>
-              <span>Qualified leads</span>, ready to convert
+              Targeted <span>lead generation</span> strategies that deliver
+              results
             </h3>
             <p>
-              It’s that simple. We unearth new leads and deliver them to your
-              team, ready to turn into new business, new revenue and new
-              opportunities.
+              Creating the right awareness, fuelled by insight, intelligence and
+              creativity, across a mix of channels has the potential to deliver
+              high quality leads at scale.
             </p>
             <div className="leads--wrapper--btn">
               <Link to="/lead-generation">
                 <button type="button" className="btn">
-                  <span>Find out more</span>
+                  <span>Tell me more</span>
                 </button>
               </Link>
             </div>

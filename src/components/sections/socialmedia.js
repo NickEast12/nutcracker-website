@@ -95,16 +95,17 @@ const SocialMedia = () => {
         </div>
         <div className="media--wrapper">
           <h3>
-            <span>Social media</span> connects with your customers
+            Growing your business online using <span>social media</span>
           </h3>
           <p>
-            Join the online conversation, build your brand and unlock new
-            relationships.
+            Whether you want to build awareness of your brand, drive sales,
+            engage new customers or be a part of the conversation, social media
+            is the place to do it.
           </p>
           <div className="media--wrapper--btn">
             <Link to="/social-media">
               <button type="button" className="btn">
-                <span>Find out more</span>
+                <span>Show me how</span>
               </button>
             </Link>
           </div>

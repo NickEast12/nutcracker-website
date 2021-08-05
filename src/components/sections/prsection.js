@@ -100,18 +100,17 @@ const PagePR = () => {
         </div>
         <div className="design--wrapper">
           <h3>
-            Tell the stories that need to be told with a different kind of
-            <span> PR</span>
+            <span>PR</span> that builds your brand online
           </h3>
           <p>
-            It’s a reflection of your brand, your team, your products. Done
-            well, it creates a powerful emotional resonance with your audience
-            that will underpin your brand.
+            Enhance your reputation and visibility within your chosen sectors
+            and beyond with PR that generates response from your target
+            audience, makes the news and tells the story that needs to be told.
           </p>
           <div className="design--wrapper--btn">
             <Link to="/pr">
               <button type="button" className="btn">
-                <span>Find out more</span>
+                <span>Find out how</span>
               </button>
             </Link>
           </div>

@@ -192,6 +192,9 @@ const NavStyles = styled.nav`
       justify-content: center;
       &--top {
         padding-top: 2.5rem;
+        @media only screen and (min-width: 414px) {
+          padding-top: 0;
+        }
         li {
           &:nth-child(1) {
             opacity: 0;

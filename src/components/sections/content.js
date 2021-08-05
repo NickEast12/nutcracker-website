@@ -96,16 +96,17 @@ const Content = () => {
         <div className="content--wrapper">
           <div className="content--wrapper--content">
             <h3>
-              There is power in <span>content.</span> We know how to unlock it
+              <span>Content</span> creation and strategy done right should
+              engage, inspire, influence and leave a lasting impression.
             </h3>
             <p>
-              Our content creation and strategy are designed to engage, inspire
-              and influence your audience – with measurable results.
+              Content creation and strategy done right should engage, inspire,
+              influence and leave a lasting impression.
             </p>
             <div className="content--wrapper--content--btn">
               <Link to="/content">
                 <button type="button" className="btn btn--main">
-                  <span>Find out more</span>
+                  <span>Find out how we do it</span>
                 </button>
               </Link>
             </div>

@@ -105,13 +105,11 @@ const Design = () => {
         </div>
         <div className="design--wrapper">
           <h3>
-            Good <span>design</span> needs to get noticed. We'll make that
-            happen
+            Great <span>design</span> gets you noticed. We make that happen
           </h3>
           <p>
-            It’s a reflection of your brand, your team, your products. Done
-            well, it creates a powerful emotional resonance with your audience
-            that will underpin your brand.
+            Strong branding, design and creative digital content brings your
+            brand to life, tells its own story and reawakens your purpose.
           </p>
           <div className="design--wrapper--btn">
             <Link to="/design">
