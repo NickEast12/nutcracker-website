@@ -188,7 +188,7 @@ const SingleBioStyles = styled.aside`
   justify-content: center;
   section {
     max-width: var(--maxWidth);
-    animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+    animation: fade-in-bck 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     overflow: scroll;
     position: relative;
     background-color: #fff;

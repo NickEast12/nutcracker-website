@@ -6,8 +6,8 @@ import Layout from '../components/Layout';
 import Review from '../components/sections/review';
 import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
-import ServicesExample from '../components/sections/example';
 import ServiceList from '../components/sections/servicelist';
+import ServiceContact from '../components/servicecontact';
 
 const icon = [
   {
@@ -149,47 +149,52 @@ const Marketing = ({ data }) => {
   const review = data.Review;
 
   return (
-    <Layout alt>
+    <Layout>
       <SEO
         title="Marketing | Marketing Agency London | Nutcracker Agency"
         description="A marketing agency in London that uses bespoke marketing campaigns to generate leads, build brand identity and help your business stand out from the crowd."
       />
-      <ServiceHeader page="Marketing">
+      <ServiceHeader page="B2B marketing strategy">
         <h1>
-          Vanishing vision?{' '}
-          <strong>
-            <span>Nutcracker</span> has the right view
-          </strong>
+          We <span>build</span>, <span className="second">design</span> and{' '}
+          <span className="third">execute</span> successful B2B marketing
+          strategies
         </h1>
       </ServiceHeader>
       <ServiceBody icon={icon[0].src}>
         <p>
-          <span>A good marketing strategy is more than a makeover.</span> t’s
-          about amplifying what’s great about your business, adjusting what
-          isn’t and identifying the areas you need to change for the better.
-          It’s about going beneath the surface to underpin your business vision.
+          <span>A good marketing strategy always starts with the why.</span>{' '}
+          It’s about going beneath the surface. It should underpin the way you
+          run your business, lay the foundations for future decision-making and
+          be driven by long-term strategic vision.
         </p>
         <p>
-          Nutcracker digs much deeper to develop a logical, effective plan that
-          will lead your business to success.
-        </p>
-        <p>
-          Where are your audience? What do you need to tell them? What will get
-          you to your business goal? We’ll find the answers.
+          Why do your customers need your product(s) or service(s)? If you can’t
+          answer the why, explain who you are, and outline what you stand for,
+          neither will your customers.
         </p>
       </ServiceBody>
       <ServiceList
+        title="Our approach to your marketing strategy"
+        strong="Building an effective marketing strategy involves extensive research
+        into your target market, creating your customer persona, exploring
+        trends, and investigating market size and demographics."
         p="Whether you’re ready to scale up, need to overcome a business challenge, or are just looking for a fresh take on your marketing, we’ll look at the bigger picture, connect the dots and bring a new lease of life to your marketing. We promise to:"
         data={list}
       />
-      <ServicesExample
-        problem="Disorganised, disparate and disengaged marketing activity that
-              wasn’t in line with business objectives"
-        solution="In-depth market and persona research, followed by a clear,
-              considered strategy aligned with business vision, that accesses
-              the target audience through all the right avenues"
-        result="A surge in brand awareness, visibility and incoming leads – including higher website visitors and newsletter subscribers"
-      />
+
+      <ServiceContact>
+        <h5>
+          <span>Nutcracker</span> digs deep to develop a marketing strategy that
+          will lead your business to success. We start with your business
+          objectives and then we find the answers.
+        </h5>
+        <p>
+          Have questions about{' '}
+          <span>B2B digital sales and marketing strategy </span> and how
+          Nutcracker can help?
+        </p>
+      </ServiceContact>
       <Review reviewData={review} />
     </Layout>
   );

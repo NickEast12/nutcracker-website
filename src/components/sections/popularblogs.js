@@ -34,6 +34,7 @@ const PopularBlogsStyles = styled.section`
       }
     }
     @media only screen and (min-width: 1024px) {
+      width: 85%;
       &__wrapper {
         grid-template-columns: repeat(3, 1fr);
       }

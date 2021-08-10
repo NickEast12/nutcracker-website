@@ -10,6 +10,19 @@ const ServiceBodyStyles = styled.section`
     margin: var(--auto);
     padding: 2rem 0;
     &__left {
+      h3 {
+        font-size: 1.95rem;
+        span {
+          color: var(--mainColour);
+          font-weight: inherit;
+        }
+      }
+      strong {
+        font-weight: 700;
+        margin: 1rem 0;
+        line-height: 1.5;
+        display: block;
+      }
       p {
         margin-bottom: 1rem;
         span {
@@ -72,12 +85,12 @@ const ServiceBodyStyles = styled.section`
       &__right {
         margin: var(--auto);
         svg {
-          width: 500px;
+          width: 450px;
         }
       }
       .large-icon-fix {
         svg {
-          width: 30%;
+          width: 35%;
           height: auto;
         }
       }

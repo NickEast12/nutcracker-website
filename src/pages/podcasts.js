@@ -9,6 +9,7 @@ import SEO from '../components/functional/SEO.js';
 const Podcasts = ({ data }) => {
   const featuredPodcast = data.Fea.nodes;
   const allPodcasts = data.All.nodes;
+  console.log(featuredPodcast);
   return (
     <Layout alt>
       <SEO

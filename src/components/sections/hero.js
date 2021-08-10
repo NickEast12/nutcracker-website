@@ -1,6 +1,8 @@
 import { Link, navigate } from 'gatsby';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { useIntersection } from 'react-use';
 // local imports
 import Tree from '../icons/Tree';
 
@@ -148,25 +150,47 @@ const HomepageStyled = styled.section`
   }
 `;
 const Homepage = () => {
-  const i = true;
+  const homepageRef = useRef(null);
+  const intersection = useIntersection(homepageRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  });
+  const fadeIn = (elm) => {
+    gsap.to(elm, {
+      opacity: 1,
+      y: 0,
+      ease: 'power4.out',
+      delay: 0.5,
+      stagger: {
+        amount: 0.4,
+      },
+    });
+  };
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-expressions
+    intersection && intersection.intersectionRatio < 0.2
+      ? ''
+      : fadeIn('.fadeIn');
+  });
   return (
-    <HomepageStyled>
+    <HomepageStyled ref={homepageRef}>
       <div className="homepage">
-        <div className="homepage--icon">
+        <div className="homepage--icon willAnimate fadeIn ">
           <Tree />
         </div>
         <div className="homepage--content">
-          <h1>
+          <h1 className="willAnimate fadeIn">
             Marketing that <span>transforms</span> your business
           </h1>
-          <p>
+          <p className="willAnimate fadeIn">
             A good marketing strategy turns ideas into actions. The result? New
             leads. New customers. New possibilities.
           </p>
           <div className="homepage--content--btns">
             <button
               type="button"
-              className="btn btn--main"
+              className="btn btn--main willAnimate fadeIn "
               onClick={() => {
                 navigate('/marketing');
               }}
@@ -176,7 +200,7 @@ const Homepage = () => {
 
             <button
               type="button"
-              className="btn btn--alt"
+              className="btn btn--alt willAnimate fadeIn"
               onClick={() => {
                 navigate('/contact');
               }}
@@ -184,7 +208,7 @@ const Homepage = () => {
               <span>Contact us</span>
             </button>
           </div>
-          <h3>
+          <h3 className="willAnimate fadeIn">
             Stand <span>out</span> from the crowd
           </h3>
         </div>

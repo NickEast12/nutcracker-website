@@ -61,6 +61,8 @@ const BlogTopicsStyles = styled.aside`
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
+        /* gap: 2rem; */
         .marker {
           font-weight: 700;
           span {
@@ -69,7 +71,7 @@ const BlogTopicsStyles = styled.aside`
           }
         }
         li {
-          font-size: 1.1rem;
+          font-size: 0.85rem;
         }
       }
     }

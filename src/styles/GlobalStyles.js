@@ -58,7 +58,7 @@ const GlobalStyles = createGlobalStyle`
         position: relative;
         z-index: 99;
         overflow-x: hidden;
-        transition: all .35s ease-in-out;
+        /* transition: all .35s ease-in-out; */
         border: solid 2px var(--mainColour);
        
         span {
@@ -76,9 +76,7 @@ const GlobalStyles = createGlobalStyle`
     .btn--main {
         background: var(--mainColour);
         border: none;
-        &:hover {
-          background-color: var(--navy);
-        }
+        
     }
     .btn--alt {
         background: none;
@@ -86,15 +84,9 @@ const GlobalStyles = createGlobalStyle`
         span {
             color: var(--mainColour);
         }
-        &:hover {
-          background-color: var(--mainColour);
-          transform: scale(1.01, 1.05);
-          span {
-              color: #fff;
-          }
-        }
+       
     }
-    p , li, input, address, label,input, textarea, blockquote, button, span  {
+    p , li, input, address, label,input, textarea, blockquote, button, span , strong {
       font-family: var(--sans);
       font-feature-settings: "kern" 1;
       font-kerning: normal;

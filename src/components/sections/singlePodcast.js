@@ -12,18 +12,21 @@ const FeaturedPodcastStyles = styled.section`
   border: solid 2px var(--altBackground);
   transition: all 0.35s ease;
   cursor: pointer;
+  border: 2px solid rgb(236, 236, 236);
   .f-img {
     position: relative;
     .gatsby-image-wrapper {
       width: 100%;
-      height: 100%;
+      height: auto;
       border-radius: 8.5px 8.5px 0 0;
+      @media only screen and (min-width: 768px) {
+        height: 100%;
+      }
     }
   }
   .f-content {
     padding: 1.5rem 1rem 1rem 1rem;
     border-radius: 0 0 8.5px 8.5px;
-    border: 1px solid rgb(236, 236, 236);
     border-top: none;
     span {
       margin: 0.5rem 0;

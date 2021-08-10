@@ -31,19 +31,15 @@ const Animations = css`
       transform: translateY(0px);
     }
   }
-  @keyframes puff-in-center {
+  @keyframes fade-in-bck {
     0% {
-      -webkit-transform: scale(2);
-      transform: scale(2);
-      -webkit-filter: blur(4px);
-      filter: blur(4px);
+      -webkit-transform: translateZ(80px);
+      transform: translateZ(80px);
       opacity: 0;
     }
     100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-      -webkit-filter: blur(0px);
-      filter: blur(0px);
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
       opacity: 1;
     }
   }

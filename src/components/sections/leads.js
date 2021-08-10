@@ -133,9 +133,9 @@ const Leads = () => {
               results
             </h3>
             <p>
-              Creating the right awareness, fuelled by insight, intelligence and
-              creativity, across a mix of channels has the potential to deliver
-              high quality leads at scale.
+              Creating the right awareness - fuelled by insight, intelligence
+              and creativity, across a mix of channels - has the potential to
+              deliver high quality leads at scale.
             </p>
             <div className="leads--wrapper--btn">
               <Link to="/lead-generation">

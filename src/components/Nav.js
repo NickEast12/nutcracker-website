@@ -346,16 +346,16 @@ const Nav = ({ alt }) => {
               <section>
                 <ul>
                   <li>
-                    <Link to="/marketing">Marketing</Link>
+                    <Link to="/b2b-marketing-strategy">Marketing</Link>
                   </li>
                   <li>
-                    <Link to="/content">Content</Link>
+                    <Link to="/content-marketing-services">Content</Link>
                   </li>
                   <li>
-                    <Link to="/social-media">Social media</Link>
+                    <Link to="/social-media-marketing">Social media</Link>
                   </li>
                   <li>
-                    <Link to="/design">Design</Link>
+                    <Link to="/design-and-branding">Design</Link>
                   </li>
                   <li>
                     <Link to="/lead-generation">Lead generation</Link>
@@ -406,16 +406,16 @@ const Nav = ({ alt }) => {
         <div className="mobile--menu" open={open}>
           <ul className="mobile--menu--top">
             <li>
-              <Link to="/marketing">Marketing</Link>
+              <Link to="/b2b-marketing-strategy">Marketing</Link>
             </li>
             <li>
-              <Link to="/content">Content</Link>
+              <Link to="/content-marketing-services">Content</Link>
             </li>
             <li>
-              <Link to="/social-media">Social media</Link>
+              <Link to="/social-media-marketing">Social media</Link>
             </li>
             <li>
-              <Link to="/design">Design</Link>
+              <Link to="/design-and-branding">Design</Link>
             </li>
             <li>
               <Link to="/lead-generation">Lead generation</Link>

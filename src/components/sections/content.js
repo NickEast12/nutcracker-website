@@ -1,5 +1,7 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useIntersection } from 'react-use';
+import { gsap } from 'gsap';
 import styled from 'styled-components';
 import NutPen from '../../svgs/new-pen.svg';
 
@@ -86,24 +88,46 @@ const ContentStyles = styled.section`
   }
 `;
 const Content = () => {
-  const i = true;
+  const contentRef = useRef(null);
+  const intersection = useIntersection(contentRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2,
+  });
+  const contentIn = (elm) => {
+    gsap.to(elm, {
+      opacity: 1,
+      y: 0,
+      ease: 'power1.out',
+      delay: 0.5,
+      stagger: {
+        amount: 0.4,
+      },
+    });
+  };
+  useEffect(() => {
+    // eslint-disable-next-line no-unused-expressions
+    intersection && intersection.intersectionRatio < 0.2
+      ? ''
+      : contentIn('.contentIn');
+  });
   return (
-    <ContentStyles>
+    <ContentStyles ref={contentRef}>
       <div className="content">
         <div className="content--img">
           <NutPen />
         </div>
         <div className="content--wrapper">
           <div className="content--wrapper--content">
-            <h3>
-              <span>Content</span> creation and strategy done right should
-              engage, inspire, influence and leave a lasting impression.
+            <h3 className="willAnimate contentIn">
+              <span>Content </span> that cuts through the noise. We know how to
+              do it
             </h3>
-            <p>
-              Content creation and strategy done right should engage, inspire,
-              influence and leave a lasting impression.
+            <p className="willAnimate contentIn">
+              Content creation and strategy should engage, inspire, influence
+              and leave a lasting impression.
             </p>
-            <div className="content--wrapper--content--btn">
+            <div className="content--wrapper--content--btn willAnimate contentIn">
               <Link to="/content">
                 <button type="button" className="btn btn--main">
                   <span>Find out how we do it</span>

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
@@ -8,6 +9,9 @@ import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
 import ServicesExample from '../components/sections/example';
 import ServiceList from '../components/sections/servicelist';
+import NewServiceBodyLeft from '../components/sections/newservicebody';
+import ServiceBlogs from '../components/sections/serviceblogs';
+import ServiceContact from '../components/servicecontact';
 
 const icon = [
   {
@@ -130,48 +134,57 @@ const PR = ({ data }) => {
       />
       <ServiceHeader page="PR">
         <h1>
-          PR getting stale?{' '}
-          <strong>
-            <span>Shake it up with</span>{' '}
-            <span className="second">Nutcracker</span>
-          </strong>
+          Tell <span>your</span> brand’s <span className="second">story</span>{' '}
+          with a different kind of <span className="third">PR</span>
         </h1>
       </ServiceHeader>
       <ServiceBody icon={icon[0].src}>
         <p>
           <span>
-            Film quotes get stuck in your head because they’re impactful.
-            Exciting. And memorable.
-          </span>{' '}
-          Nutcracker PR is the same and that’s why it works.
+            We tell the stories that need to be told with a results-driven
+            strategic approach to PR.
+          </span>
         </p>
         <p>
-          We’re throwing out formulaic and routine, and replacing it with a new
-          kind of PR – one that’ll boost revenue by more than the general
-          estimate of 23%.
-        </p>
-        <p>
-          When it comes to PR, Nutcracker understands that number-driven results
-          won’t tell you how your brand makes your audience feel. Instead, we
-          measure the emotional response from your audience, the virality of
-          your content and your share of voice in trade media.
-        </p>
-        <p>
-          Our team of former journalists and editors create insightful and
-          stimulating content. They then connect with relevant people. And
-          finally, they evaluate results, push for better and strive for
-          success. Your success.
+          Your reputation and visibility within your chosen sectors and beyond
+          is of utmost importance in a world where brands are continually
+          competing for attention. Effective PR needs to get you on the radar of
+          your target audience, achieve coverage in the right places, and drive
+          brand awareness in the long term.
         </p>
       </ServiceBody>
-      <ServiceList
-        p="With a huge 68% of consumers more likely to spend time reading content from a brand they relate to, and at a time when a brand’s reputation has never been more important, start your Nutcracker PR journey today. We promise to:"
-        data={list}
-      />
-      <ServicesExample
-        problem="PR that needed to be inspiring, active and improve awareness of a growing brand"
-        solution="Interesting and engaging content supported by eye-catching designs, plus strong connections with the relevant publications, journalists and websites"
-        result="Reputation built for the business, exposure gained in market-leading publications with a combined circulation of 494k+"
-      />
+      <NewServiceBodyLeft
+        alt
+        title="PR"
+        strong="Our team of former journalists and editors have strong editorial, copywriting and media skills that produce great content, stories and ideas, and we stay on top of news and trends so we know when and what to pitch. And our network of journalists, industry professionals and bloggers is wide reaching."
+        fp="We always make sure to keep our nose to the ground, ready to respond with comments to requests from journalists and expand our network with the key influencers in your industry to get you connected with the right people. We don’t over promise, but we do make our mark. We do what’s right for you, making sure you gain exposure across the right audiences and media, whether that be consumer, local, trade or national. "
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <NewServiceBodyLeft
+        title="Digital PR"
+        fp="As with all content, we make sure that your PR stories are optimised for digital channels and secure high-quality backlinks from websites and online publications. We strive to get your brand featured on the websites your potential customers read, the podcasts they listen to and the social media accounts they engage with. "
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceContact>
+        <h5>
+          Whether your <span>PR</span> objectives are to build brand awareness,
+          increase your visibility in a crowded market or generate sales,
+          exposure, leads or website traffic, Nutcracker builds the strategy
+          that’s right for you and gets you coverage where you want and need it.
+        </h5>
+        <p>
+          Want to explore a different approach to PR? Drop us a message today.
+        </p>
+      </ServiceContact>
       <Review reviewData={review} />
     </Layout>
   );
@@ -201,6 +214,57 @@ export const Query = graphql`
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
+        }
+      }
+    }
+    Category: allSanityPost(
+      filter: {
+        categories: {
+          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+        }
+      }
+      limit: 3
+    ) {
+      nodes {
+        title
+        slug {
+          current
+        }
+        publishedAt(formatString: "MMM DD YYYY")
+        id
+        readingTimeInMinutes
+        categories {
+          title
+          slug {
+            current
+          }
+        }
+        authors {
+          author {
+            name
+            id
+            position
+            image {
+              alt
+              asset {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+        mainImage {
+          alt
+          asset {
+            gatsbyImageData(
+              width: 700
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

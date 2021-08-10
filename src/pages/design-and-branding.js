@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
 import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
-import ServicesExample from '../components/sections/example';
-import ServiceList from '../components/sections/servicelist';
+import ServiceContact from '../components/servicecontact';
+import NewServiceBodyLeft from '../components/sections/newservicebody';
+import ServiceBlogs from '../components/sections/serviceblogs';
 
 const icon = [
   {
@@ -86,45 +88,87 @@ const Design = ({ data }) => {
   const review = data.Review;
 
   return (
-    <Layout alt>
+    <Layout>
       <SEO
         title="Design | Marketing Agency London | Nutcracker Agency"
         description="Design and marketing agency in London that excels at delivering designs that fit your business’ identity with well-constructed objectives."
       />
-      <ServiceHeader page="Design">
+      <ServiceHeader page="Design &amp; branding">
         <h1>
-          Feeling underexposed?{' '}
-          <strong>
-            <span>Nutcracker</span> will make an impact
-          </strong>
+          <span>Design</span> and <span className="second">branding</span>{' '}
+          services for <span className="third">businesses</span> that want
+          better
         </h1>
       </ServiceHeader>
       <ServiceBody icon={icon[0].src}>
         <p>
           <span>
-            Good design isn’t just creating something that looks good. It has to
-            fulfil a purpose, communicate a message and have impact
+            We create and evolve your brand story through bold design, strong
+            identity and creative digital content.
           </span>{' '}
-          It needs to connect with your buyers, invoke a strong brand loyalty
-          while also aligning with your entire sales and marketing strategy.
         </p>
         <p>
-          Up to 90% of all information that goes into the human brain is visual,
-          so design is one of the most valuable tools your business can use.
-          Whether it’s online, in print, your logos, your packaging or marketing
-          materials, Nutcracker will make you stand out with cohesive designs
-          that reflect a unified, collective vision of your company’s message.
+          Impactful design isn’t just creating something that looks good on a
+          page. It has to make a connection, have it’s own identity, evoke your
+          brand’s purpose, mission and vision and be unforgettable.
+        </p>
+        <p>
+          It needs to connect you with your audience, build brand loyalty and
+          align with your company objectives with your brand storytelling
+          strategy.
         </p>
       </ServiceBody>
-      <ServiceList
-        p="Design is the face your business shows the world, and 82% of companies believe there is a strong connection between creativity and business success, so it should never be mediocre. We promise to:"
-        data={list}
-      />
-      <ServicesExample
-        problem="Poor website design, uninspiring packaging and unaligned promotional material"
-        solution="Complete website redesign fully aligned with new packaging, catalogues, advertisements, social media platforms and campaigns"
-        result="40% growth in the first year, increased website visitors and increased brand awareness"
-      />
+      <NewServiceBodyLeft
+        title="Brand Design"
+        strong="We work with businesses to create new, and re-defined, re-designed brand identities, that will bring your brand to life, communicate its story and reawaken its purpose."
+        fp="We offer various branding and design packages depending on your
+        requirements, needs and objectives. Our brand design services include
+        everything from the strategic brand propositioning piece, logo
+        creation or re-design, typography, colour choice, visual design
+        strategy, imagery styling and brand guidelines to assets such as
+        labelling, packaging and point of sale."
+        sp="Branding can make or break your business. At Nutcracker, we provide
+        everything you need to connect or reconnect with your audience, make
+        your brand valued and leave a long-lasting impact."
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <NewServiceBodyLeft
+        alt
+        title="Design"
+        fp="Our design ethos at Nutcracker is to create work that makes an impact on our client’s businesses. The Nutcracker design process always centres around a creative end goal, with strategy at its core, we work backwards from there to ensure all design content, in its many forms, forges meaningful connections with your target audience."
+        sp="Whether our graphic designers get to work on a strategic marketing campaign to target a specific sector, e-books/guides or whitepapers, account based marketing campaigns, print advertisements or social content, the design we create always embodies a clear purpose. "
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <NewServiceBodyLeft
+        title="Digital design"
+        fp="In today’s world, digital design is equally as important as traditional design and if your digital presence is lacklustre in comparison to your overall brand identity, you’re making a big mistake. "
+        sp="From social media content and animations or banners for a display marketing campaign, paid social graphics, digital e-guides, email marketing material to assets and icons for your company website, the Nutcracker design team have what it takes to tell your brand’s story in the digital space."
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceContact>
+        <h5>
+          Ready to explore the benefits of <span>design</span> that makes a
+          difference and build upon your most important business asset, your
+          brand?
+        </h5>
+        <p>
+          Let us know where you'd like to start and we can take it from there.
+          Don’t be shy.
+        </p>
+      </ServiceContact>
       <Review reviewData={review} />
     </Layout>
   );
@@ -154,6 +198,57 @@ export const Query = graphql`
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
+        }
+      }
+    }
+    Category: allSanityPost(
+      filter: {
+        categories: {
+          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+        }
+      }
+      limit: 3
+    ) {
+      nodes {
+        title
+        slug {
+          current
+        }
+        publishedAt(formatString: "MMM DD YYYY")
+        id
+        readingTimeInMinutes
+        categories {
+          title
+          slug {
+            current
+          }
+        }
+        authors {
+          author {
+            name
+            id
+            position
+            image {
+              alt
+              asset {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+        mainImage {
+          alt
+          asset {
+            gatsbyImageData(
+              width: 700
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

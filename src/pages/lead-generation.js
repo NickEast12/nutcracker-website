@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
@@ -8,6 +9,9 @@ import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
 import ServicesExample from '../components/sections/example';
 import ServiceList from '../components/sections/servicelist';
+import ServiceBlogs from '../components/sections/serviceblogs';
+import NewServiceBodyLeft from '../components/sections/newservicebody';
+import ServiceContact from '../components/servicecontact';
 
 const icon = [
   {
@@ -81,52 +85,61 @@ const LeadGeneration = ({ data }) => {
   const review = data.Review;
 
   return (
-    <Layout alt>
+    <Layout>
       <SEO
         title="Lead Generation | Marketing Agency London | Nutcracker Agency"
         description="Lead generation is at the heart of our marketing strategy here at Nutcracker Marketing. Obtain and generate new sales leads and position your company."
       />
-      <ServiceHeader page="Lead Generation">
+      <ServiceHeader page="B2B lead generation campaigns and strategy">
         <h1>
-          Struggling to compete?{' '}
-          <strong>
-            <span>Lead the way with</span>{' '}
-            <span className="second">Nutcracker</span>
-          </strong>
+          We deliver targeted <span>lead generation strategies</span> that
+          deliver <span className="second">results </span>
+          and drive business <span className="third">success</span>.
         </h1>
       </ServiceHeader>
+
       <ServiceBody icon={icon[0].src}>
         <p>
           <span>
-            Smiling while you’re dialling is all well and good, but strategy
-            must be at the heart of lead generation.
+            Lead generation is the life-blood of every business. But to succeed
+            in a competitive market, your strategy needs to unite deep sector
+            knowledge, an effective combination of channels and targeted
+            messaging that prompts a response. That’s where Nutcracker comes in.
           </span>{' '}
-          With only one in 10 marketers claiming their efforts are effective in
-          securing sales, now is the time to enlist Nutcracker’s sales team.
         </p>
         <p>
-          Lead generation comes in all different shapes and sizes, through
-          various channels including LinkedIn, email campaigns and age-old phone
-          calls. Ultimately, it is intelligent business positioning that will
-          place your company where your audience is looking, for the best ROI.
-        </p>
-        <p>
-          To succeed in a competitive market, your business needs an efficient
-          strategy, a strong follow-up and a team that can turn prospects into
-          leads. We will take you through every step of the process, pin down
-          your ideal audience and your lead magnet, and propel leads down the
-          path to becoming customers.
+          We know that the key to any successful lead generation campaign or
+          strategy is a thorough understanding of your customer’s journey.
+          Before embarking on any campaign, we explore where your audience are
+          most likely to engage, how far they are along the buying process and
+          what content they are most likely to engage with. This helps us to
+          curate engagement-worthy content that speaks in their language.
         </p>
       </ServiceBody>
-      <ServiceList
-        p="The buying journey is continuously changing. We combine traditional sales pitches with a strong digital presence to understand and qualify perspective leads, tailor information and learn the needs of your customers. We promise to:"
-        data={list}
-      />
-      <ServicesExample
-        problem="An old, inconsistent database, poor targeting campaign and few conversions"
-        solution="Data targeting with bespoke content, 13,500 individual relevant contacts sourced and motivated sales lead activity"
-        result="A transformed email campaign with 99% delivery rates and eight qualified leads from just one newsletter mail-out. Plus £250,000 converted sales"
-      />
+      <NewServiceBodyLeft
+        alt
+        title="Lead generation strategies"
+        fp="Nutcracker’s lead generation services cover tried-and-tested campaign strategies for each major channel, including events and webinars, email marketing, direct mail, landing pages, social media, PPC, content marketing, SEO and age-old phone calls."
+        sp="By aligning sales and marketing, our lead generation strategies help you to pin down your ideal audience, create your lead magnet and fill your sales funnel with prospective buyers. "
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Lead generation strategies | Nutcracker"
+        />
+      </NewServiceBodyLeft>
+      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceContact>
+        <h5>
+          The buying journey is continuously changing. By combining traditional
+          sales pitches with a strong digital presence we can help you
+          understand and qualify prospective leads, tailor information to them
+          and propel leads down the path to becoming customers.
+        </h5>
+        <p>
+          Need to supercharge your business's approach to lead generation? Get
+          in touch.
+        </p>
+      </ServiceContact>
       <Review reviewData={review} />
     </Layout>
   );
@@ -156,6 +169,57 @@ export const Query = graphql`
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
+        }
+      }
+    }
+    Category: allSanityPost(
+      filter: {
+        categories: {
+          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+        }
+      }
+      limit: 3
+    ) {
+      nodes {
+        title
+        slug {
+          current
+        }
+        publishedAt(formatString: "MMM DD YYYY")
+        id
+        readingTimeInMinutes
+        categories {
+          title
+          slug {
+            current
+          }
+        }
+        authors {
+          author {
+            name
+            id
+            position
+            image {
+              alt
+              asset {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+        mainImage {
+          alt
+          asset {
+            gatsbyImageData(
+              width: 700
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

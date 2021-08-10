@@ -10,22 +10,28 @@ const SingleBlogStyles = styled.article`
   padding-bottom: 0.5rem;
   border-radius: 10.5px;
   background-color: #fff;
-  border: solid var(--altBackground) 2px;
+  border: 2px solid rgb(236, 236, 236);
   padding: 0;
   transition: all 0.35s ease;
-  .gatsby-image-wrapper {
-    width: 100%;
-    height: auto;
-    border-radius: 8.5px 8.5px 0 0;
+  .m-i {
+    .gatsby-image-wrapper {
+      width: 100%;
+      height: auto;
+      border-radius: 8.5px 8.5px 0 0;
+    }
   }
   .b-c {
     padding: 1.5rem 1rem 1rem 1rem;
     border-radius: 0 0 8.5px 8.5px;
-    border: 1px solid rgb(236, 236, 236);
+
     border-top: none;
+    display: flex;
+    flex-direction: column;
+
     h6 {
       font-weight: 700;
       font-size: 0.95rem;
+      color: var(--mainColour);
     }
     h3 {
       margin-top: 0.55rem;
@@ -86,7 +92,9 @@ const SingleBlog = ({ data }) => {
       <Link
         to={`/blog/${data.categories[0].slug.current}/${data.slug.current}`}
       >
-        <GetImage data={data.mainImage} />
+        <section className="m-i">
+          <GetImage data={data.mainImage} />
+        </section>
         <section className="b-c">
           <h6>{`${data.categories[0].title} `}</h6>
           <h3>{data.title}</h3>

@@ -95,7 +95,7 @@ const SocialMedia = () => {
         </div>
         <div className="media--wrapper">
           <h3>
-            Growing your business online using <span>social media</span>
+            Grow your business online using <span>social media</span>
           </h3>
           <p>
             Whether you want to build awareness of your brand, drive sales,

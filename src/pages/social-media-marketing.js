@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
@@ -8,6 +9,12 @@ import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
 import ServicesExample from '../components/sections/example';
 import ServiceList from '../components/sections/servicelist';
+import AltServiceSection from '../components/sections/altservicesection';
+import ServiceSection from '../components/sections/servicesection';
+import ServiceBlogs from '../components/sections/serviceblogs';
+import ServiceContact from '../components/servicecontact';
+import OtherServiceSection from '../components/sections/otherservicesection';
+import NewServiceBodyLeft from '../components/sections/newservicebody';
 
 const icon = [
   {
@@ -146,48 +153,88 @@ const list = [
 
 const SocialMedia = ({ data }) => {
   const review = data.Review;
+  const blogs = data.Category.nodes;
 
   return (
-    <Layout alt>
+    <Layout>
       <SEO
         title="Social Media | Marketing Agency London | Nutcracker Agency"
         description="Social Media marketing agency in London with expertise in bringing content platforms to life, using channels to tell stories and create brand loyalty."
       />
-      <ServiceHeader page="Social media">
+      <ServiceHeader page="Social media marketing">
         <h1>
-          Feeling underexposed?{' '}
-          <strong>
-            <span>Nutcracker</span> can change that
-          </strong>
+          <span>Social content</span>, <span className="second">strategy</span>{' '}
+          and <span className="third">social media </span> management
         </h1>
       </ServiceHeader>
       <ServiceBody icon={icon[0].src}>
         <p>
           <span>
-            You wouldn’t paint the whole interior of your house magnolia, then
-            invite potential business connections, colleagues and acquaintances
-            along to look at it and feel inspired.
-          </span>{' '}
-          So why would you plaster your social media platforms with the same,
-          dull feel as everyone else and expect people to engage?
+            We engage target audiences with winning social content that strikes
+            the right chord.
+          </span>
         </p>
-        <p>Twitter. Instagram. Facebook. LinkedIn. Pinterest.</p>
         <p>
-          If your business is already utilising them but needs to step up a gear
-          you’ll be missing out on opportunities, vital conversations and ROI.
-          This is where Nutcracker’s social media team step in – we are ready to
-          engage with your target audience and build your brand awareness.
+          Is it hard to reach the right audience on social media? No. But
+          reaching them takes insight. Nutcracker has the know-how to connect
+          your brand with their target market on the social platforms they use
+          and love.
+        </p>
+        <p>
+          Social content needs to be compelling, engagement-worthy and
+          strategy-informed and consist of highly targeted messaging and
+          campaigns that resonate in the hearts and minds of your audience if
+          you want them to turn into customers. And that’s exactly what we do
+          for our clients.
         </p>
       </ServiceBody>
-      <ServiceList
-        p="From consumer to B2B, 44% of businesses depend on social media to generate brand awareness, with 41% utilising it to drive revenue. But without the right content, relevant hashtags, great designs and the ability to learn from your analytics, social media becomes a vanity project. Done right, it’s a route to increase your business’ exposure and improve sales. We promise to:"
-        data={list}
-      />
-      <ServicesExample
-        problem="An overcrowded market with a time-poor audience"
-        solution="Find the correct avenues to reach that audience, utilise social media to share their message via strong campaigns, a brand identity and clear strategy"
-        result="A 1475% increase in customers viewing social media posts"
-      />
+      <NewServiceBodyLeft
+        alt
+        title="Social content and campaigns"
+        strong="Social content is there to tell a story. Our social media copywriters and designers are gurus in producing engaging, fresh and relevant content and campaigns that entices your social media audience. And they make content that people want to share."
+        fp="Your audience is on social media. Our expertise lies in helping you deliver and generate exactly the right content and messaging that they’ll connect with and respond to."
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <NewServiceBodyLeft
+        title="Social media management"
+        strong="If you want to leave the experts to grow and optimise your social channels, build a community or get your hands on a steady flow of conversion-driving social media content, Nutcracker can do all that and more"
+        fp="When you leave your business's social media management to us we create monthly social media content calendars filled with strategic social content, take care of the posting, and get your platforms growing. "
+        sp="To us, effective social media management comes hand in hand with consistent community management across your social platforms. You wouldn’t send a text or Watsapp message and ignore the replies, so why would you do the same on social? Nutcracker knows what it takes to create a dynamic and highly-engaged social media account. We get involved in relevant conversations, respond to comments and direct messages, and keep brand engagement flowing."
+        tp="And it doesn’t stop there, we can kick-start employee advocacy programmes, undertake personal branding and profile raising for your C suite, and partner with influencers to raise the profile and interest in your brand all through social media. Whatever your ambition, we make it happen. "
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <NewServiceBodyLeft
+        alt
+        title="Social strategy"
+        strong="Nutcracker design and execute effective social marketing campaigns that are built on effective strategy, that we make unique to the objectives of our clients."
+        fp="Whether you want to increase your social presence, build an affinity with a particular or niche demographic or attract and convert visitors into leads, we make sure that the right people are finding and engaging with your business, by delivering the right content at the right time to the right people."
+        sp="Not sure where to find your audience or what platforms and content formats will work best for your brand? We can create a strategy for what your business could – and should – be doing across social."
+      >
+        <StaticImage
+          src="../assets/images/placeholder.jpeg"
+          alt="Brand Design"
+        />
+      </NewServiceBodyLeft>
+      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceContact>
+        <h5>
+          When it comes to <span>social media marketing</span>, we got you. Let
+          us help you get your social media accounts moving in the right
+          direction, you won’t regret it.
+        </h5>
+        <p>
+          Tell us more about your brand and what you want to achieve with social
+          media.
+        </p>
+      </ServiceContact>
       <Review reviewData={review} />
     </Layout>
   );
@@ -217,6 +264,58 @@ export const Query = graphql`
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
+        }
+      }
+    }
+    Category: allSanityPost(
+      filter: {
+        categories: {
+          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+        }
+      }
+
+      limit: 2
+    ) {
+      nodes {
+        title
+        slug {
+          current
+        }
+        publishedAt(formatString: "MMM DD YYYY")
+        id
+        readingTimeInMinutes
+        categories {
+          title
+          slug {
+            current
+          }
+        }
+        authors {
+          author {
+            name
+            id
+            position
+            image {
+              alt
+              asset {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+        mainImage {
+          alt
+          asset {
+            gatsbyImageData(
+              width: 700
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

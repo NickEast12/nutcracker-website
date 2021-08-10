@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useIntersection } from 'react-use';
-import gsap from 'gsap/gsap-core';
+import { gsap } from 'gsap';
 import GetImage from '../functional/getImage';
 
 const ReviewStyles = styled.section`
@@ -19,7 +19,7 @@ const ReviewStyles = styled.section`
     max-width: var(--maxWidth);
     width: 80%;
     margin: 0 auto;
-    color: var(--backgroudColour);
+
     @media only screen and (min-width: 750px) {
       width: 70%;
     }
@@ -45,6 +45,9 @@ const ReviewStyles = styled.section`
       max-width: 700px;
       margin: var(--auto);
       line-height: 1.5;
+      letter-spacing: -0.1px;
+      color: var(--backgroundColour);
+      font-weight: 300;
     }
     h5 {
       margin-top: 1rem;
