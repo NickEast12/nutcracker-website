@@ -26,6 +26,13 @@ const NewServiceBodyStyles = styled.section`
       p {
         margin-bottom: 1rem;
       }
+      ul {
+        width: 95%;
+        margin: 0 auto 0 1rem;
+        li {
+          margin: 0.5rem 0;
+        }
+      }
     }
     .right {
       margin-top: 2rem;
@@ -63,14 +70,26 @@ const NewServiceBodyStyles = styled.section`
   @media only screen and (min-width: 1280px) {
     .s-b-l {
       .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .gatsby-image-wrapper {
-          height: 35rem;
+          height: auto;
         }
       }
     }
   }
 `;
-const NewServiceBodyLeft = ({ title, strong, children, fp, sp, tp, alt }) => {
+const NewServiceBodyLeft = ({
+  title,
+  strong,
+  children,
+  fp,
+  sp,
+  tp,
+  alt,
+  data,
+}) => {
   const i = true;
   return (
     <NewServiceBodyStyles>
@@ -80,8 +99,17 @@ const NewServiceBodyLeft = ({ title, strong, children, fp, sp, tp, alt }) => {
           {strong ? <strong>{strong}</strong> : ''}
 
           <p>{fp}</p>
-          <p>{sp}</p>
+          {sp ? <p>{sp}</p> : ''}
           {tp ? <p>{tp}</p> : ''}
+          {data ? (
+            <ul>
+              {data.map((i) => (
+                <li key={i.text}>{i.text}</li>
+              ))}
+            </ul>
+          ) : (
+            ' '
+          )}
         </div>
         <div className="right">{children}</div>
       </div>

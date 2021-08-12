@@ -32,7 +32,7 @@ const ReviewStyles = styled.section`
       margin: 1rem auto;
       text-align: center;
       @media only screen and (min-width: 750px) {
-        width: 120px;
+        width: 250px;
       }
       .gatsby-image-wrapper {
         width: 100%;

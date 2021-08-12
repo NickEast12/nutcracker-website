@@ -422,8 +422,9 @@ const FooterSignUp = () => {
           </div>
           <h4>Nut News</h4>
           <p>
-            Join an inspiring community of Nuts to gain exclusive access to
-            announcements, marketing advice and exclusive content.{' '}
+            Want to stay in the know with all things B2B marketing advice and
+            get your hands on exclusive content plus a seriously cool and
+            entrepreneurial monthly newsletter from Nutcracker?{' '}
           </p>
         </div>
         <div className="signup--right">
@@ -467,7 +468,7 @@ const FooterSignUp = () => {
             </section>
             <section>
               <CheckIcon />
-              <p>Exclusive Content</p>
+              <p>Exclusive content</p>
             </section>
             <section>
               <CheckIcon />

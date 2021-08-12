@@ -17,7 +17,8 @@ const Podcasts = ({ data }) => {
         description="Latest podcasts form the team at Nutcraker"
       />
       <BlogHeader>
-        What the <span>Nuts</span> have to say
+        Our views on <span>B2B Business Growth </span>, <span>Marketing </span>
+        &amp; <span>Sales</span>
       </BlogHeader>
       <AllPodcasts
         featuredPodcast={featuredPodcast}

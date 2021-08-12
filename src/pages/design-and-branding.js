@@ -119,41 +119,35 @@ const Design = ({ data }) => {
         </p>
       </ServiceBody>
       <NewServiceBodyLeft
+        alt
         title="Brand Design"
-        strong="We work with businesses to create new, and re-defined, re-designed brand identities, that will bring your brand to life, communicate its story and reawaken its purpose."
-        fp="We offer various branding and design packages depending on your
-        requirements, needs and objectives. Our brand design services include
-        everything from the strategic brand propositioning piece, logo
-        creation or re-design, typography, colour choice, visual design
-        strategy, imagery styling and brand guidelines to assets such as
-        labelling, packaging and point of sale."
-        sp="Branding can make or break your business. At Nutcracker, we provide
-        everything you need to connect or reconnect with your audience, make
-        your brand valued and leave a long-lasting impact."
+        strong="We work with businesses to create new, re-defined, re-designed and re-developed brand identities that will bring your brand to life, communicate its story and reawaken its purpose. A large part of our design expertise lies in taking the skeletal foundations of a brand and/or existing logos and working with our clients to develop a fully rounded brand identity that works across all aspects of marketing."
+        fp="We offer various branding and design packages depending on your requirements, needs and objectives. Our brand design services include everything from the strategic brand propositioning piece, logo creation or re-design, typography, colour choice, visual design strategy, imagery styling and brand guidelines to assets such as labelling, packaging and point of sale."
+        sp="Branding can make or break your business. At Nutcracker, we provide everything you need to connect or reconnect with your audience, make your brand valued and leave a long-lasting impact."
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
+          src="../assets/images/brand-design-nutcracker-agency.png"
           alt="Brand Design"
         />
       </NewServiceBodyLeft>
       <NewServiceBodyLeft
-        alt
         title="Design"
         fp="Our design ethos at Nutcracker is to create work that makes an impact on our client’s businesses. The Nutcracker design process always centres around a creative end goal, with strategy at its core, we work backwards from there to ensure all design content, in its many forms, forges meaningful connections with your target audience."
         sp="Whether our graphic designers get to work on a strategic marketing campaign to target a specific sector, e-books/guides or whitepapers, account based marketing campaigns, print advertisements or social content, the design we create always embodies a clear purpose. "
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
-          alt="Brand Design"
+          src="../assets/images/design-nutcracker-agency.png"
+          alt="Design"
         />
       </NewServiceBodyLeft>
       <NewServiceBodyLeft
+        alt
         title="Digital design"
         fp="In today’s world, digital design is equally as important as traditional design and if your digital presence is lacklustre in comparison to your overall brand identity, you’re making a big mistake. "
         sp="From social media content and animations or banners for a display marketing campaign, paid social graphics, digital e-guides, email marketing material to assets and icons for your company website, the Nutcracker design team have what it takes to tell your brand’s story in the digital space."
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
+          src="../assets/images/digital-design-nutcracker-agency.png"
           alt="Brand Design"
         />
       </NewServiceBodyLeft>

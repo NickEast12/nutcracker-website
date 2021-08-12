@@ -28,6 +28,7 @@ const ServiceBodyStyles = styled.section`
         span {
           color: var(--mainColour);
           font-weight: 700;
+          font-size: 1.2rem;
         }
       }
       ul {
@@ -90,7 +91,7 @@ const ServiceBodyStyles = styled.section`
       }
       .large-icon-fix {
         svg {
-          width: 35%;
+          width: 30%;
           height: auto;
         }
       }

@@ -27,6 +27,9 @@ const BlogHeaderStyles = styled.header`
           &:nth-child(2) {
             color: var(--mainColour);
           }
+          &:nth-child(3) {
+            color: var(--accent);
+          }
         }
       }
     }

@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React, { useEffect } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
 import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
-import ServiceList from '../components/sections/servicelist';
 import ServiceContact from '../components/servicecontact';
+import NewServiceBodyLeft from '../components/sections/newservicebody';
+import LowerIcon from '../svgs/marketing-strategy-nutcracker-agency.svg';
 
 const icon = [
   {
@@ -156,9 +158,8 @@ const Marketing = ({ data }) => {
       />
       <ServiceHeader page="B2B marketing strategy">
         <h1>
-          We <span>build</span>, <span className="second">design</span> and{' '}
-          <span className="third">execute</span> successful B2B marketing
-          strategies
+          We build, design and execute <span>results-focussed </span> B2B
+          marketing strategies
         </h1>
       </ServiceHeader>
       <ServiceBody icon={icon[0].src}>
@@ -174,15 +175,17 @@ const Marketing = ({ data }) => {
           neither will your customers.
         </p>
       </ServiceBody>
-      <ServiceList
+      <NewServiceBodyLeft
+        alt
         title="Our approach to your marketing strategy"
         strong="Building an effective marketing strategy involves extensive research
         into your target market, creating your customer persona, exploring
         trends, and investigating market size and demographics."
-        p="Whether you’re ready to scale up, need to overcome a business challenge, or are just looking for a fresh take on your marketing, we’ll look at the bigger picture, connect the dots and bring a new lease of life to your marketing. We promise to:"
+        fp="Whether you’re ready to scale up, need to overcome a business challenge, or are just looking for a fresh take on your marketing, we’ll look at the bigger picture, connect the dots and bring a new lease of life to your marketing. We promise to:"
         data={list}
-      />
-
+      >
+        <LowerIcon />
+      </NewServiceBodyLeft>
       <ServiceContact>
         <h5>
           <span>Nutcracker</span> digs deep to develop a marketing strategy that

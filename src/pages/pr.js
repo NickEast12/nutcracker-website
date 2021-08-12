@@ -127,7 +127,7 @@ const PR = ({ data }) => {
   const review = data.Review;
 
   return (
-    <Layout alt>
+    <Layout>
       <SEO
         title="PR getting stale? | Marketing Agency London | Nutcracker Agency"
         description="A PR Public Relations Marketing agency in London using strategies to inspire and influence your audience and elevate your brand reputation."
@@ -160,7 +160,7 @@ const PR = ({ data }) => {
         fp="We always make sure to keep our nose to the ground, ready to respond with comments to requests from journalists and expand our network with the key influencers in your industry to get you connected with the right people. We don’t over promise, but we do make our mark. We do what’s right for you, making sure you gain exposure across the right audiences and media, whether that be consumer, local, trade or national. "
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
+          src="../assets/images/pr-nutcracker-agency.png"
           alt="Brand Design"
         />
       </NewServiceBodyLeft>
@@ -169,7 +169,7 @@ const PR = ({ data }) => {
         fp="As with all content, we make sure that your PR stories are optimised for digital channels and secure high-quality backlinks from websites and online publications. We strive to get your brand featured on the websites your potential customers read, the podcasts they listen to and the social media accounts they engage with. "
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
+          src="../assets/images/digital-pr-nutcracker-agency.png"
           alt="Brand Design"
         />
       </NewServiceBodyLeft>

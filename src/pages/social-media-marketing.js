@@ -7,14 +7,10 @@ import Layout from '../components/Layout';
 import Review from '../components/sections/review';
 import ServiceHeader from '../components/sections/serviceheader';
 import ServiceBody from '../components/sections/servicebody';
-import ServicesExample from '../components/sections/example';
-import ServiceList from '../components/sections/servicelist';
-import AltServiceSection from '../components/sections/altservicesection';
-import ServiceSection from '../components/sections/servicesection';
 import ServiceBlogs from '../components/sections/serviceblogs';
 import ServiceContact from '../components/servicecontact';
-import OtherServiceSection from '../components/sections/otherservicesection';
 import NewServiceBodyLeft from '../components/sections/newservicebody';
+import LowerIcon from '../svgs/social-media-strategy-nutcracker-agency.svg';
 
 const icon = [
   {
@@ -195,8 +191,8 @@ const SocialMedia = ({ data }) => {
         fp="Your audience is on social media. Our expertise lies in helping you deliver and generate exactly the right content and messaging that they’ll connect with and respond to."
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
-          alt="Brand Design"
+          src="../assets/images/social-content-and-campaigns-nutcracker-agency.png"
+          alt="Social content and campaigns | Nutcracker"
         />
       </NewServiceBodyLeft>
       <NewServiceBodyLeft
@@ -207,8 +203,8 @@ const SocialMedia = ({ data }) => {
         tp="And it doesn’t stop there, we can kick-start employee advocacy programmes, undertake personal branding and profile raising for your C suite, and partner with influencers to raise the profile and interest in your brand all through social media. Whatever your ambition, we make it happen. "
       >
         <StaticImage
-          src="../assets/images/placeholder.jpeg"
-          alt="Brand Design"
+          src="../assets/images/social-media-management-nutcracker-agency.png"
+          alt="Social media management | Nutcracker"
         />
       </NewServiceBodyLeft>
       <NewServiceBodyLeft
@@ -218,10 +214,7 @@ const SocialMedia = ({ data }) => {
         fp="Whether you want to increase your social presence, build an affinity with a particular or niche demographic or attract and convert visitors into leads, we make sure that the right people are finding and engaging with your business, by delivering the right content at the right time to the right people."
         sp="Not sure where to find your audience or what platforms and content formats will work best for your brand? We can create a strategy for what your business could – and should – be doing across social."
       >
-        <StaticImage
-          src="../assets/images/placeholder.jpeg"
-          alt="Brand Design"
-        />
+        <LowerIcon />
       </NewServiceBodyLeft>
       <ServiceBlogs data={data.Category.nodes} />
       <ServiceContact>

@@ -21,7 +21,8 @@ const ContactMainStyles = styled.section`
         font-weight: 700;
       }
       p {
-        margin: 0.75rem 0;
+        display: block;
+        margin: 1rem 0;
       }
 
       .icons {
@@ -34,9 +35,10 @@ const ContactMainStyles = styled.section`
           fill: var(--mainColour);
         }
       }
-      section {
-        p {
-          margin-bottom: 0.5rem;
+      .links {
+        a {
+          display: block;
+          margin: 1.15rem 0;
           color: var(--backgroundColour);
           font-weight: 700;
           span {
@@ -176,26 +178,46 @@ const ContactMain = () => {
       <div className="cmain">
         <div className="cmain__contact">
           <div ref={mainRef}>
-            <h2 className="willAnimate bodyFade">
-              Talk to a member of our team
-            </h2>
+            <h2 className="willAnimate bodyFade">Get in touch.</h2>
             <p className="willAnimate bodyFade ">
-              For a marketing agency in London dedicated to helping your
-              business reach new commercial heights, drop us a line or an email
-              for an initial, no-strings-attached conversation.
+              We’d love to get together with you and hear all about your B2B
+              goals, commercial objectives and marketing to-do list. Drop us a
+              line, say hi by email or give us your details and we’ll get back
+              to you as soon as we can.
             </p>
-            <section>
-              <p className="willAnimate bodyFade ">
+            <section className="links">
+              <a href="tel:020 3941 0305" className="willAnimate bodyFade">
                 <span>020 3941 0305</span>
-              </p>
-              <p className="willAnimate bodyFade ">
+              </a>
+              <a
+                href="mailto:hello@nutcrackeragency.com"
+                className="willAnimate bodyFade"
+              >
                 <span>hello@nutcrackeragency.com</span>
-              </p>
+              </a>
             </section>
             <div className="icons">
-              <LinkedInIcon className="willAnimate bodyFade " />
-              <TwitterIcon className="willAnimate bodyFade " />
-              <InstagramIcon className="willAnimate  bodyFade" />
+              <a
+                href="https://www.linkedin.com/company/nutcracker-agency/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon className="willAnimate bodyFade " />
+              </a>
+              <a
+                href="https://twitter.com/nutcrackersm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterIcon className="willAnimate bodyFade " />
+              </a>
+              <a
+                href="https://www.instagram.com/nutcrackeragency/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon className="willAnimate  bodyFade" />
+              </a>
             </div>
           </div>
         </div>

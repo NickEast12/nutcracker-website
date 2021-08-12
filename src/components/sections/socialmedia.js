@@ -99,8 +99,8 @@ const SocialMedia = () => {
           </h3>
           <p>
             Whether you want to build awareness of your brand, drive sales,
-            engage new customers or be a part of the conversation, social media
-            is the place to do it.
+            engage new customers or be part of the conversation, social media is
+            the place to do it.
           </p>
           <div className="media--wrapper--btn">
             <Link to="/social-media">

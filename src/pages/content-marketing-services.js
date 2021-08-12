@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../components/functional/SEO';
 import Layout from '../components/Layout';
 import Review from '../components/sections/review';
@@ -10,6 +11,8 @@ import ServiceContact from '../components/servicecontact';
 import ServiceSection from '../components/sections/servicesection';
 import AltServiceSection from '../components/sections/altservicesection';
 import ServiceBlogs from '../components/sections/serviceblogs';
+import NewServiceBodyLeft from '../components/sections/newservicebody';
+import LowerIcon from '../svgs/content-strategy-nutcracker-agency.svg';
 
 const icon = [
   {
@@ -81,82 +84,60 @@ const Content = ({ data }) => {
         title="Content | Marketing Agency London | Nutcracker Agency"
         description="Content Marketing agency in London that provides award-winning communications for you. From articles to website copy. Engage, inform & innovate."
       />
-      <ServiceHeader page="Content marketing">
+      <ServiceHeader page="Content marketing services">
         <h1>
-          <span> Content </span>creation and
-          <span className="second"> copywriting</span> for brands with{' '}
+          <span>Content creation</span> and{' '}
+          <span className="second">copywriting</span> for brands with{' '}
           <span className="third">ambition</span>
         </h1>
       </ServiceHeader>
-      <AltServiceSection>
-        <h2>
-          We create content that cuts through the noise, with compelling copy
-          that converts your customers.
-        </h2>
+      <ServiceBody icon={icon[0].src} alt>
+        <p>
+          <span>
+            We create content that cuts through the noise, with compelling copy
+            that converts your customers.
+          </span>
+        </p>
         <p>
           For content to connect with your audience, drive conversions and
           generate leads, it all comes down to words. The words you choose need
           to convince, compel and convert, which is why content strategy,
           ideation and creation all depend on great copy.
         </p>
-      </AltServiceSection>
-      <ServiceBody icon={icon[0].src} alt>
-        <h3>
-          <span>Content strategy</span>, creation and copywriting
-        </h3>
-        <strong>
-          At Nutcracker, our team of content writers and award-winning
-          journalists use a unique content marketing strategy to help brands
-          discover their tone of voice, find their personality and communicate
-          their core values, mission and vision in all outbound messaging.
-        </strong>
         <p>
-          We find the right way to tell your brand’s story, and we tell it in
-          the way it needs to be told. Using a mix of channels, we turn complex
-          or clichéd jargon into clear copy that conveys your messaging,
-          resonates with your target audience, and attracts buyers to your
-          brand.
-        </p>
-        <p>
-          We get personal with our content, we get to know who we are creating
-          content for and the topics and channels that are relevant to them.
-          Even better? Our content strategies are tried and tested to convert.
-        </p>
-        <p>
-          Whether we’re creating e-books, whitepapers or case-studies,
-          infographics, videos, animated graphics or social media, all
-          Nutcracker content is built around a carefully crafted call-to-action
-          to drive action and get them started on a journey with your brand.
+          The words you choose need to convince, compel and convert, which is
+          why content strategy, ideation and creation all depend on great copy.{' '}
         </p>
       </ServiceBody>
-      <ServiceSection>
-        <h3>
-          Digital content <span>&amp; </span> SEO
-        </h3>
-        <p>
-          To thrive in the digital world, it’s not only stakeholder approval
-          that you need to gain for your content, but Google’s. It’s not just
-          what or when you say it, but how
-        </p>
-        <p>
-          you say it. At Nutcracker we ensure that all digital content is
-          optimised for your chosen keywords.
-        </p>
-        <p>
-          All digital copy is built around a solid keyword strategy that will
-          push your content to new heights and drive visitors to your site.
-        </p>
-      </ServiceSection>
-      {/* <ServiceBlogs data={blogs} /> */}
+      <NewServiceBodyLeft
+        alt
+        title="Content strategy"
+        strong="At Nutcracker, our team of content writers and award-winning journalists use a unique content marketing strategy to help brands discover their tone of voice, find their personality and communicate their core values, mission and vision in all outbound messaging. "
+        fp="While there’s no bad time to start thinking about your content strategy, if you’re planning a new website, a campaign or launching a new product, you need to start thinking about your content as soon as possible. A content strategy will ensure that you are creating the right content that will resonate, deliver results and be aligned to the buyer journey."
+      >
+        <LowerIcon />
+      </NewServiceBodyLeft>
+      <NewServiceBodyLeft
+        title="Content creation and copywriting"
+        strong="We help brands to stand out from the crowd through content that sparks valuable conversations between your sales and marketing teams and prospective customers."
+        fp="We find the right way to tell your brand’s story, and we tell it in the way it needs to be told. Our team of writers and editors are not only pros at copy-editing and proof-reading but they produce great content that's guaranteed to be different and memorable. Using a mix of channels, we turn complex or clichéd jargon into clear copy that conveys your messaging, resonates with your target audience, and attracts buyers to your brand. "
+        sp="Whether we’re creating e-books, whitepapers or case-studies, infographics, videos, animated graphics or social media, Nutcracker content is personal to you and will always be built around a carefully crafted call-to-action that will drive action and get them started on a journey with your brand."
+      >
+        <StaticImage
+          src="../assets/images/content-creation-copywriting-nutcracker-agency.png"
+          alt="Content creation and copywriting | Nutcracker"
+        />
+      </NewServiceBodyLeft>
+      <ServiceBlogs data={blogs} />
       <ServiceContact>
         <h5>
-          <span>Content</span> is our bread and butter. We love telling stories
-          and we make sure each story told is always on the money.
+          Content is our bread and butter. We love telling stories and we make
+          sure each story told is always on the money.
         </h5>
         <p>
-          Ready to discuss your <span>content strategy </span> in more detail,
-          test our knowledge of grammar and punctuation, or see if we’ve got
-          what it takes to transform your company strapline?
+          Ready to discuss your content strategy in more detail, test our
+          knowledge of grammar and punctuation, or see if we’ve got what it
+          takes to transform your company strapline?
         </p>
       </ServiceContact>
       <Review reviewData={review} />
@@ -192,8 +173,12 @@ export const Query = graphql`
       }
     }
     Category: allSanityPost(
-      filter: { categories: { elemMatch: { title: { eq: "Content" } } } }
-      limit: 2
+      filter: {
+        categories: {
+          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+        }
+      }
+      limit: 3
     ) {
       nodes {
         title
