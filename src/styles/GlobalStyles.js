@@ -69,14 +69,13 @@ const GlobalStyles = createGlobalStyle`
             font-weight: 500;
             position: relative;
             z-index: 999;
-            transition: all .35s ease-in-out;
         }
     }
     .btn--main {
         background: var(--mainColour);
         border: none;
         &:hover {
-            background: red;
+            background: #196361;
         }
         
     }
@@ -85,6 +84,12 @@ const GlobalStyles = createGlobalStyle`
         border: solid 2px var(--mainColour);
         span {
             color: var(--mainColour);
+        }
+        &:hover {
+            background: var(--mainColour);
+            span {
+                color: #fff;
+            }
         }
        
     }

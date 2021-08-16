@@ -11,7 +11,7 @@ const Mixins = {
         color: #fff;
       }
       &:hover {
-        background-color: var(--navy);
+        background-color: #196361;
       }
     }
   `,
