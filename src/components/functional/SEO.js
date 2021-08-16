@@ -3,9 +3,16 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
 
-export default function SEO({ children, location, description, title, img }) {
+export default function SEO({
+  children,
+  location,
+  description,
+  title,
+  img,
+  schemaMarkup,
+}) {
   const { pathname } = useLocation();
-  const { site } = useStaticQuery(graphql`
+  const { site, data } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -16,40 +23,76 @@ export default function SEO({ children, location, description, title, img }) {
           image
         }
       }
+      data: allSanitySiteSettings {
+        nodes {
+          title
+          openGraph {
+            title
+            description
+            image {
+              asset {
+                url
+              }
+            }
+          }
+        }
+      }
     }
   `);
-
+  const settings = data.nodes[0];
   return (
     <Helmet>
       <html lang="en" />
       <title>{title}</title>
       <link rel="stylesheet" href="https://use.typekit.net/ltj6ded.css" />
-      <meta name="description" content={description} />
+      <title>{title || settings.openGraph.title}</title>
+      <meta
+        name="description"
+        content={description || settings.openGraph.description}
+      />
       <link rel="canonical" href={`${site.siteMetadata.siteUrl}${pathname}`} />
-      <link rel="icon" href="./assets/images/nut.png" />
-      <link rel="alternate icon" href="./assets/images/favicon.ico" />
+      <link rel="icon" href="/favicon.png" />
+      <link rel="alternate icon" href="/favicon.ico" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
-
       <meta
         property="og:url"
         content={`${site.siteMetadata.siteUrl}${pathname}`}
       />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={img} />
-
+      <meta property="og:title" content={title || settings.openGraph.title} />
+      <meta
+        property="og:description"
+        content={description || settings.openGraph.description}
+      />
+      <meta
+        property="og:image"
+        content={img || settings.openGraph.image.asset.url}
+      />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content={site.siteMetadata.siteUrl} />
+      <meta
+        property="twitter:domain"
+        content={`${site.siteMetadata.siteUrl}`}
+      />
       <meta
         property="twitter:url"
         content={`${site.siteMetadata.siteUrl}${pathname}`}
       />
       <meta name="twitter:creator" content={site.siteMetadata.twitter} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={img} />
+      <meta name="twitter:title" content={title || settings.openGraph.title} />
+      <meta
+        name="twitter:description"
+        content={description || settings.openGraph.description}
+      />
+      <meta
+        name="twitter:image"
+        content={img || settings.openGraph.image.asset.url}
+      />
+      {schemaMarkup && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaMarkup)}
+        </script>
+      )}
     </Helmet>
   );
 }
