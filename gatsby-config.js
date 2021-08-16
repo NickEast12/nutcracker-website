@@ -2,9 +2,9 @@ require('dotenv').config({ path: '.env' });
 
 module.exports = {
   siteMetadata: {
-    title: `Enter`,
-    siteUrl: `https://wwww.nick-east.com`,
-    description: `Enter`,
+    title: `Nutcracker | Award-winning Creative B2B Marketing Agency in London`,
+    siteUrl: `https://www.nutcrackeragency.com/`,
+    description: `Discover Nutcracker, an award-winning creative B2B marketing agency based in London. Experts in helping businesses achieve growth and tech startups scale to new heights. `,
     twitter: `@comebacktothis`,
     image: `/icon.png`,
   },

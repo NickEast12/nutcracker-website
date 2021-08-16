@@ -192,7 +192,7 @@ const Homepage = () => {
               type="button"
               className="btn btn--main willAnimate fadeIn "
               onClick={() => {
-                navigate('/marketing');
+                navigate('/b2b-marketing-strategy');
               }}
             >
               <span>Find out more</span>

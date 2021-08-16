@@ -97,7 +97,20 @@ const ServiceContact = ({ children }) => {
     <ServiceContactStyles>
       <div className="s-c">
         <section>{children}</section>
-        <form action="">
+        <form
+          name="service_contact_form"
+          method="post"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          action="/success"
+        >
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="service_contact_form" />
+          <p className="hidden">
+            <label htmlFor="bot-field">
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <section>
             <textarea name="" id="" placeholder="Your message" />
           </section>

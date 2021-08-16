@@ -103,7 +103,7 @@ const SocialMedia = () => {
             the place to do it.
           </p>
           <div className="media--wrapper--btn">
-            <Link to="/social-media">
+            <Link to="/social-media-marketing">
               <button type="button" className="btn">
                 <span>Show me how</span>
               </button>

@@ -58,7 +58,6 @@ const GlobalStyles = createGlobalStyle`
         position: relative;
         z-index: 99;
         overflow-x: hidden;
-        /* transition: all .35s ease-in-out; */
         border: solid 2px var(--mainColour);
        
         span {
@@ -76,6 +75,9 @@ const GlobalStyles = createGlobalStyle`
     .btn--main {
         background: var(--mainColour);
         border: none;
+        &:hover {
+            background: red;
+        }
         
     }
     .btn--alt {

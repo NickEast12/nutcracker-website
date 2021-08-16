@@ -112,7 +112,7 @@ const Design = () => {
             brand to life, tells its own story and reawakens your purpose.
           </p>
           <div className="design--wrapper--btn">
-            <Link to="/design">
+            <Link to="/design-and-branding">
               <button type="button" className="btn">
                 <span>Find out more</span>
               </button>
