@@ -172,7 +172,10 @@ const LeadGeneration = ({ data }) => {
       >
         <LowerIcon />
       </NewServiceBodyLeft>
-      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceBlogs
+        data={data.Category.nodes}
+        title="Lead generation and B2B sales insight"
+      />
       <ServiceContact>
         <h5>
           The buying journey is continuously changing. By combining traditional
@@ -220,7 +223,7 @@ export const Query = graphql`
     Category: allSanityPost(
       filter: {
         categories: {
-          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+          elemMatch: { slug: { current: { eq: "sales-and-lead-generation" } } }
         }
       }
       limit: 3

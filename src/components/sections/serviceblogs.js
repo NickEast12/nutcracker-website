@@ -37,14 +37,13 @@ const ServiceBlogsStyles = styled.section`
     }
   }
 `;
-const ServiceBlogs = ({ data }) => {
+const ServiceBlogs = ({ data, title }) => {
   const i = true;
 
   return (
     <ServiceBlogsStyles>
       <div className={data.length === 0 ? 'empty' : 's-b'}>
-        <h4>See for yourself.</h4>
-        <p>Select blogs for ????</p>
+        <h4>{title}</h4>
         <div className="s-b__grid">
           {data.map((blog) => (
             <SingleBlog data={blog} key={blog.title} alt />

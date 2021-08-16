@@ -17,8 +17,10 @@ const BlogHeaderStyles = styled.header`
       margin-top: 1.5rem;
 
       h1 {
-        margin: 0.5rem 0;
+        margin: 0.5rem auto;
         color: #fff;
+        max-width: 850px;
+
         span {
           font-weight: 800;
           &:nth-child(1) {

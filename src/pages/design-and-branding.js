@@ -151,7 +151,10 @@ const Design = ({ data }) => {
           alt="Brand Design"
         />
       </NewServiceBodyLeft>
-      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceBlogs
+        data={data.Category.nodes}
+        title="Insight from the Nutcracker team"
+      />
       <ServiceContact>
         <h5>
           Ready to explore the benefits of <span>design</span> that makes a
@@ -198,7 +201,7 @@ export const Query = graphql`
     Category: allSanityPost(
       filter: {
         categories: {
-          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
+          elemMatch: { slug: { current: { eq: "news-and-opinions" } } }
         }
       }
       limit: 3

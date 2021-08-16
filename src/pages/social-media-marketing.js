@@ -216,7 +216,10 @@ const SocialMedia = ({ data }) => {
       >
         <LowerIcon />
       </NewServiceBodyLeft>
-      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceBlogs
+        data={data.Category.nodes}
+        title="Our social media tips and tricks"
+      />
       <ServiceContact>
         <h5>
           When it comes to <span>social media marketing</span>, we got you. Let
@@ -262,9 +265,7 @@ export const Query = graphql`
     }
     Category: allSanityPost(
       filter: {
-        categories: {
-          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
-        }
+        categories: { elemMatch: { slug: { current: { eq: "social-media" } } } }
       }
 
       limit: 2

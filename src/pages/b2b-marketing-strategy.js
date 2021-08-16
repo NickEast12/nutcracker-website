@@ -10,6 +10,7 @@ import ServiceBody from '../components/sections/servicebody';
 import ServiceContact from '../components/servicecontact';
 import NewServiceBodyLeft from '../components/sections/newservicebody';
 import LowerIcon from '../svgs/marketing-strategy-nutcracker-agency.svg';
+import ServiceBlogs from '../components/sections/serviceblogs';
 
 const icon = [
   {
@@ -149,7 +150,7 @@ const list = [
 
 const Marketing = ({ data }) => {
   const review = data.Review;
-
+  const blogs = data.Category.nodes;
   return (
     <Layout>
       <SEO
@@ -198,6 +199,7 @@ const Marketing = ({ data }) => {
           Nutcracker can help?
         </p>
       </ServiceContact>
+      <ServiceBlogs data={blogs} title="Our marketing insight" />
       <Review reviewData={review} />
     </Layout>
   );
@@ -227,6 +229,55 @@ export const Query = graphql`
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
+        }
+      }
+    }
+    Category: allSanityPost(
+      filter: {
+        categories: { elemMatch: { slug: { current: { eq: "marketing" } } } }
+      }
+      limit: 3
+    ) {
+      nodes {
+        title
+        slug {
+          current
+        }
+        publishedAt(formatString: "MMM DD YYYY")
+        id
+        readingTimeInMinutes
+        categories {
+          title
+          slug {
+            current
+          }
+        }
+        authors {
+          author {
+            name
+            id
+            position
+            image {
+              alt
+              asset {
+                gatsbyImageData(
+                  width: 200
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+        }
+        mainImage {
+          alt
+          asset {
+            gatsbyImageData(
+              width: 700
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
         }
       }
     }

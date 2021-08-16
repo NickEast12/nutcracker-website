@@ -161,7 +161,7 @@ const PR = ({ data }) => {
       >
         <StaticImage
           src="../assets/images/pr-nutcracker-agency.png"
-          alt="Brand Design"
+          alt="PR | Nutcracker Agency"
         />
       </NewServiceBodyLeft>
       <NewServiceBodyLeft
@@ -170,10 +170,10 @@ const PR = ({ data }) => {
       >
         <StaticImage
           src="../assets/images/digital-pr-nutcracker-agency.png"
-          alt="Brand Design"
+          alt="Digtial PR | Nutcracker Agency"
         />
       </NewServiceBodyLeft>
-      <ServiceBlogs data={data.Category.nodes} />
+      <ServiceBlogs data={data.Category.nodes} title="Our PR advice" />
       <ServiceContact>
         <h5>
           Whether your <span>PR</span> objectives are to build brand awareness,
@@ -218,11 +218,7 @@ export const Query = graphql`
       }
     }
     Category: allSanityPost(
-      filter: {
-        categories: {
-          elemMatch: { slug: { current: { eq: "content-marketing-and-seo" } } }
-        }
-      }
+      filter: { categories: { elemMatch: { slug: { current: { eq: "pr" } } } } }
       limit: 3
     ) {
       nodes {

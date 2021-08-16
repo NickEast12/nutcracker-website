@@ -128,7 +128,7 @@ const Content = ({ data }) => {
           alt="Content creation and copywriting | Nutcracker"
         />
       </NewServiceBodyLeft>
-      <ServiceBlogs data={blogs} />
+      <ServiceBlogs data={blogs} title="Our content and copywriting tips" />
       <ServiceContact>
         <h5>
           Content is our bread and butter. We love telling stories and we make
