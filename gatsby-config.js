@@ -43,15 +43,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nick East `,
-        short_name: `Nick East`,
-        description: `I'm a front-end web developer based in London, UK. With a love for designing and writing code.`,
+        name: `Nutcracker | Award-winning Creative B2B Marketing Agency in London`,
+        short_name: `Nutcracker Agency`,
+        description: `Discover Nutcracker, an award-winning creative B2B marketing agency based in London. Experts in helping businesses achieve growth and tech startups scale to new heights.`,
         start_url: `/`,
         lang: `en`,
-        background_color: `#162129`,
-        theme_color: `#1bbc9b`,
+        background_color: `#ffffff`,
+        theme_color: `#2ba5a2`,
         display: `minimal-ui`,
-        icon: `./src/assets/images/icon.png`,
+        icon: `./src/assets/images/nut.png`,
       },
     },
     {
@@ -81,7 +81,7 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
-        color: `#1bbc9b`,
+        color: `#2ba5a2`,
         // Disable the loading spinner.
         showSpinner: true,
       },
