@@ -135,8 +135,8 @@ const LeadGeneration = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Lead Generation | Marketing Agency London | Nutcracker Agency"
-        description="Lead generation is at the heart of our marketing strategy here at Nutcracker Marketing. Obtain and generate new sales leads and position your company."
+        title="B2B Lead Generation Strategies &amp; Solutions | Nutcracker "
+        description="Nutcracker helps B2B brands generate, nurture and convert more leads. From telemarketing and email marketing to PPC campaigns, find out more about our results generating lead generation services and strategies."
       />
       <ServiceHeader page="Lead generation">
         <h1>

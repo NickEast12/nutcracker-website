@@ -129,8 +129,8 @@ const PR = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="PR getting stale? | Marketing Agency London | Nutcracker Agency"
-        description="A PR Public Relations Marketing agency in London using strategies to inspire and influence your audience and elevate your brand reputation."
+        title="PR, Outreach &amp; Digital PR | Nutcracker"
+        description="utcracker takes a different approach to PR defined by your brand's goals and objectives. We promise digital and traditional PR that delivers tangible business impact. Find out more."
       />
       <ServiceHeader page="PR">
         <h1>

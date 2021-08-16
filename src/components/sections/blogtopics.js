@@ -46,8 +46,9 @@ const BlogTopicsStyles = styled.aside`
   }
   .topics--desktop {
     display: none;
+    max-width: var(--maxWidth);
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .topics {
       display: none;
     }
@@ -71,14 +72,16 @@ const BlogTopicsStyles = styled.aside`
           }
         }
         li {
-          font-size: 0.85rem;
+          font-size: 1rem;
+          a[aria-current='page'] {
+            font-weight: 700;
+            span {
+              padding-bottom: 5px;
+              border-bottom: solid 7px var(--mainColour);
+            }
+          }
         }
       }
-    }
-  }
-  @media only screen and (min-width: 1024px) {
-    .topics--desktop {
-      width: 60%;
     }
   }
 `;

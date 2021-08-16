@@ -90,8 +90,8 @@ const Design = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Design | Marketing Agency London | Nutcracker Agency"
-        description="Design and marketing agency in London that excels at delivering designs that fit your business’ identity with well-constructed objectives."
+        title="Design, Branding &amp; Digital Design | Nutcracker"
+        description="Nutcracker’s design and branding expertise defines brand identities, evolves ambitious brands and startups, and creates scroll-stopping digital content."
       />
       <ServiceHeader page="Design &amp; branding">
         <h1>

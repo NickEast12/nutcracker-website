@@ -154,8 +154,9 @@ const SocialMedia = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Social Media | Marketing Agency London | Nutcracker Agency"
-        description="Social Media marketing agency in London with expertise in bringing content platforms to life, using channels to tell stories and create brand loyalty."
+        title="Social Media Marketing &amp; Social Strategy | Nutcracker"
+        description="Nutcracker’s unique, creative approach to B2B social strategy and social media management enables ambitious brands to drive brand awareness, generate engagement-worthy content and stand out from the crowd.
+        "
       />
       <ServiceHeader page="Social media marketing">
         <h1>

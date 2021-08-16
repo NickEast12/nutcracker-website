@@ -10,8 +10,8 @@ const Contact = () => {
   return (
     <Layout alt={alt}>
       <SEO
-        title="Contact us | Marketing Agency London | Nutcracker Agency"
-        description="Contact us to find out how Nutcracker's marketing agency in London can create, implement and manage a successful marketing campaign for your business."
+        title="Get in touch | Award winning B2B Marketing Agency | Nutcracker"
+        description="Contact us at Nutcracker, we can’t wait to hear from you. Together we can discover how you can finally fulfill your B2B Marketing needs and objectives. Fill out the contact us form and we’ll be in touch."
       />
       <ContactHeader />
       <ContactMain />

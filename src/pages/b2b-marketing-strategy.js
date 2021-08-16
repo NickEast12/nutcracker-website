@@ -154,8 +154,8 @@ const Marketing = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Marketing | Marketing Agency London | Nutcracker Agency"
-        description="A marketing agency in London that uses bespoke marketing campaigns to generate leads, build brand identity and help your business stand out from the crowd."
+        title="B2B Marketing Strategy, Implementation &amp; Insight | Nutcracker "
+        description="As a B2B marketing agency, Nutcracker provides consultation and strategy to brands and startups looking to grow their business, achieve their dreams and succeed expectations. Find out more."
       />
       <ServiceHeader page="B2B marketing strategy">
         <h1>

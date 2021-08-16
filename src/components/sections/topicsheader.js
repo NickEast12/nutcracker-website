@@ -65,14 +65,10 @@ const TopicsHeaderStyles = styled.header`
       }
       .topics--desktop {
         display: none;
-      }
-      @media only screen and (min-width: 768px) {
-        .topics {
-          display: none;
-        }
-        .topics--desktop {
+        max-width: var(--maxWidth);
+        @media only screen and (min-width: 1100px) {
           display: block;
-          padding: 1.5rem 0 0.9rem 0;
+          padding: 1.5rem 0;
           width: 90%;
           margin: var(--auto);
           ul {
@@ -80,6 +76,8 @@ const TopicsHeaderStyles = styled.header`
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            flex-wrap: wrap;
+            /* gap: 2rem; */
             .marker {
               font-weight: 700;
               span {
@@ -88,10 +86,10 @@ const TopicsHeaderStyles = styled.header`
               }
             }
             li {
-              font-size: 1.1rem;
+              font-size: 1rem;
               a[aria-current='page'] {
+                font-weight: 700;
                 span {
-                  font-weight: 700;
                   padding-bottom: 5px;
                   border-bottom: solid 7px var(--mainColour);
                 }
@@ -100,26 +98,25 @@ const TopicsHeaderStyles = styled.header`
           }
         }
       }
-      @media only screen and (min-width: 1024px) {
-        .topics--desktop {
-          width: 70%;
-        }
-      }
     }
     @media only screen and (min-width: 768px) {
       section {
-        margin-bottom: 0;
+        margin-bottom: 2rem;
+      }
+    }
+    @media only screen and (min-width: 1100px) {
+      .topics {
+        display: none;
       }
     }
   }
 `;
-const TopicsHeader = ({ name, description, data, page, topics }) => {
+const TopicsHeader = ({ name, data, page, topics }) => {
   const [open, setOpen] = useState(false);
   return (
     <TopicsHeaderStyles>
       <div className="t-h">
         <h1>{name}</h1>
-        <p>{description}</p>
         <section open={open}>
           <div className="topics">
             <div

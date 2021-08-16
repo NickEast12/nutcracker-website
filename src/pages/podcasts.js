@@ -13,8 +13,8 @@ const Podcasts = ({ data }) => {
   return (
     <Layout alt>
       <SEO
-        title="Podcasts | What the Nuts have to say |Marketing Agency London | Nutcracker Agency"
-        description="Latest podcasts form the team at Nutcraker"
+        title="Our Podcasts | B2B Growth, Marketing &amp; Sales | Nutcracker"
+        description="Listen to a selection of B2B Growth, Marketing &amp; Sales Podcasts that feature the brains behind Nutcracker Agency, Jenny Knighting, CEO & Founder."
       />
       <BlogHeader>
         Our views on <span>B2B Business Growth </span>, <span>Marketing </span>

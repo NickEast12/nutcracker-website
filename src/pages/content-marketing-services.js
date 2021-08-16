@@ -81,8 +81,8 @@ const Content = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Content | Marketing Agency London | Nutcracker Agency"
-        description="Content Marketing agency in London that provides award-winning communications for you. From articles to website copy. Engage, inform & innovate."
+        title=" B2B Creative Content, Copywriting &amp; Strategy | Nutcracker"
+        description="Nutcracker helps businesses to unlock the power of content through storytelling. B2B content marketing, creation and strategy that helps brands engage their target audience and drive conversations that convert prospects into customers."
       />
       <ServiceHeader page="Content marketing services">
         <h1>

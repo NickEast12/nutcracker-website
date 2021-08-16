@@ -16,8 +16,8 @@ const Blog = ({ data }) => {
   return (
     <Layout alt>
       <SEO
-        title="Latest Blogs | Marketing Agency London | Nutcracker Agency"
-        description="Marketing insights from Nutcracker Marketing agency in London. Take a look at our blogs for all the top news and views from the Nutcracker content team."
+        title="B2B Marketing Blog | News, Insight &amp; Opinions | Nutcracker"
+        description="Read about B2B marketing industry news & insight, social & content marketing tips and find out more about marketing strategy &amp; trends from our in-house experts. Sign up to our newsletter to stay in the know."
       />
       <BlogHeader>
         <span>News</span>,<span> Insight </span> &amp; <span>Opinions</span>{' '}
