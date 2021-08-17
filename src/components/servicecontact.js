@@ -112,11 +112,28 @@ const ServiceContact = ({ children }) => {
             </label>
           </p>
           <section>
-            <textarea name="" id="" placeholder="Your message" />
+            <textarea
+              name="message"
+              id="s-message"
+              required
+              placeholder="Your message"
+            />
           </section>
           <section className="i-p">
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Your email" />
+            <input
+              type="text"
+              name="name"
+              id="s-name"
+              required
+              placeholder="Your name"
+            />
+            <input
+              type="email"
+              name="email"
+              id="s-email"
+              required
+              placeholder="Your email"
+            />
             <button type="submit">
               <span>Let's chat</span>
             </button>
