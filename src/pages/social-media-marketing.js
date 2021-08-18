@@ -179,7 +179,7 @@ const SocialMedia = ({ data }) => {
         </p>
         <p>
           Social content needs to be compelling, engagement-worthy and
-          strategy-informed and consist of highly targeted messaging and
+          strategy-informed and consisting of highly targeted messaging and
           campaigns that resonate in the hearts and minds of your audience if
           you want them to turn into customers. And that’s exactly what we do
           for our clients.
@@ -200,8 +200,8 @@ const SocialMedia = ({ data }) => {
         title="Social media management"
         strong="If you want to leave the experts to grow and optimise your social channels, build a community or get your hands on a steady flow of conversion-driving social media content, Nutcracker can do all that and more"
         fp="When you leave your business's social media management to us we create monthly social media content calendars filled with strategic social content, take care of the posting, and get your platforms growing. "
-        sp="To us, effective social media management comes hand in hand with consistent community management across your social platforms. You wouldn’t send a text or Watsapp message and ignore the replies, so why would you do the same on social? Nutcracker knows what it takes to create a dynamic and highly-engaged social media account. We get involved in relevant conversations, respond to comments and direct messages, and keep brand engagement flowing."
-        tp="And it doesn’t stop there, we can kick-start employee advocacy programmes, undertake personal branding and profile raising for your C suite, and partner with influencers to raise the profile and interest in your brand all through social media. Whatever your ambition, we make it happen. "
+        sp="To us, effective social media management comes hand in hand with consistent community management across your social platforms. You wouldn’t send a text or WhatsApp message and ignore the replies, so why would you do the same on social? Nutcracker knows what it takes to create a dynamic and highly-engaged social media account. We get involved in relevant conversations, respond to comments and direct messages, and keep brand engagement flowing."
+        tp="And it doesn’t stop there. We can kick-start employee advocacy programmes, undertake personal branding and profile raising for your C suite, and partner with influencers to raise the profile and interest in your brand all through social media. Whatever your ambition, we make it happen. "
       >
         <StaticImage
           src="../assets/images/social-media-management-nutcracker-agency.png"

@@ -159,7 +159,7 @@ const Marketing = ({ data }) => {
       />
       <ServiceHeader page="B2B marketing strategy">
         <h1>
-          We build, design and execute <span>results-focussed </span> B2B
+          We build, design and execute <span>results-focused </span> B2B
           marketing strategies
         </h1>
       </ServiceHeader>
@@ -194,8 +194,7 @@ const Marketing = ({ data }) => {
           objectives and then we find the answers.
         </h5>
         <p>
-          Have questions about{' '}
-          <span>B2B digital sales and marketing strategy </span> and how
+          Have questions about B2B digital sales, marketing strategies or how
           Nutcracker can help?
         </p>
       </ServiceContact>

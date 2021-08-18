@@ -22,7 +22,7 @@ const Tree = () => (
           </Link>
         </g>
         <g>
-          <Link to="/design">
+          <Link to="/design-and-branding">
             <path
               fill="#bcc9c9"
               d="M110.16 62.38s-45.26 1.2-36.96 25.6c0 0 2.53 7 8.52 8.02 0 0 20.33 4.28 28.43-33.62"
@@ -30,7 +30,7 @@ const Tree = () => (
           </Link>
         </g>
         <g>
-          <Link to="/content">
+          <Link to="/content-marketing-services-marketing-services">
             <path
               fill="#fae101"
               d="M99.4 22.22S55.3 32.54 68.36 54.76c0 0 3.9 6.34 9.97 6.13 0 0 20.78.1 21.07-38.67"
@@ -38,7 +38,7 @@ const Tree = () => (
           </Link>
         </g>
         <g>
-          <Link to="/marketing">
+          <Link to="/b2b-marketing-strategy">
             <path
               fill="#8e1b55"
               d="M37.1 1.32S25.12 45 50.86 44.12c0 0 7.43-.4 10.14-5.84 0 0 10-18.22-23.9-36.96"
@@ -46,7 +46,7 @@ const Tree = () => (
           </Link>
         </g>
         <g>
-          <Link to="/social-media">
+          <Link to="/social-media-marketing">
             <path
               fill="#2ba5a2"
               d="M6.25 38.86s45.18 2.9 35.98 26.96c0 0-2.8 6.9-8.82 7.7 0 0-20.47 3.5-27.15-34.66"
@@ -133,22 +133,22 @@ const Tree = () => (
           x="70.547798 73.835281 76.621719 79.702629 81.495789 83.965797 87.046707"
           y="43.544"
         >
-          <Link to="/content">Content</Link>
+          <Link to="/content-marketing-services">Content</Link>
         </tspan>
         <tspan
           x="18.853569 21.569687 24.356131 26.84811 28.487448 31.032173 32.504501"
           y="55.622"
         >
-          <Link to="/social-media">Social</Link>
+          <Link to="/social-media-marketing">Social</Link>
         </tspan>
         <tspan x="18.563501 22.918962 25.388966 28.302862 29.9422" y="60.017">
-          <Link to="/social-media">media</Link>
+          <Link to="/social-media-marketing">media</Link>
         </tspan>
         <tspan
           x="78.340172 81.803452 84.273453 86.510513 88.149849 91.0242"
           y="80.757"
         >
-          <Link to="/design">Design</Link>
+          <Link to="/design-and-branding">Design</Link>
         </tspan>
         <tspan x="22.048746 25.041754" y="94.447">
           <Link to="/pr">PR</Link>
