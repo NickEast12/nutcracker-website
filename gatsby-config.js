@@ -89,7 +89,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: '1010101010',
+        trackingId: 'UA-52136219-1',
         head: true,
       },
     },
@@ -97,7 +97,7 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: '1010101010',
+          trackingId: 'UA-52136219-1',
           anonymize: true,
         },
         environments: ['production', 'development'],
