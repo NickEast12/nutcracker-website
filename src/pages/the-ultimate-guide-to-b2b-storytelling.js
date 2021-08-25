@@ -282,13 +282,14 @@ const LandingPage = () => {
             alt="Nutcracker's ultimate guide to B2B storytelling guide"
           />
           <form
-            name="landinpage_form"
+            name="landingpage_form"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             action="/b2b-storytelling"
           >
-            <input type="hidden" name="form-name" value="landinpage_form" />
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <input type="hidden" name="form-name" value="landingpage_form" />
             <p className="hidden">
               <label htmlFor="bot-field">
                 Don’t fill this out if you’re human: <input name="bot-field" />
@@ -302,8 +303,8 @@ const LandingPage = () => {
             <section>
               <input
                 type="email"
-                name="work-email"
-                id="work-email"
+                name="email"
+                id="l-email"
                 required
                 placeholder="Enter your work email"
               />
