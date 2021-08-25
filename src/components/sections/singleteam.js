@@ -94,7 +94,7 @@ const SingleTeamStyles = styled.section`
     }
   }
   &:nth-child(even) {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 
     .box--content:hover {
       background-color: rgba(30, 54, 59, 0.5);
