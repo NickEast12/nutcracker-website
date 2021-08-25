@@ -104,10 +104,6 @@ const Content = ({ data }) => {
           to convince, compel and convert, which is why content strategy,
           ideation and creation all depend on great copy.
         </p>
-        <p>
-          The words you choose need to convince, compel and convert, which is
-          why content strategy, ideation and creation all depend on great copy.{' '}
-        </p>
       </ServiceBody>
       <NewServiceBodyLeft
         alt
