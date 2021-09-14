@@ -97,13 +97,16 @@ const FooterStyles = styled.footer`
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      svg {
-        margin: 0;
-        padding: 0;
-        width: 25px;
-        height: 25px;
-        /* fill: rgba(0, 0, 0, 0.65); */
-        fill: var(--mainColour);
+      a {
+        color: inherit;
+        svg {
+          margin: 0;
+          padding: 0;
+          width: 25px;
+          height: 25px;
+          /* fill: rgba(0, 0, 0, 0.65); */
+          fill: var(--mainColour);
+        }
       }
     }
     @media only screen and (min-width: 414px) {
@@ -226,9 +229,27 @@ const Footer = () => {
       </div>
       <div className="social">
         <div className="social--inner">
-          <LinkedInIcon />
-          <TwitterIcon />
-          <InstagramIcon />
+          <a
+            href="https://www.linkedin.com/company/nutcracker-agency/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon />
+          </a>
+          <a
+            href="https://twitter.com/nutcrackersm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterIcon />
+          </a>
+          <a
+            href="https://www.instagram.com/nutcrackeragency/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InstagramIcon />
+          </a>
         </div>
       </div>
       <div className="legal">

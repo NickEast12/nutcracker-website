@@ -202,21 +202,21 @@ const ContactMain = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedInIcon className="willAnimate bodyFade " />
+                <LinkedInIcon className=" willAnimate bodyFade" />
               </a>
               <a
                 href="https://twitter.com/nutcrackersm"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <TwitterIcon className="willAnimate bodyFade " />
+                <TwitterIcon className=" willAnimate bodyFade" />
               </a>
               <a
                 href="https://www.instagram.com/nutcrackeragency/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <InstagramIcon className="willAnimate  bodyFade" />
+                <InstagramIcon className=" willAnimate bodyFade" />
               </a>
             </div>
           </div>
