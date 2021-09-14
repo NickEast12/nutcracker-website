@@ -26,7 +26,6 @@ const Blog = ({ data }) => {
   const blogData = data.Blog;
   const coverImage = blogData.mainImage;
   const RelatedData = data.Category;
-  console.log(RelatedData);
   return (
     <Layout>
       <SEO
@@ -87,6 +86,12 @@ const BlogHeader = ({ coverImage }) => (
 BlogHeader.propTypes = {
   coverImage: PropTypes.any,
 };
+const urlFor = (source) =>
+  urlBuilder({
+    projectId: process.env.GATSBY_SANITY_ID,
+    dataset: 'production',
+  }).image(source);
+
 const BlogBodyStyles = styled.article`
   width: 100%;
   background-color: #fff;
