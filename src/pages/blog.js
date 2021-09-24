@@ -17,11 +17,11 @@ const Blog = ({ data }) => {
     <Layout alt>
       <SEO
         title="B2B Marketing Blog | News, Insight &amp; Opinions | Nutcracker"
-        description="Read about B2B marketing industry news & insight, social & content marketing tips and find out more about marketing strategy &amp; trends from our in-house experts. Sign up to our newsletter to stay in the know."
+        description="Read about B2B marketing industry news &amp; insight, social &amp; content marketing tips and find out more about marketing strategy &amp; trends from our in-house experts. Sign up to our newsletter to stay in the know."
       />
       <BlogHeader>
         <span>News</span>,<span> Insight </span> &amp; <span>Opinions</span>{' '}
-        from the Nutracker team
+        from the Nutcracker team
       </BlogHeader>
       <FeaturedBlog data={FeaturedBlogData} />
       <PopularBlogs data={PopularBlogData} />
