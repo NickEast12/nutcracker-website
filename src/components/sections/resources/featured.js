@@ -33,8 +33,14 @@ const FeaturedStyles = styled.header`
     @media only screen and (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-gap: 1.5rem;
       &--img {
         margin-top: 0;
+      }
+      &--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
