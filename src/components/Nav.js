@@ -260,6 +260,12 @@ const NavStyles = styled.nav`
             animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.7s
               forwards;
           }
+          &:nth-child(5) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.85s
+              forwards;
+          }
         }
       }
       &--top,
@@ -267,12 +273,12 @@ const NavStyles = styled.nav`
         list-style: none;
         li {
           color: #ffffff;
-          padding: 0.85rem 0;
+          padding: 0.65rem 0;
           font-weight: 500;
-          font-size: 0.95rem;
+          font-size: 0.85rem;
           @media only screen and (min-width: 375px) {
-            font-size: 1.1rem;
-            padding: 1rem 0;
+            font-size: 0.95rem;
+            padding: 0.95rem 0;
           }
           text-align: center;
           a {
@@ -377,6 +383,9 @@ const Nav = ({ alt }) => {
                     <Link to="/blog">Blog</Link>
                   </li>
                   <li>
+                    <Link to="/resources">Resources</Link>
+                  </li>
+                  <li>
                     <Link to="/podcasts">Podcasts</Link>
                   </li>
                 </ul>
@@ -430,6 +439,9 @@ const Nav = ({ alt }) => {
             </li>
             <li>
               <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/resources">Resources</Link>
             </li>
             <li>
               <Link to="/podcasts">Podcasts</Link>
