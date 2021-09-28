@@ -7,31 +7,39 @@ const BodyStyles = styled.section`
   width: 100%;
   margin: 3.5rem 0 2rem 0;
   .r-b {
-    max-width: var(--maxWidth);
+    max-width: 1000px;
     width: 85%;
     margin: var(--auto);
     h3 {
       text-align: center;
       position: relative;
-      &::after {
-        position: absolute;
-        z-index: 2;
-        bottom: -1rem;
-        left: calc(0% + 42%);
-        width: 50px;
-        height: 4px;
+      font-size: 1.45rem;
+    }
+    &--line {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+      div {
         background-color: var(--mainColour);
-        content: '';
+        width: 150px;
+        height: 4px;
       }
     }
     &--grid {
       margin-top: 3rem;
+      display: grid;
+      grid-gap: 1.5rem;
       @media only screen and (min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0.5rem;
+        grid-gap: 2.5rem;
       }
     }
+  }
+  @media only screen and (min-width: 1024px) {
+    margin-top: 5rem;
   }
 `;
 const Body = ({ data }) => {
@@ -40,6 +48,9 @@ const Body = ({ data }) => {
     <BodyStyles>
       <div className="r-b">
         <h3>Latest resources &amp; downloads</h3>
+        <div className="r-b--line">
+          <div />
+        </div>
         <div className="r-b--grid">
           {data.map((x, i) => (
             <SingleResource data={x} key={i} />
@@ -57,10 +68,25 @@ export default Body;
 const SingleResourceStyles = styled.article`
   width: 100%;
   .s-r {
-    .gatsby-image-wrappe {
+    .gatsby-image-wrapper {
+      position: relative;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      max-width: 300px;
+      &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        width: 2px;
+        height: 100%;
+        content: '';
+        background-color: #000;
+        z-index: 10;
+      }
     }
     h4 {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       margin-top: 1rem;
     }
     a {
@@ -81,7 +107,9 @@ const SingleResourceStyles = styled.article`
           fill: var(--mainColour);
         }
       }
-      &:hover {
+    }
+    &:hover {
+      a {
         transform: translateX(3px);
         span {
           svg {
@@ -94,15 +122,17 @@ const SingleResourceStyles = styled.article`
 `;
 const SingleResource = ({ data }) => (
   <SingleResourceStyles>
-    <div className="s-r">
-      <GetImage data={data.mainImage} />
-      <h4>{data.title}</h4>
-      <a href={`${data.file.asset.url}?dl=`} download>
-        Download Resource
-        <span>
-          <ArrowIcon />
-        </span>
-      </a>
-    </div>
+    <a href={`${data.file.asset.url}?dl=`} download>
+      <div className="s-r">
+        <GetImage data={data.mainImage} />
+        <h4>{data.title}</h4>
+        <a href={`${data.file.asset.url}?dl=`} download>
+          Download Resource
+          <span>
+            <ArrowIcon />
+          </span>
+        </a>
+      </div>
+    </a>
   </SingleResourceStyles>
 );

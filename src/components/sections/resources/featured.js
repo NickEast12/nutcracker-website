@@ -4,21 +4,24 @@ import GetImage from '../../functional/getImage';
 
 const FeaturedStyles = styled.header`
   width: 100%;
+  position: relative;
   .r-s {
     width: 85%;
     padding-top: 5rem;
     margin: var(--auto);
     &--text {
+      padding-bottom: 1rem;
       p {
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 500;
+        color: var(--mainColour);
       }
       h1 {
         display: none;
       }
       h2 {
         font-size: 2.5rem;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
       }
       a {
         display: block;
@@ -29,11 +32,30 @@ const FeaturedStyles = styled.header`
     }
     &--img {
       margin-top: 1.5rem;
+      position: relative;
+      .gatsby-image-wrapper {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        z-index: -200;
+        max-width: 300px;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        width: 2px;
+        height: 100%;
+        content: '';
+        background-color: #000;
+        z-index: 10;
+      }
     }
     @media only screen and (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1.5rem;
+      padding-top: 7rem;
       &--img {
         margin-top: 0;
       }
@@ -41,6 +63,26 @@ const FeaturedStyles = styled.header`
         display: flex;
         flex-direction: column;
         justify-content: center;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      width: 80%;
+      padding-top: 9.5rem;
+      grid-gap: 3rem;
+      &--img {
+        .gatsby-image-wrapper {
+          max-width: 395px;
+        }
+      }
+    }
+    @media only screen and (min-width: 1280px) {
+      width: 70%;
+      padding-top: 8rem;
+      grid-gap: 3rem;
+      &--img {
+        .gatsby-image-wrapper {
+          max-width: 395px;
+        }
       }
     }
   }
