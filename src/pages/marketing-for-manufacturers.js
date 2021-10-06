@@ -38,7 +38,9 @@ const LandingPageStyles = styled.div`
     position: relative;
     height: 80vh;
     padding-top: 1.5rem;
+    background-color: #1e363b;
     .l-l {
+      background-color: #1e363b;
       width: 90%;
       margin: 0 auto;
       position: relative;
@@ -62,6 +64,7 @@ const LandingPageStyles = styled.div`
       left: 0;
       width: 100%;
       overflow: hidden;
+      z-index: -2;
       line-height: 0;
       transform: rotate(180deg) scaleX(-1);
     }
@@ -139,7 +142,9 @@ const LandingPage = () => (
           </li>
         </ul> */}
       </div>
-      <div className="l-r" />
+      <div className="l-r">
+        <StaticImage src="../assets/images/Manufacturing-guide.png" alt="" />
+      </div>
       <BorderIcon className="border" />
     </div>
     {/* <StaticImage
