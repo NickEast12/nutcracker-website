@@ -1,6 +1,16 @@
 import { css } from 'styled-components';
+import AgencyBlackWOFF from '../assets/fonts/agencyfbblackcondensed.woff';
+import AgencyBlackWOFF2 from '../assets/fonts/agencyfbblackcondensed.woff2';
 
 const Typography = css`
+  @font-face {
+    font-family: 'Agency-Black';
+    src: url('${AgencyBlackWOFF2}') format('woff2'),
+      url('${AgencyBlackWOFF}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
   html {
     font-size: 16px;
     @media only screen and (min-width: 414px) {
