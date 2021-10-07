@@ -6,6 +6,7 @@ const Vars = css`
     --mainColour: #2ba5a2;
     --backgroundColour: #1e363b;
     --yellow: #ffd400;
+    --deepOrange: #fce205;
     --navy: #41404c;
     --altBackground: rgb(245, 245, 245);
     --accent: rgb(157, 10, 74);
