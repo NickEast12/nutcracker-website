@@ -194,6 +194,7 @@ const LandingPageStyles = styled.div`
             background: #f28c28;
             transition: all 0.25s ease-in-out;
             cursor: pointer;
+            font-size: 1rem;
             &:hover,
             &:active {
               background: #c17020;

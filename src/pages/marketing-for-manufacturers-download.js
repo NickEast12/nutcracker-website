@@ -77,7 +77,7 @@ const MarketingForManfacturersDowload = ({ data }) => {
       </Helmet>
       <GlobalStyles />
       <section>
-        <h1>Marketing for manufacturers</h1>
+        <h1>Marketing for Manufacturers</h1>
         <button type="button">
           <a href={file} download rel="noopener noreferrer">
             <span>Download now</span>

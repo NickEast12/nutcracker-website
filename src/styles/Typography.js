@@ -9,7 +9,6 @@ const Typography = css`
       url('${AgencyBlackWOFF}') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
   }
   html {
     font-size: 16px;
