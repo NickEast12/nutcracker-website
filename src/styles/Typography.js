@@ -1,12 +1,30 @@
 import { css } from 'styled-components';
-import AgencyBlackWOFF from '../assets/fonts/agencyfbblackcondensed.woff';
-import AgencyBlackWOFF2 from '../assets/fonts/agencyfbblackcondensed.woff2';
+import AgencyBlackWOFF from '../assets/fonts/agencyfbblackcondensed_2-webfont.woff';
+import AgencyBlackWOFF2 from '../assets/fonts/agencyfbblackcondensed_2-webfont.woff2';
+import SportFontWOFF from '../assets/fonts/sportsfonts_-_winner_cond_regular-webfont.woff';
+import SportFontWOFF2 from '../assets/fonts/sportsfonts_-_winner_cond_regular-webfont.woff2';
+import EssonnesDisplayWOFF2 from '../assets/fonts/EssonnesDisplay-Regular.woff2';
+import EssonnesDisplayWOFF from '../assets/fonts/EssonnesDisplay-Regular.woff';
 
 const Typography = css`
   @font-face {
     font-family: 'Agency-Black';
     src: url('${AgencyBlackWOFF2}') format('woff2'),
       url('${AgencyBlackWOFF}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Sport';
+    src: url('${SportFontWOFF2}') format('woff2'),
+      url('${SportFontWOFF}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Essonnes';
+    src: url('${EssonnesDisplayWOFF2}') format('woff2'),
+      url('${EssonnesDisplayWOFF}') format('woff');
     font-weight: normal;
     font-style: normal;
   }

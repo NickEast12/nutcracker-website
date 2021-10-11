@@ -53,6 +53,7 @@ const StoryTellingStyles = styled.main`
       background: var(--mainColour);
       border: solid 1px var(--mainColour);
       color: #fff;
+      font-size: 1rem;
     }
     .home {
       display: flex;
@@ -61,6 +62,7 @@ const StoryTellingStyles = styled.main`
       svg {
         width: 20px;
         height: 20px;
+        fill: #fff;
       }
       p {
         margin-left: 5px;

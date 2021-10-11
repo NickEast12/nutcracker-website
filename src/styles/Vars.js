@@ -15,6 +15,10 @@ const Vars = css`
       Arial, sans-serif;
     --AgencyBlack: Agency-Black, -apple-system, system-ui, 'Helvetica Neue',
       Helvetica, Arial, sans-serif;
+    --Sport: Sport, -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+      sans-serif;
+    --Essonnes: Essonnes, -apple-system, system-ui, 'Helvetica Neue', Helvetica,
+      Arial, sans-serif;
     //*Font-size
     --titleLarge: 3.052rem;
     --titleSemiLarge: 2.441rem;

@@ -64,11 +64,11 @@ const LandingPageStyles = styled.div`
         color: #f28c28;
         text-transform: uppercase;
         margin-top: 1.75rem;
-        font-weight: 400;
-        letter-spacing: 1.5px;
         font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 1.5px;
         @media only screen and (min-width: 414px) {
-          font-size: 2.5rem;
+          font-size: 2.55rem;
         }
       }
       button {
@@ -246,14 +246,13 @@ const LandingPage = () => {
           <div className="l-l">
             <Logo />
             <h1>Marketing for manufacturers</h1>
-            <p>We’re here to tell you about marketing. Specifically:</p>
             <h2>The good. The bad. And the ugly. </h2>
             <button
               type="button"
               className="btn btn--main"
               onClick={() => scrollTo('#content')}
             >
-              <span>Find out more</span>
+              <span>Read more</span>
             </button>
           </div>
           <div className="l-r">
