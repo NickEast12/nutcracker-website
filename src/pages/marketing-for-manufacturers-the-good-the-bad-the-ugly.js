@@ -5,7 +5,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import { Link } from 'gatsby';
 import SEO from '../components/functional/SEO';
 import GlobalStyles from '../styles/GlobalStyles';
-import MetaImg from '../assets/images/background.jpeg';
+import MetaImg from '../assets/images/Manufacturing.jpg';
 import Logo from '../svgs/nutcracker-logo.svg';
 import BorderIcon from '../svgs/l-border.svg';
 
@@ -221,12 +221,11 @@ const LandingPageStyles = styled.div`
 
 const MarketingManufacturers = () => {
   const i = true;
-
   return (
     <main>
       <SEO
-        title="The Ultimate Guide To B2B Storytelling | Nutcracker Agency"
-        description="Learn why storytelling needs to be a part of your content strategy to elevate your brand, influence decision making, connect to your audience and generate leads with the ultimate guide to B2B storytelling from Nutcracker."
+        title="Marketing For Manufacturers The Good. The Bad. And The Ugly. | Nutcracker Agency"
+        description="In this guide, we explore The Good, The Bad and The Ugly of marketing in the manufacturing industry and share our key takeaways from Nutcracker"
         img={MetaImg}
       />
       <GlobalStyles />
