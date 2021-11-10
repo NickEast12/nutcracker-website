@@ -30,7 +30,7 @@ const Blog = ({ data }) => {
     <Layout>
       <SEO
         title={`${blogData.title} | Nutcracker Agency`}
-        description={blogData.excerpt}
+        description={blogData.description}
         img={blogData.mainImage.asset.url}
       />
       <BlogHeader coverImage={coverImage} />
@@ -377,7 +377,7 @@ export const query = graphql`
       categories {
         title
       }
-      excerpt
+      description
       _rawBody
       authors {
         author {

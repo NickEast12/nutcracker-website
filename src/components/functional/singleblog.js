@@ -13,6 +13,7 @@ const SingleBlogStyles = styled.article`
   border: 2px solid rgb(236, 236, 236);
   padding: 0;
   transition: all 0.35s ease;
+
   .m-i {
     .gatsby-image-wrapper {
       width: 100%;
