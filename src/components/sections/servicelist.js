@@ -79,15 +79,12 @@ ServiceList.propTypes = {
 
 export default ServiceList;
 
-const SingleListItem = ({ data }) => {
-  console.log(data);
-  return (
-    <li>
-      <Icon />
-      {data.text}
-    </li>
-  );
-};
+const SingleListItem = ({ data }) => (
+  <li>
+    <Icon />
+    {data.text}
+  </li>
+);
 
 SingleListItem.propTypes = {
   data: PropTypes.shape({

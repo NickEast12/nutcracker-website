@@ -45,25 +45,22 @@ const PopularBlogsStyles = styled.section`
     }
   }
 `;
-const AllBlogs = ({ data }) => {
-  console.log(data);
-  return (
-    <PopularBlogsStyles>
-      <div className="recent">
-        <div className="recent__wrapper">
-          {data.map((recent) => (
-            <ReducedBlog key={recent.title} data={recent} />
-          ))}
-        </div>
-        <div className="recent__desktop">
-          {data.map((recent) => (
-            <SingleBlog key={recent.title} data={recent} />
-          ))}
-        </div>
+const AllBlogs = ({ data }) => (
+  <PopularBlogsStyles>
+    <div className="recent">
+      <div className="recent__wrapper">
+        {data.map((recent) => (
+          <ReducedBlog key={recent.title} data={recent} />
+        ))}
       </div>
-    </PopularBlogsStyles>
-  );
-};
+      <div className="recent__desktop">
+        {data.map((recent) => (
+          <SingleBlog key={recent.title} data={recent} />
+        ))}
+      </div>
+    </div>
+  </PopularBlogsStyles>
+);
 
 AllBlogs.propTypes = {
   data: PropTypes.any,

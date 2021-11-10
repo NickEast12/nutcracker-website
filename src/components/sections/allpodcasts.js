@@ -32,21 +32,18 @@ const AllPodcastsStyles = styled.section`
     }
   }
 `;
-const AllPodcasts = ({ featuredPodcast, allPodcasts }) => {
-  console.log(featuredPodcast);
-  return (
-    <AllPodcastsStyles>
-      <div className="p-w">
-        <FeaturedPodcast data={featuredPodcast} />
-        <section className="wrapper">
-          {allPodcasts.map((podcast) => (
-            <SinglePodcast data={podcast} key={podcast.id} />
-          ))}
-        </section>
-      </div>
-    </AllPodcastsStyles>
-  );
-};
+const AllPodcasts = ({ featuredPodcast, allPodcasts }) => (
+  <AllPodcastsStyles>
+    <div className="p-w">
+      <FeaturedPodcast data={featuredPodcast} />
+      <section className="wrapper">
+        {allPodcasts.map((podcast) => (
+          <SinglePodcast data={podcast} key={podcast.id} />
+        ))}
+      </section>
+    </div>
+  </AllPodcastsStyles>
+);
 
 AllPodcasts.propTypes = {
   allPodcasts: PropTypes.any,

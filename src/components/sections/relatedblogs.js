@@ -42,7 +42,6 @@ const RelatedBlogsStyles = styled.section`
 `;
 const RelatedBlogs = ({ relatedBlogsData, alt }) => {
   const data = relatedBlogsData.nodes;
-  console.log(data);
   return (
     <RelatedBlogsStyles>
       <div className={data.length === 0 ? 'empty' : 'related'}>

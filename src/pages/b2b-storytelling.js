@@ -71,7 +71,6 @@ const StoryTellingStyles = styled.main`
 `;
 const StoryTelling = ({ data }) => {
   const file = data.file.publicURL;
-  console.log(file);
   return (
     <StoryTellingStyles>
       <Helmet>

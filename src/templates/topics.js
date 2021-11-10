@@ -75,9 +75,7 @@ const Topics = ({ pageContext, data }) => {
             ))}
           </div>
         ) : (
-          <div className="nein">
-            <p>Nothing to see here just yet</p>
-          </div>
+          ''
         )}
       </TopicsStyles>
     </Layout>

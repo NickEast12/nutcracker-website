@@ -10,7 +10,6 @@ import Body from '../components/sections/resources/body';
 const Resources = ({ data }) => {
   const fea = data.Fea.nodes;
   const resources = data.All.nodes;
-  console.log(resources);
   return (
     <Layout>
       <SEO

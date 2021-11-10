@@ -100,7 +100,6 @@ const BlogTopics = () => {
   `);
   const topicData = data.topics.nodes;
   const [open, setOpen] = useState(false);
-  console.log(topicData);
   return (
     <BlogTopicsStyles open={open}>
       <div className="topics">

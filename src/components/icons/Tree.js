@@ -30,7 +30,7 @@ const Tree = () => (
           </Link>
         </g>
         <g>
-          <Link to="/content-marketing-services-marketing-services">
+          <Link to="/content-marketing-services">
             <path
               fill="#fae101"
               d="M99.4 22.22S55.3 32.54 68.36 54.76c0 0 3.9 6.34 9.97 6.13 0 0 20.78.1 21.07-38.67"

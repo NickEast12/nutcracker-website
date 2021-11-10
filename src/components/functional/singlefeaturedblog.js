@@ -140,7 +140,6 @@ const FeaturedBlogStyles = styled.article`
 `;
 const SingleFeaturedBlog = ({ data }) => {
   const i = data;
-  console.log(data);
   return (
     <FeaturedBlogStyles>
       <Link to={`/blog/${i.categories[0].slug.current}/${i.slug.current}`}>

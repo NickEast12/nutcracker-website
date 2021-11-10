@@ -77,7 +77,6 @@ const icon = [
 const Content = ({ data }) => {
   const review = data.Review;
   const blogs = data.Category.nodes;
-  console.log(blogs);
   return (
     <Layout>
       <SEO
