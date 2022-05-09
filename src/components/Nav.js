@@ -232,6 +232,12 @@ const NavStyles = styled.nav`
             animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.1s
               forwards;
           }
+          &:nth-child(7) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.1s
+              forwards;
+          }
         }
       }
       &--lower {
@@ -369,6 +375,9 @@ const Nav = ({ alt }) => {
                   <li>
                     <Link to="/pr">PR</Link>
                   </li>
+                  <li>
+                    <Link to="/digital">Digital</Link>
+                  </li>
                 </ul>
               </section>
             </li>
@@ -431,6 +440,9 @@ const Nav = ({ alt }) => {
             </li>
             <li>
               <Link to="/pr">PR</Link>
+            </li>
+            <li>
+              <Link to="/digital">Digital</Link>
             </li>
           </ul>
           <ul className="mobile--menu--lower">

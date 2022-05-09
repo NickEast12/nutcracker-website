@@ -206,6 +206,9 @@ const Footer = () => {
               <li>
                 <Link to="/pr">PR</Link>
               </li>
+              <li>
+                <Link to="/digital">Digital</Link>
+              </li>
             </ul>
           </section>
           <section>
