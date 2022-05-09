@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Icon from '../../assets/images/favicon-32x32.png';
 
 const ServiceBodyStyles = styled.section`
@@ -97,15 +97,47 @@ const ServiceBodyStyles = styled.section`
       }
     }
   }
+  ${(props) =>
+    props.$digital &&
+    css`
+      .s-b__left {
+        p {
+          a {
+            font-weight: 500;
+            text-decoration: underline;
+            &:hover,
+            &:active {
+              color: var(--mainColour);
+            }
+          }
+        }
+      }
+      .s-b__right {
+        width: 100%;
+        margin: 1rem auto;
+        text-align: center;
+        svg {
+          max-width: 400px;
+          margin: var(--auto);
+        }
+      }
+      @media only screen and (min-width: 1024px) {
+        .s-b {
+          grid-template-columns: 55% 1fr;
+        }
+      }
+    `}
 `;
-const ServiceBody = ({ children, icon, alt }) => {
+const ServiceBody = (props) => {
   const i = true;
   return (
-    <ServiceBodyStyles>
+    <ServiceBodyStyles {...props}>
       <div className="s-b">
-        <div className="s-b__left">{children}</div>
-        <div className={alt ? 's-b__right large-icon-fix' : 's-b__right'}>
-          {icon}
+        <div className="s-b__left">{props.children}</div>
+        <div
+          className={props.alt ? 's-b__right large-icon-fix' : 's-b__right '}
+        >
+          {props.icon}
         </div>
       </div>
     </ServiceBodyStyles>
