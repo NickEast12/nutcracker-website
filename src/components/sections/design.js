@@ -54,6 +54,10 @@ const DesignStyles = styled.section`
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
+      grid-template-areas: 'a b';
+      &--img {
+        grid-area: b;
+      }
       &--img {
         svg {
           width: 100%;

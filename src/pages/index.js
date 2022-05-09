@@ -7,6 +7,7 @@ import SocialMedia from '../components/sections/socialmedia';
 import Design from '../components/sections/design';
 import Leads from '../components/sections/leads';
 import PagePR from '../components/sections/prsection';
+import Digital from '../components/index/digital';
 
 const index = () => {
   const i = true;
@@ -14,6 +15,7 @@ const index = () => {
     <Layout alt>
       <SEO />
       <Hero />
+      <Digital />
       <Content />
       <SocialMedia />
       <Design />
