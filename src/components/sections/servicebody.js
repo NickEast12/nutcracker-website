@@ -117,7 +117,7 @@ const ServiceBodyStyles = styled.section`
         margin: 1rem auto;
         text-align: center;
         svg {
-          max-width: 400px;
+          max-width: 400px !important;
           margin: var(--auto);
         }
       }
