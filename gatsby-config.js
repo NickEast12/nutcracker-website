@@ -108,7 +108,7 @@ module.exports = {
       options: {
         host: 'https://www.nutcrackeragency.com/',
         sitemap: 'https://www.nutcrackeragency.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [{ userAgent: '*', disallow: '/' }],
       },
     },
     {
