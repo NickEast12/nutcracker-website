@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { gsap } from 'gsap';
 import { useIntersection } from 'react-use';
 // local imports
-import Tree from '../icons/Tree';
+import Tree from '../icons/Tree-New';
 
 const HomepageStyled = styled.section`
   width: 100%;

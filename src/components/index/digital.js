@@ -1,33 +1,34 @@
 import { Link } from 'gatsby';
-import React, { useEffect, useRef } from 'react';
-import { useIntersection } from 'react-use';
-import { gsap } from 'gsap';
+import React from 'react';
 import styled from 'styled-components';
-import NutPen from '../../svgs/new-pen.svg';
+import DigitalIcon from '../../svgs/Digital.svg';
 
-const ContentStyles = styled.section`
+const DigitalStyles = styled.section`
   width: 100%;
-  background: var(--backgroundColour);
-  padding: 1rem 0;
-  .content {
+  background: #fff;
+  padding: 0;
+  .Digital {
     max-width: var(--maxWidth);
     &--img {
       margin: 0;
       padding: 0;
+      text-align: center;
+      margin: var(--auto);
+      width: 80%;
       svg {
-        height: 300px;
-        width: 100%;
+        margin: 1rem auto;
+        height: auto;
+        max-width: 400px;
       }
     }
     &--wrapper {
       padding: 1rem 0 3rem 0;
-      &--content {
-        color: #fff;
+      &--Digital {
+        color: var(--backgroundColour);
         width: 90%;
         margin: 0 auto;
         h3 {
-          margin-bottom: 1.5rem;
-          color: #fff;
+          margin: 1rem auto;
           span {
             color: var(--mainColour);
             font-weight: 800;
@@ -42,28 +43,17 @@ const ContentStyles = styled.section`
       }
     }
   }
-  @media only screen and (min-width: 414px) {
-    .content {
-      &--img {
-        width: 100%;
-        margin: 0 auto;
-        svg {
-          height: 400px;
-          width: 100%;
-        }
-      }
-    }
-  }
+
   @media only screen and (min-width: 768px) {
     padding-bottom: 3rem;
-    .content {
+    .Digital {
       width: 90%;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 55%;
       grid-gap: 2rem;
       padding-bottom: 0;
-      grid-template-areas: 'a b';
+      grid-template-areas: 'b a';
       &--img {
         grid-area: b;
       }
@@ -75,12 +65,12 @@ const ContentStyles = styled.section`
     }
   }
   @media only screen and (min-width: 1280px) {
-    padding-bottom: 2rem;
-    .content {
+    padding-bottom: 0;
+    .Digital {
       grid-gap: 0;
       &--img {
         svg {
-          height: 490px;
+          height: 550px;
           width: 100%;
         }
       }
@@ -91,36 +81,39 @@ const ContentStyles = styled.section`
     }
   }
 `;
-const Content = () => {
+const Digital = () => {
   const i = true;
   return (
-    <ContentStyles>
-      <div className="content">
-        <div className="content--img">
-          <NutPen />
+    <DigitalStyles>
+      <div className="Digital">
+        <div className="Digital--img">
+          <DigitalIcon />
         </div>
-        <div className="content--wrapper">
-          <div className="content--wrapper--content">
+        <div className="Digital--wrapper">
+          <div className="Digital--wrapper--Digital">
             <h3>
-              <span>Content </span> that cuts through the noise. We know how to
-              do it
+              Getting your <span>brand</span> in front of your audience,
+              wherever they are online
             </h3>
             <p>
-              Content creation and strategy should engage, inspire, influence
-              and leave a lasting impression.
+              From SEO to PPC to paid social, digital marketing makes sure your
+              brand appears in front of your customers at every step on their
+              path to purchase – from social media to search results – bringing
+              inbound leads to you.
             </p>
-            <div className="content--wrapper--content--btn">
-              <Link to="/content-marketing-services">
+
+            <div className="Digital--wrapper--Digital--btn">
+              <Link to="/digital">
                 <button type="button" className="btn btn--main">
-                  <span>Find out how we do it</span>
+                  <span>Find out more</span>
                 </button>
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </ContentStyles>
+    </DigitalStyles>
   );
 };
 
-export default Content;
+export default Digital;

@@ -47,10 +47,11 @@ const SocialMediaStyles = styled.section`
     padding-bottom: 1rem;
     padding-top: 0;
     margin-top: 0;
+
     .media {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'a b';
+      grid-template-areas: 'b a';
       grid-gap: 2rem;
       &--img {
         grid-area: b;
