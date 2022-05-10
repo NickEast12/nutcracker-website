@@ -54,7 +54,7 @@ const SocialMediaStyles = styled.section`
       grid-template-areas: 'b a';
       grid-gap: 2rem;
       &--img {
-        grid-area: b;
+        grid-area: a;
         svg {
           width: 100%;
         }

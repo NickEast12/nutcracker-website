@@ -39,17 +39,6 @@ const FeaturedStyles = styled.header`
         z-index: -200;
         max-width: 300px;
       }
-      &::after {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 5px;
-        width: 2px;
-        height: 100%;
-        content: '';
-        background-color: #000;
-        z-index: 10;
-      }
     }
     @media only screen and (min-width: 768px) {
       display: grid;

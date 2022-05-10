@@ -73,17 +73,6 @@ const SingleResourceStyles = styled.article`
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       max-width: 300px;
-      &::after {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 5px;
-        width: 2px;
-        height: 100%;
-        content: '';
-        background-color: #000;
-        z-index: 10;
-      }
     }
     h4 {
       font-size: 1.25rem;

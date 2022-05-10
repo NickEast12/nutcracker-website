@@ -65,7 +65,7 @@ const ContentStyles = styled.section`
       padding-bottom: 0;
       grid-template-areas: 'a b';
       &--img {
-        grid-area: b;
+        grid-area: a;
       }
       &--wrapper {
         display: flex;

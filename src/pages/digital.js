@@ -171,14 +171,13 @@ const Content = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Digital Marketing | Nutcracker"
-        description="Nutcracker helps businesses to unlock the power of content through storytelling. B2B content marketing, creation and strategy that helps brands engage their target audience and drive conversations that convert prospects into customers."
+        title="B2B Digital Marketing Agency | Nutcracker"
+        description="Nutcracker helps B2B businesses and brands with ambition reach their audience online via innovative, scalable and results driven digital marketing services. Find out how we do it."
       />
       <ServiceHeader page="Digital Marketing">
         <h1>
-          Getting your <span>brand</span> in front of your{' '}
-          <span className="second">audience</span>, wherever they are{' '}
-          <span className="third">online</span>{' '}
+          We help <span>B2B</span> brands grow with results driven{' '}
+          <span className="third">digital marketing</span>
         </h1>
       </ServiceHeader>
       <ServiceBody icon={icon[0].src} $digital>
@@ -198,10 +197,8 @@ const Content = ({ data }) => {
           relevant decision-makers.
         </p>
         <p>
-          Want to take the next step?{' '}
-          <Link to="/contact">
-            Book your digital marketing consultation now.
-          </Link>
+          Want to take the next step? Book your digital marketing consultation
+          by <Link to="/contact">contacting Nutcracker today.</Link>
         </p>
       </ServiceBody>
       <DigitalBody $right>
@@ -215,11 +212,9 @@ const Content = ({ data }) => {
               maximise your results at every step on your customer’s journey.
             </p>
             <p>
-              Your first step?{' '}
-              <Link to="/contact">
-                Start with an SEO audit, competitor evaluation and audience
-                analysis to begin planning your digital marketing outreach
-              </Link>
+              Your first step? Start with an SEO audit, competitor evaluation
+              and audience analysis to begin planning your digital marketing
+              outreach.
             </p>
           </div>
           <div className="right">
@@ -239,10 +234,9 @@ const Content = ({ data }) => {
               technical efficiency and external outreach.
             </p>
             <p>
-              <Link to="/contact">
-                Book your SEO consultation to find out how we do it through
-                on-page, technical and off-page SEO activity.
-              </Link>
+              Book your SEO consultation to find out how we do it through
+              on-page, technical and off-page SEO activity.{' '}
+              <Link to="/contact">Contact us today to get started.</Link>
             </p>
           </div>
           <div className="right">
@@ -262,10 +256,8 @@ const Content = ({ data }) => {
               the people you most want to reach.
             </p>
             <p>
-              <Link to="/contact">
-                We’ll help you decide on the best spend for your objectives, to
-                get the ROI you need on your investment.
-              </Link>
+              We’ll help you decide on the best spend for your objectives, to
+              get the ROI you need on your investment.
             </p>
           </div>
           <div className="right">
