@@ -61,19 +61,19 @@ const LeadsStyles = styled.section`
       grid-template-areas: 'a b';
       padding-bottom: 0;
       &--img {
-        grid-area: b;
+        grid-area: a;
         width: 100%;
         height: auto;
         svg {
           position: absolute;
           top: -5px;
-          right: 0.15rem;
+          left: 0.15rem;
           width: 500px;
           height: auto;
         }
       }
       &--wrapper {
-        grid-area: a;
+        grid-area: b;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -102,7 +102,7 @@ const LeadsStyles = styled.section`
   }
   @media only screen and (min-width: 1280px) {
     .leads {
-      padding-bottom: 4rem;
+      padding-bottom: 0rem;
       grid-template-columns: 55% 1fr;
       &--img {
         svg {

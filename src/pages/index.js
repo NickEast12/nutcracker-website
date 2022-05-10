@@ -16,11 +16,11 @@ const index = () => {
       <SEO />
       <Hero />
       <Digital />
-      <Design />
-      <SocialMedia />
       <Content />
       <Leads />
+      <Design />
       <PagePR />
+      <SocialMedia />
     </Layout>
   );
 };

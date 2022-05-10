@@ -72,9 +72,11 @@ const SocialMediaStyles = styled.section`
   }
 
   @media only screen and (min-width: 1280px) {
+    padding: 0;
+    margin: 0;
     .media {
       &--img {
-        width: 85%;
+        width: 100%;
         svg {
         }
       }
