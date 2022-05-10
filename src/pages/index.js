@@ -16,9 +16,9 @@ const index = () => {
       <SEO />
       <Hero />
       <Digital />
-      <Content />
-      <SocialMedia />
       <Design />
+      <SocialMedia />
+      <Content />
       <Leads />
       <PagePR />
     </Layout>

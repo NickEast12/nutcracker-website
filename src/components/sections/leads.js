@@ -61,6 +61,7 @@ const LeadsStyles = styled.section`
       grid-template-areas: 'a b';
       padding-bottom: 0;
       &--img {
+        grid-area: b;
         width: 100%;
         height: auto;
         svg {

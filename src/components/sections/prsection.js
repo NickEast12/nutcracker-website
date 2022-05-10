@@ -48,7 +48,9 @@ const DesignStyles = styled.section`
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
+      grid-template-areas: 'b a';
       &--img {
+        grid-area: b;
         width: 100%;
         height: 100%;
       }

@@ -56,7 +56,7 @@ const DesignStyles = styled.section`
       grid-gap: 1rem;
       grid-template-areas: 'a b';
       &--img {
-        grid-area: b;
+        grid-area: a;
       }
       &--img {
         svg {
