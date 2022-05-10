@@ -77,7 +77,8 @@ const DesignStyles = styled.section`
   }
   @media only screen and (min-width: 1280px) {
     padding-bottom: 0;
-    padding-top: 0;
+    padding-top: 2;
+    margin-bottom: 0;
     margin-top: 0;
     .design {
       margin-bottom: 0;

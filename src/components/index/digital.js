@@ -55,7 +55,7 @@ const DigitalStyles = styled.section`
       padding-bottom: 0;
       grid-template-areas: 'b a';
       &--img {
-        grid-area: a;
+        grid-area: b;
       }
       &--wrapper {
         display: flex;
