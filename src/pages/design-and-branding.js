@@ -10,6 +10,7 @@ import ServiceBody from '../components/sections/servicebody';
 import ServiceContact from '../components/servicecontact';
 import NewServiceBodyLeft from '../components/sections/newservicebody';
 import ServiceBlogs from '../components/sections/serviceblogs';
+import { DesignSlider } from '../components/sections';
 
 const icon = [
   {
@@ -151,6 +152,7 @@ const Design = ({ data }) => {
           alt="Brand Design"
         />
       </NewServiceBodyLeft>
+      <DesignSlider />
       <ServiceBlogs
         data={data.Category.nodes}
         title="Insight from the Nutcracker team"

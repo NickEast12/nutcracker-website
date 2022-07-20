@@ -10,6 +10,8 @@ import Nav from './Nav';
 import Footer from './Footer';
 import Cookie from './functional/cookie';
 
+import '../styles/styles.css';
+
 // ? https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require

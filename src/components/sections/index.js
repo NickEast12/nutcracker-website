@@ -1,0 +1,1 @@
+export { DesignSlider } from './DesignSlider';
