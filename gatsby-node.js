@@ -1,6 +1,6 @@
 const path = require('path');
 
-export async function turnCategoriesIntoPages({ graphql, actions }) {
+async function turnCategoriesIntoPages({ graphql, actions }) {
   const template = path.resolve('./src/templates/topics.js');
   const { data } = await graphql(`
     query CategoryQuery {
@@ -31,7 +31,7 @@ export async function turnCategoriesIntoPages({ graphql, actions }) {
     });
   });
 }
-export async function createAllBlogsPage({ actions }) {
+async function createAllBlogsPage({ actions }) {
   const template = path.resolve('./src/templates/topics.js');
 
   console.log(`creating a page for all the blogs`);
@@ -45,7 +45,7 @@ export async function createAllBlogsPage({ actions }) {
     },
   });
 }
-export async function turnBlogsIntoPages({ graphql, actions }) {
+async function turnBlogsIntoPages({ graphql, actions }) {
   const template = path.resolve('./src/templates/blogtemplate.js');
   const { data } = await graphql(`
     query BlogQuery {
@@ -80,38 +80,16 @@ export async function turnBlogsIntoPages({ graphql, actions }) {
   });
 }
 
-// export async function turnPodcastsIntoPages({ graphql, actions }) {
-//   const template = path.resolve('./src/templates/podcast.js');
-//   const { data } = await graphql(`
-//     query PodcastQuery {
-//       Podcasts: allSanityPodcast {
-//         nodes {
-//           slug {
-//             current
-//           }
-//           title
-//         }
-//       }
-//     }
-//   `);
-//   const podcasts = data.Podcasts.nodes;
-//   podcasts.forEach((podcast) => {
-//     console.log(`creating a page for the ${podcast.title} podcast`);
-//     actions.createPage({
-//       path: `podcasts/${podcast.slug.current}`,
-//       component: template,
-//       context: {
-//         title: podcast.title,
-//         slug: podcast.slug.current,
-//       },
-//     });
-//   });
+// export async function createPages(params) {
+//   //* Create page functions will go here
+//   await Promise.all([turnCategoriesIntoPages(params)]);
+//   await Promise.all([turnBlogsIntoPages(params)]);
+//   await Promise.all([createAllBlogsPage(params)]);
+//   // await Promise.all([turnPodcastsIntoPages(params)]);
 // }
 
-export async function createPages(params) {
-  //* Create page functions will go here
+exports.createPages = async (params) => {
   await Promise.all([turnCategoriesIntoPages(params)]);
   await Promise.all([turnBlogsIntoPages(params)]);
   await Promise.all([createAllBlogsPage(params)]);
-  // await Promise.all([turnPodcastsIntoPages(params)]);
-}
+};

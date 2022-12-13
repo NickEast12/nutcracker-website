@@ -99,7 +99,7 @@ const SingleBlog = ({ data }) => {
         <section className="b-c">
           <h6>{`${data.categories[0].title} `}</h6>
           <h3>{data.title}</h3>
-          <p className="meta">{`${data.publishedAt} | ${data.readingTimeInMinutes} min read`}</p>
+          <p className="meta">{`${data.readingTimeInMinutes} min read`}</p>
           <div className="author">
             <div className="author__img">
               <GetImage data={data.authors[0].author.image} />

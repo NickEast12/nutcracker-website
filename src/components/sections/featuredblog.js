@@ -155,7 +155,7 @@ const FeaturedBlog = ({ data }) => {
           <div className="fea--content">
             <h6>{i.categories[0].title}</h6>
             <h2>{i.title}</h2>
-            <p className="meta">{`${i.publishedAt} | ${i.readingTimeInMinutes} min read`}</p>
+            <p className="meta">{`${i.readingTimeInMinutes} min read`}</p>
             <div className="author">
               <div className="author__img">
                 <GetImage data={i.authors[0].author.image} />

@@ -49,7 +49,7 @@ const ReducedBlog = ({ data }) => {
         <section className="b-c">
           <h6>{`${data.categories[0].title} `}</h6>
           <h3>{data.title}</h3>
-          <p className="meta">{`${data.publishedAt} | ${data.readingTimeInMinutes} min read`}</p>
+          <p className="meta">{`${data.readingTimeInMinutes} min read`}</p>
         </section>
       </Link>
     </SingleBlogStyles>
