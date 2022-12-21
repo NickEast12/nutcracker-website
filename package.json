@@ -89,6 +89,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "esm": "^3.2.25",
+    "gatsby-plugin-netlify": "^5.1.0",
     "prettier": "^2.8.1"
   },
   "repository": {
