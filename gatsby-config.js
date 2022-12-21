@@ -32,14 +32,14 @@ module.exports = {
         path: `${__dirname}/src/assets/pdfs`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: process.env.TYPEKIT_ID,
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     typekit: {
+    //       id: process.env.TYPEKIT_ID,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
