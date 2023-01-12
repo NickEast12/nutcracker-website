@@ -203,10 +203,12 @@ export class Maps extends Component {
           zoom={15}
           disableDefaultUI
           onReady={(mapProps, map) => this._mapLoaded(mapProps, map)}
-          initialCenter={{ lat: 51.35854, lng: -0.1891 }}
+          // initialCenter={{ lat: 51.35854, lng: -0.1891 }}
+          initialCenter={{ lat: 52.05515925568539, lng: 1.1490883650893988 }}
         >
           <Marker
-            position={{ lat: 51.35854, lng: -0.1891 }}
+            // position={{ lat: 51.35854, lng: -0.1891 }}
+            position={{ lat: 52.05515925568539, lng: 1.1490883650893988 }}
             icon={{
               url: `${Icon}`,
             }}

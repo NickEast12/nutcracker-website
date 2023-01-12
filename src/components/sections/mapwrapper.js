@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import Map from '../functional/map';
+import React from "react";
+import styled from "styled-components";
+import Map from "../functional/map";
 // import OfficeIcon from '../../svgs/office.svg';
-import OfficeIcon from '../../svgs/nut.svg';
+import OfficeIcon from "../../svgs/nut.svg";
 
 const MapWrapperStyles = styled.section`
   width: 100%;
@@ -16,6 +16,7 @@ const MapWrapperStyles = styled.section`
       padding: 1rem 0.75rem;
       border-radius: 5px;
       margin-bottom: 1.5rem;
+      
       svg {
         width: 60px;
 
@@ -33,6 +34,7 @@ const MapWrapperStyles = styled.section`
       address {
         font-style: normal;
         line-height: 1.4;
+        font-size: .95rem;
       }
     }
     @media only screen and (min-width: 750px) {
@@ -57,30 +59,34 @@ const MapWrapperStyles = styled.section`
     @media only screen and (min-width: 1280px) {
       &__content--wrapper {
         width: 25%;
+        border-radius: 10px;
       }
     }
   }
 `;
 const MapWrapper = () => {
-  const i = true;
   return (
     <MapWrapperStyles>
       <div className="map">
         <div className="map__content">
           <div className="map__content--wrapper">
             <OfficeIcon />
-            <h5>Nutracker HQ</h5>
+            <h5>Nutcracker Agency</h5>
             <address>
               <a
-                href="https://www.google.co.uk/maps/search/Nutcracker+Agency+Salatin+House+19+Cedar+Road+Sutton+SM2+5DA/@51.358596,-0.1906146,17z/data=!3m1!4b1"
+                href="https://goo.gl/maps/xBTLLcCBhJFysQvb7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Nutcracker Agency <br />
-                Salatin House 19
-                <br /> Cedar Road
-                <br /> Sutton
-                <br /> SM2 5DA
+                3rd and 4th Floors
+                <br />
+                Franciscan House
+                <br />
+                51 Princes Street
+                <br />
+                Ipswich
+                <br />
+                IP1 1UR
               </a>
             </address>
           </div>

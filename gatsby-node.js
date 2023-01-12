@@ -66,8 +66,16 @@ async function turnBlogsIntoPages({ graphql, actions }) {
     }
   `);
   const Blogs = data.blogs.nodes;
+  let isMany
+  if (Blogs.length > 10) {
+    console.log(`creating a page for ${Blogs.lenght} blogs`)
+  } else {
+    isMany = false
+  }
   Blogs.forEach((blog) => {
-    console.log(`creating a page for ${blog.title}`);
+    if (!isMany) {
+      console.log(`creating a page for ${blog.title}`);
+    }
     actions.createPage({
       path: `blog/${blog.categories[0].slug.current}/${blog.slug.current}`,
       component: template,
