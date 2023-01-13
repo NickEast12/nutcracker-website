@@ -15,7 +15,8 @@ const Contact = () => {
       />
       <ContactHeader />
       <ContactMain />
-      <MapWrapper />
+      <MapWrapper sutton />
+      <MapWrapper $second />
     </Layout>
   );
 };
