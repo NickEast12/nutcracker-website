@@ -184,7 +184,7 @@ const MyMapStyles = [
 
 const MapStyles = styled.div`
   width: 100%;
-  height: 20rem;
+  height: 22rem;
   position: relative;
 `;
 
@@ -198,22 +198,43 @@ export class Maps extends Component {
   render() {
     return (
       <MapStyles>
-        <Map
+        {this.props.sutton ? (
+          <Map
           google={this.props.google}
           zoom={15}
           disableDefaultUI
           onReady={(mapProps, map) => this._mapLoaded(mapProps, map)}
-          // initialCenter={{ lat: 51.35854, lng: -0.1891 }}
-          initialCenter={{ lat: 52.05515925568539, lng: 1.1490883650893988 }}
+          initialCenter={{ lat: 51.35854, lng: -0.1891 }}
+          
         >
           <Marker
-            // position={{ lat: 51.35854, lng: -0.1891 }}
-            position={{ lat: 52.05515925568539, lng: 1.1490883650893988 }}
+            position={{ lat: 51.35854, lng: -0.1891 }}
+            
             icon={{
               url: `${Icon}`,
             }}
           />
         </Map>
+        ) : (
+<Map
+google={this.props.google}
+zoom={15}
+disableDefaultUI
+onReady={(mapProps, map) => this._mapLoaded(mapProps, map)}
+// initialCenter={{ lat: 51.35854, lng: -0.1891 }}
+initialCenter={{ lat: 52.05515925568539, lng: 1.1490883650893988 }}
+>
+<Marker
+  // position={{ lat: 51.35854, lng: -0.1891 }}
+  position={{ lat: 52.05515925568539, lng: 1.1490883650893988 }}
+  icon={{
+    url: `${Icon}`,
+  }}
+/>
+</Map>
+
+        )}
+        
       </MapStyles>
     );
   }
