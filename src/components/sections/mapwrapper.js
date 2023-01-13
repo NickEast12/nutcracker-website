@@ -17,7 +17,7 @@ const MapWrapperStyles = styled.section`
       border-radius: 5px;
       margin-bottom: 1.5rem;
       ${props => props.$second && css`
-        margin-bottom: 0px!important;
+        margin-bottom: 2.5rem!important;
       `}
       svg {
         width: 60px;
