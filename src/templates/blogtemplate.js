@@ -260,8 +260,8 @@ const BlogBody = ({ blogData }) => {
         <div className="image">
           <img
             src={`${urlFor(props.node.asset)
-              .width(1388)
-              .height(926)
+              // .width(1388)
+              // .height(926)
               .fit('crop')
               .auto('format')}`}
             alt={blogData.title}
