@@ -12,6 +12,15 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link rel="stylesheet" href="https://use.typekit.net/ltj6ded.css" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDTKHNEGQK"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-BDTKHNEGQK');
+          `}
+        </script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
