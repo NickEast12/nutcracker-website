@@ -389,7 +389,7 @@ const Nav = ({ alt }) => {
               </section>
             </li>
             <li>
-              <Link to="/nx3">NX3</Link>
+              <Link to="/nx3">nx<sup>3</sup></Link>
             </li>
             <li>
               <Link to="/team">The team</Link>
@@ -457,7 +457,7 @@ const Nav = ({ alt }) => {
           </ul>
           <ul className="mobile--menu--lower">
           <li>
-              <Link to="/nx3">NX3</Link>
+          <Link to="/nx3">nx<sup>3</sup></Link>
             </li>
             <li>
               <Link to="/team">The team</Link>

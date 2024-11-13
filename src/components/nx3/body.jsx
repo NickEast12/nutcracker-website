@@ -4,8 +4,6 @@ import styled from "styled-components";
 import XLogo from "../../svgs/x-logo.svg";
 import Animate from "./animate";
 
-import Shutter from '../../assets/images/shutter.gif'
-import { StaticImage } from "gatsby-plugin-image";
 
 const BodyStyles = styled.section`
   background-color: white;
@@ -21,6 +19,11 @@ const BodyStyles = styled.section`
       font-size: 0.9rem;
       line-height: 1.25rem;
       font-weight: 600;
+      span {
+        svg {
+          width: 100px;
+        }
+      }
       @media only screen and (min-width: 576px) {
         font-size: 1.15rem;
         line-height: 1.5rem;
@@ -41,19 +44,34 @@ const BodyStyles = styled.section`
       }
       h3 {
         margin: 1rem 0;
-        font-size: 1.25rem;
+        font-size: 32px;
         text-align: center;
         max-width: none;
         font-weight: 800;
-        @media only screen and (min-width: 576px) {
-          font-size: 1.5rem;
-          line-height: 1.5rem;
-          margin-top: 2rem;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        span {
+          svg {
+            width: auto;
+            height: 29px;
+            @media only screen and (min-width: 768px) {
+              height: 37px;
         }
         @media only screen and (min-width: 1280px) {
-          font-size: 1.95rem;
-          line-height: 1.8rem;
+          height: 43px;
         }
+          }
+        }
+        @media only screen and (min-width: 768px) {
+          font-size: 37px;
+          gap: 20px;
+        }
+        @media only screen and (min-width: 1280px) {
+          font-size: 43px; 
+        }
+        
       }
       .shutter {
         margin: 3rem auto 0 auto;
@@ -101,10 +119,7 @@ export default function Body() {
             lasting relationships.
           </h3>
           <div className="body">
-            <div className="logo">
-              <XLogo />
-            </div>
-            <h3>How it works</h3>
+            <h3>How <span><XLogo /></span> works</h3>
             <div className="shutter">
             <img src='/new-shutter.gif' alt="" />
             </div>

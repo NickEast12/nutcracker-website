@@ -97,7 +97,7 @@ const HeroStyles = styled.section`
             }
             h1,h2 {
                 color: white;
-                text-align: left;
+                text-align: center;
             }
             
         }
@@ -145,14 +145,11 @@ export default function NewHero() {
             />
             </div>
             <div className='video'>
-            <video ref={videoRef} src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" autoPlay muted></video>
+            <video ref={videoRef} src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" autoPlay muted loop></video>
             </div>
             <div className="text">
-                <div className="nut">
-                <StaticImage src="../../assets/images/nut.png" alt="" />
-                </div>
-            <h1>The formular for ambitious business.</h1>
-            <h2>Seure market share, build brand authority. <br /> Achieve measurable growth</h2>
+            <h1>The formula for ambitious businesses</h1>
+            <h2>Secure market share. Achieve measurable growth. Build brand authority</h2>
             </div>
         </div>
     </HeroStyles>

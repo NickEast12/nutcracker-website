@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const HeroStyles = styled.section`
     width: 100%;
-    /* height: 100vh; */
     background: #283D43;
     .hero {
         width: 91.888%; 
@@ -40,7 +39,6 @@ const HeroStyles = styled.section`
             transition: opacity 0.5s ease-in-out;
         }
         .image {
-            
             width: 100%;
             height: 100%;
             opacity: 1;
@@ -62,7 +60,7 @@ const HeroStyles = styled.section`
                     font-size: 2rem;
                 }
                 @media only screen and (min-width: 1380px) { 
-                    font-size: 2.5rem;
+                    font-size: 50px;
                 }
             }
             h2 {
@@ -81,7 +79,6 @@ const HeroStyles = styled.section`
                 color: white;
                 text-align: center;
             }
-            
         }
     }
 `
@@ -89,23 +86,40 @@ const HeroStyles = styled.section`
 export default function NXThreeHero() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     const video = videoRef.current;
 
     if (video) {
+      // Handle initial load
       video.addEventListener('canplaythrough', () => {
         setIsVideoLoaded(true);
       });
-    }
 
-    return () => {
-      if (video) {
+      // Handle video end
+      const handleVideoEnd = () => {
+        video.pause();
+        // Wait 4 seconds before playing again
+        timeoutRef.current = setTimeout(() => {
+          video.currentTime = 0;
+          video.play();
+        }, 4000);
+      };
+
+      video.addEventListener('ended', handleVideoEnd);
+
+      return () => {
         video.removeEventListener('canplaythrough', () => {
           setIsVideoLoaded(true);
         });
-      }
-    };
+        video.removeEventListener('ended', handleVideoEnd);
+        // Clean up timeout if component unmounts
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      };
+    }
   }, []);
 
   useEffect(() => {
@@ -127,7 +141,12 @@ export default function NXThreeHero() {
             />
             </div>
             <div className='video'>
-            <video ref={videoRef} src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" autoPlay muted></video>
+            <video 
+              ref={videoRef} 
+              src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" 
+              autoPlay 
+              muted
+            ></video>
             </div>
             <div className="text">
             <h1>Where strategy meets creativity and digital expertise</h1>

@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import Background from "../../assets/images/cta-background.png";
-import { Link } from "gatsby";
 import Animate from "./animate";
 
+
 const CtaStyles = styled.section`
-  background-color: white;
-  background-image: url(${Background});
-  background-size: cover;
+  background-color: #1b5354;
   padding: 4rem 0;
   .wrapper {
     width: 91.888%;
@@ -17,20 +14,33 @@ const CtaStyles = styled.section`
     .top {
       h3 {
         color: #ffffff;
-        margin:  0 0 .65rem 0 ;
-        font-size: 1.5rem;
+        margin: 1rem 0;
+        font-size: 32px;
         text-align: center;
         max-width: none;
         font-weight: 800;
-        @media only screen and (min-width: 576px) {
-          font-size: 1.5rem;
-          line-height: 1.5rem;
-          /* margin-top: 2rem; */
+        
+        /* display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap: 12px; */
+        br {
+          display: hidden;
+        }
+       img {
+        width: 99px;
+        margin-left: 10px;
+       }
+        @media only screen and (min-width: 768px) {
+          font-size: 37px;
+          gap: 20px;
         }
         @media only screen and (min-width: 1280px) {
-          font-size: 1.95rem;
-          line-height: 1.8rem;
+          font-size: 43px; 
+          line-height: 55px;
         }
+        
+      }
       }
       p {
         text-align: center;
@@ -47,37 +57,43 @@ const CtaStyles = styled.section`
         max-width: 300px;
         a {
             display: block;
-            background: var(--backgroundColour);
+            background: #ffd400;
             height: 100%;
             padding: 1.1rem 1rem;
             border-radius: 8px;
-            color: #ffffff;
-            border: solid 2px var(--backgroundColour);
+            color: #000000;
+            border: solid 2px #ffd400;
             transition: all .24s ease-in-out;
+            font-weight: 700;
             &:hover, &:focus {
                 background: none;
             }
+            @media only screen and (min-width: 992px) {
+            font-size: 20px;
+        }
         }
       }
     }
-  }
+  
 `;
 
 export default function Cta() {
   return (
     <CtaStyles>
-        <Animate>
-
+        
+    <Animate>
       <div className="wrapper">
         <div className="top">
-          <h3>Ready to take your market share to the next level?</h3>
-          <p>Book some time with one of the team. We can discuss your business, <br /> your goals and how nx3 can support them.</p>
+          <h3>Ready to see what <span><img src="/nx3-logo.png" alt="" /></span> <br /> can do for you?</h3>
+          {/* <h3><span>Ready to see what<XLogo /></span>
+          can do for you?</h3> */}
+          
           <div className="btn-wrapper">
-            <Link to="/contact/">Book a free consultation</Link>
+            <a href="mailto:jenny.knighting@nutcrackeragency.com">Book a free consultation</a>
           </div>
         </div>
       </div>
-        </Animate>
+      </Animate>
     </CtaStyles>
   );
 }

@@ -80,6 +80,9 @@ const CardStyles = styled.section`
         h4 {
           font-weight: 700;
           font-size: 1.75rem;
+          @media only screen and (min-width: 1280px) {
+          font-size: 2rem;
+        }
         }
       }
       &--inner {
@@ -107,6 +110,9 @@ const CardStyles = styled.section`
         p {
           font-size: 16px;
           font-weight: 500;
+          @media only screen and (min-width: 1280px) {
+            font-size: 18px;
+        }
         }
         strong {
           font-weight: 800;
@@ -124,6 +130,7 @@ const CardStyles = styled.section`
           li {
             font-size: 16px;
             font-weight: 500;
+            
           }
         }
       }

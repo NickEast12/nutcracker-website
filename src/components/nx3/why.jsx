@@ -11,6 +11,7 @@ import Animate from "./animate";
 const WhyStyles = styled.section`
   /* background-color: var(--backgroundColour); */
   background-image: url(${Background});
+  background-attachment: fixed;
   background-size: cover;
   padding: 5rem 0;
   .wrapper {
@@ -19,21 +20,33 @@ const WhyStyles = styled.section`
     max-width: 1920px;
     .top {
       h3 {
-        color: white;
+        color: #ffffff;
         margin: 1rem 0;
-        font-size: 1.5rem;
+        font-size: 32px;
         text-align: center;
         max-width: none;
         font-weight: 800;
-        @media only screen and (min-width: 576px) {
-          font-size: 1.5rem;
-          line-height: 1.5rem;
-          margin-top: 2rem;
+        
+        /* display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap: 12px; */
+        br {
+          display: hidden;
+        }
+       img {
+        width: 99px;
+        margin-left: 10px;
+       }
+        @media only screen and (min-width: 768px) {
+          font-size: 37px;
+          gap: 20px;
         }
         @media only screen and (min-width: 1280px) {
-          font-size: 1.95rem;
-          line-height: 1.8rem;
+          font-size: 43px; 
+          line-height: 55px;
         }
+        
       }
       .logo {
         width: 100px;
@@ -43,7 +56,7 @@ const WhyStyles = styled.section`
         }
       }
     }
-    .cards {
+    .cardss {
         margin-top: 2rem;
         display: grid;
         grid-template-columns: 1fr;
@@ -56,8 +69,6 @@ const WhyStyles = styled.section`
             margin-top: 4rem;
         }
         div {
-          opacity: 0;
-          transform: translateY(2rem) scale(0.9);
             span {
                 svg {
                     width: 100px;
@@ -69,8 +80,12 @@ const WhyStyles = styled.section`
                 font-size: 22px;
                 margin: 1rem 0;
                 font-size: 22.5px;
+                font-weught: 800;
                 @media only screen and (min-width: 992px) {
                     font-size: 25px;
+                }
+                @media only screen and (min-width: 1280px) {
+                    font-size: 28px;
                 }
             }
             p {
@@ -101,26 +116,26 @@ export default function Why() {
           </div>
           <h3>Why it works: The Nutcracker difference </h3>
         </div>
-        <div className="cards">
-            <div class="card">
+        <div className="cardss">
+            <div>
                 <span>
-                    <IconOne />
+                    {/* <IconOne /> */}
                 </span>
                 <h4>Over a decade of <br />
                 experience driving results </h4>
                 <p>Since inception in 2014, we have refined and finessed the Nutcracker approach. We understand what it takes to deliver commercial results and build brands. We have worked across multiple industry sectors with different sized businesses, all with the same core goal: to grow market share.</p>
             </div>
-            <div class="card">
+            <div>
             <span>
-                    <IconTwo />
+                    {/* <IconTwo /> */}
                 </span>
                 <h4>Dynamic, <br />
                 data-driven approach</h4>
                 <p>nx³ is more than a campaign; it’s a complete strategy that aligns  social media, email marketing, SEO, PPC, and more to create a cohesive journey for your audience. Every touchpoint is optimised to guide your audience from  awareness to conversion, ensuring no opportunity is missed. </p>
             </div>
-            <div class="card">
+            <div>
             <span>
-                    <IconThree />
+                    {/* <IconThree /> */}
                 </span>
                 <h4>Integrated, <br />
                 multi-channel strategy</h4>
