@@ -384,6 +384,9 @@ const Nav = ({ alt }) => {
             <li>
               <Link to="/team">The team</Link>
             </li>
+            <li>
+              <Link to="/nx3">NX3</Link>
+            </li>
             <li className="dropdowntwo">
               News &amp; views
               <section>
