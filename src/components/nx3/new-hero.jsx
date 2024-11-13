@@ -105,26 +105,26 @@ const HeroStyles = styled.section`
 `
 
 export default function NewHero() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
   const videoRef = useRef(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
+//   useEffect(() => {
+//     const video = videoRef.current;
 
-    if (video) {
-      video.addEventListener('canplaythrough', () => {
-        setIsVideoLoaded(true);
-      });
-    }
+//     if (video) {
+//       video.addEventListener('canplaythrough', () => {
+//         setIsVideoLoaded(true);
+//       });
+//     }
 
-    return () => {
-      if (video) {
-        video.removeEventListener('canplaythrough', () => {
-          setIsVideoLoaded(true);
-        });
-      }
-    };
-  }, []);
+//     return () => {
+//       if (video) {
+//         video.removeEventListener('canplaythrough', () => {
+//           setIsVideoLoaded(true);
+//         });
+//       }
+//     };
+//   }, []);
 
   useEffect(() => {
     if (isVideoLoaded) {
