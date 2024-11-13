@@ -55,6 +55,8 @@ const StatsStyles = styled.section`
             margin-top: 3rem;
         }
         div {
+          opacity: 0;
+    transform: translateY(2rem) scale(0.9);
             .green {
                 color: var(--mainColour);
             }
@@ -96,17 +98,17 @@ export default function Stats() {
           <p>How our clients have achieved market share growth by using nx³</p>
         </div>
         <div className="cards">
-            <div>
+            <div className="card">
                 <p className="num green">12.3k</p>
                 <p className="intro green">e-commerce orders</p>
                 <p className="text"><strong>For Printt</strong>. Results from <br /> a six-month period.</p>
             </div>
-            <div>
+            <div className="card">
                 <p className="num">1.5k%</p>
                 <p className="intro">increase in total shop sales</p>
                 <p className="text"><strong>For Zano Controls’.</strong> Results from <br /> a twelve-month period.</p>
             </div>
-            <div>
+            <div className="card">
                 <p className="num green">116%</p>
                 <p className="intro green">increase in demo requests</p>
                 <p className="text"><strong>For a leading SasS business.</strong> <br /> Results from a six-month period.</p>

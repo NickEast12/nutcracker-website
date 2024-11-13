@@ -19,9 +19,9 @@ export default function NXThree() {
       />
         <NXThreeHero />
         <Body />
-        <Cards />
-        <Why />
-        <Stats />
+        <Cards  />
+        <Why  />
+        <Stats  />
         <Cta />
     </Layout>
   )

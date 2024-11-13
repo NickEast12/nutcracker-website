@@ -94,8 +94,6 @@ export default function Why() {
   return (
     <WhyStyles>
       <Animate>
-
-      
       <div className="wrapper">
         <div className="top">
           <div className="logo">
@@ -104,7 +102,7 @@ export default function Why() {
           <h3>Why it works: The Nutcracker difference </h3>
         </div>
         <div className="cards">
-            <div>
+            <div class="card">
                 <span>
                     <IconOne />
                 </span>
@@ -112,7 +110,7 @@ export default function Why() {
                 experience driving results </h4>
                 <p>Since inception in 2014, we have refined and finessed the Nutcracker approach. We understand what it takes to deliver commercial results and build brands. We have worked across multiple industry sectors with different sized businesses, all with the same core goal: to grow market share.</p>
             </div>
-            <div>
+            <div class="card">
             <span>
                     <IconTwo />
                 </span>
@@ -120,7 +118,7 @@ export default function Why() {
                 data-driven approach</h4>
                 <p>nx³ is more than a campaign; it’s a complete strategy that aligns  social media, email marketing, SEO, PPC, and more to create a cohesive journey for your audience. Every touchpoint is optimised to guide your audience from  awareness to conversion, ensuring no opportunity is missed. </p>
             </div>
-            <div>
+            <div class="card">
             <span>
                     <IconThree />
                 </span>
