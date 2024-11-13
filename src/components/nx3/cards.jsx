@@ -86,7 +86,7 @@ const CardStyles = styled.section`
         position: relative;
         margin-top: 1.25rem;
         border-radius: 10px;
-        padding: 3rem 2rem 2rem 2rem;
+        padding: 2rem 2rem 2rem 2rem;
         color: #273d44;
         @media only screen and (min-width: 992px) {
           min-height: 550px;
