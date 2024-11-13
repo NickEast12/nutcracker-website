@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const HeroStyles = styled.section`
     width: 100%;
-    /* height: 100vh; */
     background: #283D43;
     .hero {
         width: 91.888%; 
@@ -40,7 +39,6 @@ const HeroStyles = styled.section`
             transition: opacity 0.5s ease-in-out;
         }
         .image {
-            
             width: 100%;
             height: 100%;
             opacity: 1;
@@ -50,22 +48,8 @@ const HeroStyles = styled.section`
             position: absolute;
             bottom: 3rem;
             width: 100%;
-            text-align: left;
-            max-width: var(--maxWidth);
-            @media only screen and (min-width: 768px) { 
-                width: 90%;
-            }
-            .nut {
-                .gatsby-image-wrapper {
-                    width: 50px;
-                    margin-bottom: 10px;
-                    @media only screen and (min-width: 768px) { 
-                        margin-bottom: 17px;
-                    }
-                }  
-            }
             @media only screen and (min-width: 1380px) { 
-                bottom: 3rem;
+                bottom: 5rem;
             }
 
             h1 {
@@ -76,55 +60,67 @@ const HeroStyles = styled.section`
                     font-size: 2rem;
                 }
                 @media only screen and (min-width: 1380px) { 
-                    font-size: 2.5rem;
+                    font-size: 50px;
                 }
             }
             h2 {
                 font-size: .85rem;
-                font-weight: 300;
-                @media only screen and (min-width: 576px) {
-                    font-size: 1.2rem;
-                }
                 @media only screen and (min-width: 768px) {
-                    font-size: 1.3rem;
+                    font-size: .95rem;
                 }
                 @media only screen and (min-width: 992px) { 
-                    font-size: 1.4rem;
+                    font-size: 1.22rem;
                 }
                 @media only screen and (min-width: 1380px) { 
-                    font-size: 1.8rem;
+                    font-size: 1.5rem;
                 }
             }
             h1,h2 {
                 color: white;
                 text-align: center;
             }
-            
         }
     }
 `
 
-export default function NewHero() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
+export default function NXThreeHero() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef(null);
+  const timeoutRef = useRef(null);
 
-//   useEffect(() => {
-//     const video = videoRef.current;
+  useEffect(() => {
+    const video = videoRef.current;
 
-//     if (video) {
-//       video.addEventListener('canplaythrough', () => {
-//         setIsVideoLoaded(true);
-//       });
-//     }
+    if (video) {
+      // Handle initial load
+      video.addEventListener('canplaythrough', () => {
+        setIsVideoLoaded(true);
+      });
 
-//     return () => {
-//       if (video) {
-//         video.removeEventListener('canplaythrough', () => {
-//           setIsVideoLoaded(true);
-//         });
-//       }
-//     };
-//   }, []);
+      // Handle video end
+      const handleVideoEnd = () => {
+        video.pause();
+        // Wait 4 seconds before playing again
+        timeoutRef.current = setTimeout(() => {
+          video.currentTime = 0;
+          video.play();
+        }, 4000);
+      };
+
+      video.addEventListener('ended', handleVideoEnd);
+
+      return () => {
+        video.removeEventListener('canplaythrough', () => {
+          setIsVideoLoaded(true);
+        });
+        video.removeEventListener('ended', handleVideoEnd);
+        // Clean up timeout if component unmounts
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      };
+    }
+  }, []);
 
   useEffect(() => {
     if (isVideoLoaded) {
@@ -145,7 +141,12 @@ export default function NewHero() {
             />
             </div>
             <div className='video'>
-            <video ref={videoRef} src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" autoPlay muted loop></video>
+            <video 
+              ref={videoRef} 
+              src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" 
+              autoPlay 
+              muted
+            ></video>
             </div>
             <div className="text">
             <h1>The formula for ambitious businesses</h1>
