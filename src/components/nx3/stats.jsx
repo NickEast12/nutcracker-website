@@ -6,6 +6,7 @@ import XLogo from "../../svgs/x-logo.svg";
 import IconOne from '../../svgs/icon-1.svg'
 import IconTwo from '../../svgs/icon-2.svg'
 import IconThree from '../../svgs/icon-3.svg'
+import Animate from "./animate";
 
 const StatsStyles = styled.section`
   background-color: white;
@@ -86,6 +87,9 @@ const StatsStyles = styled.section`
 export default function Stats() {
   return (
     <StatsStyles>
+      <Animate>
+
+      
       <div className="wrapper">
         <div className="top">
           <h3>Don’t just take it from us</h3>
@@ -109,6 +113,7 @@ export default function Stats() {
             </div>
         </div>
       </div>
+      </Animate>
     </StatsStyles>
   );
 }

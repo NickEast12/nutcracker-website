@@ -126,7 +126,7 @@ export default function NXThreeHero() {
             />
             </div>
             <div className='video'>
-            <video ref={videoRef} src="https://TickedPink.b-cdn.net/NX3_9sec_01.mp4" autoPlay muted></video>
+            <video ref={videoRef} src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" autoPlay muted></video>
             </div>
             <div className="text">
             <h1>Where strategy meets creativity and digital expertise</h1>

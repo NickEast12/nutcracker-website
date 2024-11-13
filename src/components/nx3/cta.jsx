@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Background from "../../assets/images/cta-background.png";
 import { Link } from "gatsby";
+import Animate from "./animate";
 
 const CtaStyles = styled.section`
   background-color: white;
@@ -65,6 +66,8 @@ const CtaStyles = styled.section`
 export default function Cta() {
   return (
     <CtaStyles>
+        <Animate>
+
       <div className="wrapper">
         <div className="top">
           <h3>Ready to take your market share to the next level?</h3>
@@ -74,6 +77,7 @@ export default function Cta() {
           </div>
         </div>
       </div>
+        </Animate>
     </CtaStyles>
   );
 }

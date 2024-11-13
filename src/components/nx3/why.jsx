@@ -6,6 +6,7 @@ import XLogo from "../../svgs/x-logo.svg";
 import IconOne from '../../svgs/icon-1.svg'
 import IconTwo from '../../svgs/icon-2.svg'
 import IconThree from '../../svgs/icon-3.svg'
+import Animate from "./animate";
 
 const WhyStyles = styled.section`
   /* background-color: var(--backgroundColour); */
@@ -55,6 +56,8 @@ const WhyStyles = styled.section`
             margin-top: 4rem;
         }
         div {
+          opacity: 0;
+          transform: translateY(2rem) scale(0.9);
             span {
                 svg {
                     width: 100px;
@@ -90,6 +93,9 @@ const WhyStyles = styled.section`
 export default function Why() {
   return (
     <WhyStyles>
+      <Animate>
+
+      
       <div className="wrapper">
         <div className="top">
           <div className="logo">
@@ -124,6 +130,7 @@ export default function Why() {
             </div>
         </div>
       </div>
+      </Animate>
     </WhyStyles>
   );
 }
