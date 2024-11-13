@@ -389,10 +389,10 @@ const Nav = ({ alt }) => {
               </section>
             </li>
             <li>
-              <Link to="/team">The team</Link>
+              <Link to="/nx3">NX3</Link>
             </li>
             <li>
-              <Link to="/nx3">NX3</Link>
+              <Link to="/team">The team</Link>
             </li>
             <li className="dropdowntwo">
               News &amp; views
