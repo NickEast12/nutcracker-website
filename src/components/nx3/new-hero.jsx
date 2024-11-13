@@ -31,15 +31,16 @@ const HeroStyles = styled.section`
             padding-bottom: 0rem;
         }
         video {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: auto;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
         .image {
-            position: absolute;
-            top: 0;
-            left: 0;
+            
             width: 100%;
             height: 100%;
             opacity: 1;
