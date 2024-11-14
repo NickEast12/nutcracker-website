@@ -143,7 +143,7 @@ export default function NXThreeHero() {
             <div className='video'>
             <video 
               ref={videoRef} 
-              src="https://NoSweatCDN.b-cdn.net/NX3_25sec_01.mp4" 
+              src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" 
               autoPlay 
               muted
             ></video>

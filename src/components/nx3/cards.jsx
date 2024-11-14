@@ -54,7 +54,7 @@ const CardStyles = styled.section`
       grid-gap: 20px;
     }
     .card {
-      max-width: 350px;
+      max-width: 450px;
       margin: 0 auto;
       opacity: 0;
       opacity: 0;
@@ -92,7 +92,7 @@ const CardStyles = styled.section`
         padding: 2rem 2rem 2rem 2rem;
         color: #273d44;
         @media only screen and (min-width: 992px) {
-          min-height: 670px;
+          min-height: 600px;
         }
         span {
           background: white;

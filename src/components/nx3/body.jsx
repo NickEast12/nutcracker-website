@@ -49,9 +49,10 @@ const BodyStyles = styled.section`
       .video  {
         width: 100%;
         max-width: 700px;
-        margin: 2rem auto 0 auto;
+        margin: 4rem auto 0 auto;
         video {
-          width:100%;
+          width:90%;
+          margin: 0 auto;
         }
       }
       h3 {
