@@ -112,17 +112,17 @@ export default function Stats() {
         </div>
         <div className="cards">
             <div className="card">
-                <p className="num ">12.3k</p>
+                <p className="num ">+12.3k</p>
                 <p className="intro green">e-commerce orders</p>
                 <p className="text">For Printt. Results from a <br /> six-month period.</p>
             </div>
             <div className="card">
-                <p className="num">1.5k%</p>
+                <p className="num">+1.5k%</p>
                 <p className="intro green">increase in total shop sales</p>
                 <p className="text">For Zano Controls. Results from <br /> a twelve-month period.</p>
             </div>
             <div className="card">
-                <p className="num ">116%</p>
+                <p className="num ">+116%</p>
                 <p className="intro green">increase in demo requests</p>
                 <p className="text">For a leading SaaS business. <br /> Results from a six-month period.</p>
             </div>

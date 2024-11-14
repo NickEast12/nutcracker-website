@@ -46,6 +46,9 @@ const WhyStyles = styled.section`
           font-size: 43px; 
           line-height: 55px;
         }
+        @media only screen and (min-width: 1280px) {
+          font-size: 55px; 
+        }
         
       }
       .logo {
@@ -87,6 +90,9 @@ const WhyStyles = styled.section`
                 @media only screen and (min-width: 1280px) {
                     font-size: 28px;
                 }
+                @media only screen and (min-width: 1440px) {
+                    font-size: 32px;
+                }
             }
             p {
                 color: white;
@@ -98,6 +104,11 @@ const WhyStyles = styled.section`
                     font-size: 16px;
                     line-height: 22px;
                     max-width: 300px;
+                }
+                @media only screen and (min-width: 1280px) {
+                    font-size: 18px;
+                    max-width: 340px;
+                    line-height: 27px;
                 }
             }
         }

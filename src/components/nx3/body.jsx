@@ -60,7 +60,7 @@ const BodyStyles = styled.section`
               height: 37px;
         }
         @media only screen and (min-width: 1280px) {
-          height: 43px;
+          height: 55px;
         }
           }
         }
@@ -69,7 +69,7 @@ const BodyStyles = styled.section`
           gap: 20px;
         }
         @media only screen and (min-width: 1280px) {
-          font-size: 43px; 
+          font-size: 59px; 
         }
         
       }

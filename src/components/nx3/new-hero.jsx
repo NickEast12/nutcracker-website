@@ -150,7 +150,7 @@ export default function NXThreeHero() {
             </div>
             <div className="text">
             <h1>The formula for ambitious businesses</h1>
-            <h2>Secure market share. Achieve measurable growth. Build brand authority</h2>
+            <h2>Secure market share. Achieve measurable growth. Build brand authority.</h2>
             </div>
         </div>
     </HeroStyles>
