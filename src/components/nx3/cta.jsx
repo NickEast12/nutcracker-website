@@ -62,11 +62,10 @@ const CtaStyles = styled.section`
             padding: 1.1rem 1rem;
             border-radius: 8px;
             color: #000000;
-            border: solid 2px #ffd400;
             transition: all .24s ease-in-out;
             font-weight: 700;
             &:hover, &:focus {
-                background: none;
+              background: #c4a300;
             }
             @media only screen and (min-width: 992px) {
             font-size: 20px;
@@ -89,7 +88,7 @@ export default function Cta() {
           can do for you?</h3> */}
           
           <div className="btn-wrapper">
-            <a href="mailto:jenny.knighting@nutcrackeragency.com">Book a free consultation</a>
+            <a href="mailto:jenny.knighting@nutcrackeragency.com?subject=I’d like to know more about nx3">Book a free consultation</a>
           </div>
         </div>
       </div>

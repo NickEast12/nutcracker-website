@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image'
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
@@ -22,12 +23,20 @@ const HeroStyles = styled.section`
             padding-bottom: 7rem;
         }
         @media only screen and (min-width: 768px) {
-            padding-top: 0px;
-            padding-bottom: 2rem;
+            /* padding-top: 0px; */
+            /* padding-bottom: 2rem; */
         }
-        @media only screen and (min-width: 992px) {
-            padding-top: 0px;
-            padding-bottom: 0rem;
+        @media only screen and (min-width: 1280px) {
+            /* padding-top: 2rem; */
+            padding-bottom: 8rem;
+        }
+        @media only screen and (min-width: 1360px) {
+            /* padding-top: 2rem; */
+            padding-bottom: 7rem;
+        }
+        @media only screen and (min-width: 1440px) {
+            /* padding-top: 2rem; */
+            padding-bottom: 5rem;
         }
         video {
             position: absolute;
@@ -46,8 +55,29 @@ const HeroStyles = styled.section`
         }
         .text {
             position: absolute;
-            bottom: 3rem;
+            bottom: 2em;
             width: 100%;
+            .hero-button {
+              max-width: 210px;
+              text-align: center;
+              margin: 1.25rem auto 0 auto;
+              a {
+            display: block;
+            background: #ffd400;
+            height: 100%;
+            padding: 1.1rem 1rem;
+            border-radius: 8px;
+            color: #000000;
+            transition: all .24s ease-in-out;
+            font-weight: 700;
+            &:hover, &:focus {
+              background: #c4a300;
+            }
+            @media only screen and (min-width: 992px) {
+            font-size: 20px;
+        }
+        }
+            }
             @media only screen and (min-width: 1380px) { 
                 bottom: 5rem;
             }
@@ -56,8 +86,12 @@ const HeroStyles = styled.section`
                 font-weight: 800;
                 margin-bottom: 1rem;
                 font-size: 1.5rem;
+                @media only screen and (min-width: 768px) {
+                  font-size: 2rem;
+
+                }
                 @media only screen and (min-width: 992px) { 
-                    font-size: 2rem;
+                  font-size: 42px;
                 }
                 @media only screen and (min-width: 1380px) { 
                     font-size: 50px;
@@ -65,15 +99,21 @@ const HeroStyles = styled.section`
             }
             h2 {
                 font-size: .85rem;
+                line-height: 1.25rem;
+                max-width: 500px;
+                margin: 0 auto;
                 @media only screen and (min-width: 768px) {
-                    font-size: .95rem;
+                    font-size: 1rem;
+                    max-width: 500px;
                 }
                 @media only screen and (min-width: 992px) { 
+                  max-width: 650px;
                     font-size: 1.22rem;
+                    line-height: 1.7rem;
                 }
-                @media only screen and (min-width: 1380px) { 
+                /* @media only screen and (min-width: 1380px) { 
                     font-size: 1.5rem;
-                }
+                } */
             }
             h1,h2 {
                 color: white;
@@ -149,8 +189,11 @@ export default function NXThreeHero() {
             ></video>
             </div>
             <div className="text">
-            <h1>The formula for ambitious businesses</h1>
-            <h2>Secure market share. Achieve measurable growth. Build brand authority.</h2>
+            <h1>Stand out from the crowd</h1>
+            <h2>While nx3 is at our core, we know every brand’s journey is unique. That’s why we offer a full range of services, from one-off projects to flexible packages, to support your goals and drive results.</h2>
+            <div className='hero-button'>
+              <Link to="/nx3/">Find out more</Link>
+            </div>
             </div>
         </div>
     </HeroStyles>

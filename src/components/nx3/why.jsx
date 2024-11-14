@@ -20,8 +20,8 @@ const WhyStyles = styled.section`
     max-width: 1920px;
     .top {
       h3 {
-        color: #ffffff;
-        margin: 1rem 0;
+        color: #fff;
+        margin: 1rem 0 0 0 ;
         font-size: 32px;
         text-align: center;
         max-width: none;
@@ -46,9 +46,6 @@ const WhyStyles = styled.section`
           font-size: 43px; 
           line-height: 55px;
         }
-        @media only screen and (min-width: 1280px) {
-          font-size: 55px; 
-        }
         
       }
       .logo {
@@ -60,16 +57,17 @@ const WhyStyles = styled.section`
       }
     }
     .cardss {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2rem;
         text-align: center;
         max-width: 1200px;
-        margin: 2rem auto 0 auto;
+        margin: 0 auto;
+        /* margin: 2rem auto 0 auto; */
         @media only screen and (min-width: 992px) {
             grid-template-columns: 1fr 1fr 1fr;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
         div {
             span {
