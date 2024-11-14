@@ -12,13 +12,17 @@ const BodyStyles = styled.section`
     width: 91.888%;
     margin: 0 auto;
     max-width: 1920px;
+    .bold {
+      font-weight: 800;
+      margin-top: 1rem;
+      }
     h3 {
       text-align: center;
       max-width: 1000px;
       margin: 0 auto;
       font-size: 0.9rem;
       line-height: 1.25rem;
-      font-weight: 600;
+      
       span {
         svg {
           width: 100px;
@@ -40,6 +44,14 @@ const BodyStyles = styled.section`
         margin: 0 auto 0 auto;
         @media only screen and (min-width: 768px) {
           width: 155px;
+        }
+      }
+      .video  {
+        width: 100%;
+        max-width: 700px;
+        margin: 2rem auto 0 auto;
+        video {
+          width:100%;
         }
       }
       h3 {
@@ -109,19 +121,27 @@ export default function Body() {
     <BodyStyles>
       <div className="wrapper">
         <Animate>
-          <h3>
-            At Nutcracker we know that in today's competitive market, gaining
-            and holding onto market share requires more than just eye-catching
-            campaigns. It demands a strategic, integrated approach that guides
-            your audience from first impression to loyal customer. That's why we
-            created nx³, a streamlined strategy designed to help businesses like
-            yours attract attention, build engagement, and convert leads into
-            lasting relationships.
+          <h3 >
+          At Nutcracker we know that in today's competitive market, gaining and holding onto market share requires more than just eye-catching campaigns. It demands a strategic, integrated approach that guides your audience from first impression to loyal customer.
+          </h3>
+          <h3 className="bold">
+          That's why we created nx³, a streamlined strategy designed to help businesses like yours attract attention, build engagement, and convert leads into lasting relationships.
+
+
           </h3>
           <div className="body">
             <h3>How <span><XLogo /></span> works</h3>
-            <div className="shutter">
+            {/* <div className="shutter">
             <img src='/new-shutter.gif' alt="" />
+            </div> */}
+            <div className='video'>
+            <video 
+              ref={videoRef} 
+              src="https://NoSweatCDN.b-cdn.net/NX3_shutter_White_1000x1000d.mp4" 
+              autoPlay 
+              muted
+              loop
+            ></video>
             </div>
           </div>
         </Animate>

@@ -128,7 +128,7 @@ export default function Stats() {
             </div>
             <div className="card">
                 <p className="num ">+750%</p>
-                <p className="intro green">Return on ad spend</p>
+                <p className="intro green">return on ad spend</p>
                 <p className="text">For a leading food manufacture. Results <br /> from a three-month period.
                 </p>
             </div>

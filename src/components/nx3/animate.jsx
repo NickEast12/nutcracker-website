@@ -19,7 +19,7 @@ export default function Animate({ children }) {
       scrollTrigger: {
         trigger: container.current,
         start: 'top bottom',
-        end: 'top 20%',
+        end: 'top 10px',
         markers: false,
         toggleActions: 'play pause resume reset',
         scrub: 1.5,

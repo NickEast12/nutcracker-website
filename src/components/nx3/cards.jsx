@@ -92,7 +92,7 @@ const CardStyles = styled.section`
         padding: 2rem 2rem 2rem 2rem;
         color: #273d44;
         @media only screen and (min-width: 992px) {
-          min-height: 550px;
+          min-height: 670px;
         }
         span {
           background: white;
@@ -130,6 +130,10 @@ const CardStyles = styled.section`
           li {
             font-size: 16px;
             font-weight: 500;
+            @media only screen and (min-width: 1280px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
             
           }
         }
