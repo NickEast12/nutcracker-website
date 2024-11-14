@@ -52,7 +52,8 @@ const NavStyles = styled.nav`
         visibility: visible;
         position: static;
         margin-top: 0;
-        width: 55%;
+        width: 65%;
+        max-width: 650px;
         .desktop--menu {
           display: block;
           position: relative;
@@ -272,6 +273,12 @@ const NavStyles = styled.nav`
             animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.85s
               forwards;
           }
+          &:nth-child(6) {
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: ${({ open }) => (open ? 'e-in' : '')} ease 0.35s 1.85s
+              forwards;
+          }
         }
       }
       &--top,
@@ -279,12 +286,12 @@ const NavStyles = styled.nav`
         list-style: none;
         li {
           color: #ffffff;
-          padding: 0.65rem 0;
+          padding: 0.35rem 0;
           font-weight: 500;
           font-size: 0.85rem;
           @media only screen and (min-width: 375px) {
             font-size: 0.95rem;
-            padding: 0.95rem 0;
+            padding: 0.55rem 0;
           }
           text-align: center;
           a {
@@ -382,6 +389,9 @@ const Nav = ({ alt }) => {
               </section>
             </li>
             <li>
+              <Link to="/nx3">nx<sup>3</sup></Link>
+            </li>
+            <li>
               <Link to="/team">The team</Link>
             </li>
             <li className="dropdowntwo">
@@ -446,6 +456,9 @@ const Nav = ({ alt }) => {
             </li>
           </ul>
           <ul className="mobile--menu--lower">
+          <li>
+          <Link to="/nx3">nx<sup>3</sup></Link>
+            </li>
             <li>
               <Link to="/team">The team</Link>
             </li>
