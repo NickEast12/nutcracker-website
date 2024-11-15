@@ -4,9 +4,13 @@ import styled from 'styled-components'
 
 const HeroStyles = styled.section`
     width: 100%;
-    background: #253A40;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* background: red; */
+    /* background: #253A40; */
     .hero {
-        width: 91.888%; 
+        /* width: 91.888%;  */
         margin: 0 auto;
         max-width: 1920px;
         display: flex;
@@ -134,7 +138,7 @@ export default function NXThreeHero() {
         <div className="hero">
             <div className="image">
             <StaticImage
-              src="../../assets/images/background.png"
+              src="../../assets/images/new-background.png"
               alt="NXThree"
               placeholder="blurred"
               loading='eager'
@@ -143,7 +147,7 @@ export default function NXThreeHero() {
             <div className='video'>
             <video 
               ref={videoRef} 
-              src="https://NoSweatCDN.b-cdn.net/new-nx3-page-hero.mp4" 
+              src="https://cdn.nosweatwebsites.co.uk/new-nx3-page-hero.mp4" 
               autoPlay 
               muted
             ></video>

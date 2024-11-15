@@ -5,9 +5,10 @@ import styled from 'styled-components'
 
 const HeroStyles = styled.section`
     width: 100%;
+    /* background: red; */
     background: #283D43;
     .hero {
-        width: 91.888%; 
+        /* width: 91.888%;  */
         margin: 0 auto;
         max-width: 1920px;
         display: flex;
@@ -16,27 +17,29 @@ const HeroStyles = styled.section`
         flex-direction: column;
         height: 100%;
         position: relative;
-        padding-bottom: 10rem;
-        padding-top: 2rem;
+        padding-bottom: 6rem;
+        /* padding-top: 7rem; */
         @media only screen and (min-width: 576px) {
             padding-top: 0px;
-            padding-bottom: 7rem;
+            padding-bottom: 1rem;
+            /* padding-bottom: 7rem; */
         }
         @media only screen and (min-width: 768px) {
+          padding-bottom: 0rem;
             /* padding-top: 0px; */
             /* padding-bottom: 2rem; */
         }
         @media only screen and (min-width: 1280px) {
             /* padding-top: 2rem; */
-            padding-bottom: 8rem;
+            /* padding-bottom: 8rem; */
         }
         @media only screen and (min-width: 1360px) {
             /* padding-top: 2rem; */
-            padding-bottom: 7rem;
+            /* padding-bottom: 7rem; */
         }
         @media only screen and (min-width: 1440px) {
             /* padding-top: 2rem; */
-            padding-bottom: 5rem;
+            /* padding-bottom: 5rem; */
         }
         video {
             position: absolute;
@@ -56,7 +59,7 @@ const HeroStyles = styled.section`
         .text {
             position: absolute;
             bottom: 2em;
-            width: 100%;
+            width: 95%;
             .hero-button {
               max-width: 210px;
               text-align: center;
@@ -99,21 +102,15 @@ const HeroStyles = styled.section`
             }
             h2 {
                 font-size: .85rem;
-                line-height: 1.25rem;
-                max-width: 500px;
-                margin: 0 auto;
                 @media only screen and (min-width: 768px) {
-                    font-size: 1rem;
-                    max-width: 500px;
+                    font-size: .95rem;
                 }
                 @media only screen and (min-width: 992px) { 
-                  max-width: 650px;
                     font-size: 1.22rem;
-                    line-height: 1.7rem;
                 }
-                /* @media only screen and (min-width: 1380px) { 
+                @media only screen and (min-width: 1380px) { 
                     font-size: 1.5rem;
-                } */
+                }
             }
             h1,h2 {
                 color: white;
@@ -183,17 +180,14 @@ export default function NXThreeHero() {
             <div className='video'>
             <video 
               ref={videoRef} 
-              src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" 
+              src="https://cdn.nosweatwebsites.co.uk/NX3_9sec_01.mp4" 
               autoPlay 
               muted
             ></video>
             </div>
             <div className="text">
-            <h1>Stand out from the crowd</h1>
-            <h2>While nx3 is at our core, we know every brand’s journey is unique. That’s why we offer a full range of services, from one-off projects to flexible packages, to support your goals and drive results.</h2>
-            <div className='hero-button'>
-              <Link to="/nx3/">Find out more</Link>
-            </div>
+            <h1>The formula for ambitious businesses</h1>
+            <h2>Secure market share. Achieve measurable growth. Build brand authority.</h2>
             </div>
         </div>
     </HeroStyles>

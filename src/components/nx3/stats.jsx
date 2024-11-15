@@ -134,12 +134,12 @@ export default function Stats() {
             </div>
             <div className="card">
                 <p className="num">+960%</p>
-                <p className="intro green">Increase in form submits </p>
+                <p className="intro green">increase in form submits</p>
                 <p className="text">For a leading data transformation <br /> business. Results from a one year period.</p>
             </div>
             <div className="card">
                 <p className="num ">+400%</p>
-                <p className="intro green">Increase in organic purchases</p>
+                <p className="intro green">increase in organic purchases</p>
                 <p className="text">For a leading construction supplier. <br /> Results from a one year period.</p>
             </div>
         </div>

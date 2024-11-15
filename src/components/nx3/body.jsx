@@ -137,7 +137,7 @@ export default function Body() {
             <div className='video'>
             <video 
               ref={videoRef} 
-              src="https://NoSweatCDN.b-cdn.net/NX3_shutter_White_1000x1000d.mp4" 
+              src="https://cdn.nosweatwebsites.co.uk/NX3_shutter_White_1000x1000d.mp4" 
               autoPlay 
               muted
               loop
