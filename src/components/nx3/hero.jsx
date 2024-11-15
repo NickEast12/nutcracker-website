@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const HeroStyles = styled.section`
     width: 100%;
-    background: #283D43;
+    background: #253A40;
     .hero {
         width: 91.888%; 
         margin: 0 auto;
@@ -15,9 +15,9 @@ const HeroStyles = styled.section`
         flex-direction: column;
         height: 100%;
         position: relative;
-        padding-bottom: 10rem;
-        padding-top: 2rem;
-        @media only screen and (min-width: 576px) {
+        /* padding-bottom: 10rem;
+        padding-top: 2rem; */
+        /* @media only screen and (min-width: 576px) {
             padding-top: 0px;
             padding-bottom: 7rem;
         }
@@ -28,7 +28,7 @@ const HeroStyles = styled.section`
         @media only screen and (min-width: 992px) {
             padding-top: 0px;
             padding-bottom: 0rem;
-        }
+        } */
         video {
             position: absolute;
             top: 0;
@@ -44,7 +44,7 @@ const HeroStyles = styled.section`
             opacity: 1;
             transition: opacity 0.5s ease-in-out;
         }
-        .text {
+        /* .text {
             position: absolute;
             bottom: 3rem;
             width: 100%;
@@ -79,7 +79,7 @@ const HeroStyles = styled.section`
                 color: white;
                 text-align: center;
             }
-        }
+        } */
     }
 `
 
@@ -143,15 +143,15 @@ export default function NXThreeHero() {
             <div className='video'>
             <video 
               ref={videoRef} 
-              src="https://NoSweatCDN.b-cdn.net/NX3_9sec_01.mp4" 
+              src="https://NoSweatCDN.b-cdn.net/new-nx3-page-hero.mp4" 
               autoPlay 
               muted
             ></video>
             </div>
-            <div className="text">
+            {/* <div className="text">
             <h1>Where strategy meets creativity and digital expertise</h1>
             <h2>The formula for securing market share, building brand authority and achieving measurable growth</h2>
-            </div>
+            </div> */}
         </div>
     </HeroStyles>
   )
