@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import XLogo from "../../svgs/x-logo.svg";
-import Animate from "./animate";
 
 
 const BodyStyles = styled.section`
@@ -121,7 +120,7 @@ export default function Body() {
   return (
     <BodyStyles>
       <div className="wrapper">
-        <Animate>
+        
           <h3 >
           At Nutcracker we know that in today's competitive market, gaining and holding onto market share requires more than just eye-catching campaigns. It demands a strategic, integrated approach that guides your audience from first impression to loyal customer.
           </h3>
@@ -145,7 +144,6 @@ export default function Body() {
             ></video>
             </div>
           </div>
-        </Animate>
       </div>
     </BodyStyles>
   );
